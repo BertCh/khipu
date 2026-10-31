@@ -1,0 +1,42 @@
+/* Story: Inkawasi storehouse accounts */
+
+/* step 5: the three mirrored pairs, one weave each */
+.mirror-shelf {
+	display: grid;
+	gap: 1.1rem;
+}
+.mirror-shelf-pair .strand-weave {
+	margin: 0;
+}
+.story .mirror-shelf-label {
+	margin: 0 0 0.3rem;
+	font-size: 0.85rem;
+	color: var(--ink-2);
+}
+.mirror-shelf-label b {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+/* the pair table, kept as the text alternative */
+.ledger-details {
+	margin: 0.5rem 0 1.5rem;
+}
+.ledger-details > summary {
+	cursor: pointer;
+	font-size: 0.85rem;
+	color: var(--ink-2);
+	padding: 0.25rem 0;
+}
+.ledger-details[open] > summary {
+	margin-bottom: 0.5rem;
+}
+.ledger-details .ledger-table {
+	overflow-x: auto;
+	display: block;
+}
+
+/* step 7: the storeroom's links, drawn as on /network */
+.story-island .island-flow {
+	overflow-x: auto;
+}

@@ -1,0 +1,182 @@
+/* DotRows: a chance band or ring, a reference line, the observed dot.
+   Shared by /stories/what-chance-can-do and /network. */
+
+.dot-rows {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.6rem 0.9rem 0.4rem;
+}
+
+.dot-row {
+	display: grid;
+	grid-template-columns: minmax(11rem, 17rem) minmax(0, 1fr) 7.5rem;
+	align-items: center;
+	gap: 0.9rem;
+	padding: 0.45rem 0;
+	border-top: 1px solid var(--hairline);
+}
+
+.dot-row:first-child {
+	border-top: 0;
+}
+
+.dot-row-label {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	font-size: 0.85rem;
+	line-height: 1.3;
+	color: var(--ink);
+}
+
+.dot-row-label small {
+	font-size: 0.74rem;
+	color: var(--ink-3);
+}
+
+.dot-row.is-emphasis .dot-row-label > span {
+	font-weight: 600;
+}
+
+.dot-row-note {
+	font-size: 0.8rem;
+	color: var(--ink-2);
+	font-variant-numeric: tabular-nums;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.dot-track {
+	position: relative;
+	height: 26px;
+}
+
+.dot-ref {
+	position: absolute;
+	top: -0.45rem;
+	bottom: -0.45rem;
+	width: 1px;
+	background: var(--rule);
+}
+
+.dot-band {
+	position: absolute;
+	top: 8px;
+	height: 10px;
+	border-radius: 5px;
+	background: var(--series-context);
+	opacity: 0.45;
+	min-width: 3px;
+}
+
+.dot-dot {
+	position: absolute;
+	top: 13px;
+	width: 11px;
+	height: 11px;
+	margin: -5.5px 0 0 -5.5px;
+	border-radius: 50%;
+	background: var(--series-1);
+	box-shadow: 0 0 0 2px var(--surface);
+}
+
+.dot-track .chart-tip {
+	white-space: nowrap;
+}
+
+.dot-axis {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.dot-axis .dot-track {
+	height: 30px;
+}
+
+.dot-tick,
+.dot-ref-label {
+	position: absolute;
+	top: 2px;
+	transform: translateX(-50%);
+	font-size: 11px;
+	color: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.dot-ref-label {
+	top: 16px;
+	color: var(--ink-2);
+}
+
+.dot-axis-label {
+	color: var(--ink-3);
+	font-size: 0.74rem;
+	align-self: start;
+	padding-top: 2px;
+}
+
+@media (max-width: 640px) {
+	.dot-row {
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas:
+			"label note"
+			"track track";
+		gap: 0.2rem 0.6rem;
+	}
+	.dot-row-label {
+		grid-area: label;
+	}
+	.dot-row-note {
+		grid-area: note;
+		align-self: start;
+	}
+	.dot-track {
+		grid-area: track;
+		margin: 0 0.4rem;
+	}
+	.dot-axis .dot-row-label {
+		display: none;
+	}
+	.dot-axis .dot-row-note {
+		display: none;
+	}
+}
+
+/* a row's own chance level: a hollow ring joined to the dot by a stem */
+.dot-ring {
+	position: absolute;
+	top: 13px;
+	width: 11px;
+	height: 11px;
+	margin: -5.5px 0 0 -5.5px;
+	border-radius: 50%;
+	border: 1.5px solid var(--ink-3);
+	background: var(--surface);
+	box-sizing: border-box;
+}
+
+.dot-stem {
+	position: absolute;
+	top: 12.5px;
+	height: 1px;
+	background: var(--rule);
+}
+
+.dot-key-ring {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 1.5px solid var(--ink-3);
+	box-sizing: border-box;
+}
+
+/* a result at chance level stays grey */
+.dot-row.is-muted .dot-dot {
+	background: var(--series-context);
+}
+
+.dot-row.is-muted .dot-row-note {
+	color: var(--ink-3);
+}

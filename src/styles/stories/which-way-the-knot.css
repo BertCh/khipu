@@ -1,0 +1,215 @@
+/* Story: Which way the knot. S and Z take the two binary colours the other
+   stories use (--moiety-r, --accent); the knot glyphs lean as well, so the
+   direction is never colour alone. */
+
+.wwk-twoways-wrap {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.8rem 1rem 0.4rem;
+	max-width: 480px;
+}
+
+.wwk-twoways {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.wwk-svg-label {
+	font-family: var(--font-display);
+	font-size: 22px;
+	fill: var(--ink);
+}
+
+.wwk-svg-note {
+	font-size: 11px;
+	fill: var(--ink-2);
+}
+
+/* split bars: one 100 % track per knot type */
+.wwk-split {
+	display: grid;
+	gap: 0.55rem;
+	margin-top: 0.4rem;
+}
+
+.wwk-split-row {
+	display: grid;
+	grid-template-columns: minmax(7rem, 11rem) 1fr;
+	gap: 0.8rem;
+	align-items: center;
+}
+
+.wwk-split-label {
+	font-size: 0.9rem;
+	color: var(--ink);
+}
+
+.wwk-split-label small {
+	display: block;
+	color: var(--ink-3);
+	font-size: 0.75rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.wwk-split-bar {
+	display: flex;
+	gap: 2px;
+	height: 26px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.wwk-split-bar span {
+	display: flex;
+	align-items: center;
+	padding-inline: 0.5rem;
+	color: var(--surface);
+	font-size: 0.78rem;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/* the dot plot */
+.wwk-plot-wrap {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.6rem 0.8rem 0.5rem;
+}
+
+.wwk-plot {
+	display: block;
+	width: 100%;
+	max-width: 640px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.wwk-grid {
+	stroke: var(--hairline);
+	stroke-width: 1;
+}
+
+.wwk-diag {
+	stroke: var(--rule);
+	stroke-width: 1;
+	stroke-dasharray: 3 3;
+}
+
+.wwk-thresh {
+	stroke: var(--ink-3);
+	stroke-width: 1;
+}
+
+.wwk-tick {
+	font-size: 10px;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.wwk-axis {
+	font-size: 11px;
+	fill: var(--ink-2);
+}
+
+.wwk-dot {
+	fill: var(--ink-3);
+	fill-opacity: 0.55;
+	stroke: var(--surface);
+	stroke-width: 1;
+	cursor: default;
+}
+
+.wwk-dot.is-marked {
+	fill: var(--accent);
+	fill-opacity: 1;
+	stroke: var(--ink);
+	stroke-width: 1.5;
+}
+
+.wwk-dot.is-hover {
+	fill: var(--ink);
+	fill-opacity: 1;
+}
+
+.wwk-plot-caption {
+	font-size: 0.82rem;
+	color: var(--ink-2);
+	min-height: 1.4em;
+	margin-top: 0.4rem;
+	font-variant-numeric: tabular-nums;
+}
+
+/* tables */
+.wwk-scroll {
+	overflow-x: auto;
+}
+
+.wwk-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.86rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.wwk-table th {
+	text-align: left;
+	font-weight: 500;
+	color: var(--ink-2);
+	font-size: 0.75rem;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	padding: 0.35rem 0.6rem;
+	border-bottom: 1px solid var(--rule);
+	white-space: nowrap;
+}
+
+.wwk-table td {
+	padding: 0.35rem 0.6rem;
+	border-bottom: 1px solid var(--hairline);
+	vertical-align: top;
+}
+
+.wwk-table .num {
+	text-align: right;
+}
+
+.wwk-table small {
+	color: var(--ink-3);
+}
+
+.wwk-table tr.is-hover td {
+	background: var(--accent-wash);
+}
+
+.wwk-swatch {
+	display: inline-block;
+	width: 0.7em;
+	height: 0.7em;
+	border-radius: 2px;
+	margin-right: 0.35em;
+	vertical-align: -0.05em;
+}
+
+.wwk-bar-cell {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	justify-content: flex-end;
+	min-width: 8rem;
+}
+
+.wwk-bar-cell i {
+	display: block;
+	height: 8px;
+	max-width: 6rem;
+	flex: 0 0 auto;
+	border-radius: 0 4px 4px 0;
+}
+
+.wwk-story .story-figure + .story-prose {
+	margin-top: 1.4rem;
+}

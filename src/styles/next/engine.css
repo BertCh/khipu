@@ -1,0 +1,479 @@
+/* ---------------------------------------------------------------------------
+   /next engine UI: EngineBar, RunLog drawer, ProvenanceCard (P3).
+   Tokens come from styles.css and next.css (.next-page); every verdict token
+   has a fallback so the drawer also reads outside .next-page.
+   --------------------------------------------------------------------------- */
+
+.engine-bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem 1.25rem;
+	margin-block: 1.25rem 1rem;
+	padding: 0.55rem 0.9rem;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	font-size: 0.85rem;
+	color: var(--ink-2);
+}
+
+.eb-group {
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	min-width: 0;
+}
+
+.eb-status {
+	flex: 1 1 auto;
+}
+
+.eb-alpha {
+	margin-left: auto;
+}
+
+.eb-dot {
+	width: 9px;
+	height: 9px;
+	flex: none;
+	border-radius: 50%;
+	background: var(--verdict-none, var(--ink-3));
+}
+
+.eb-dot-ready {
+	background: var(--verdict-ok, var(--series-1));
+}
+
+.eb-dot-loading {
+	background: transparent;
+	box-shadow: inset 0 0 0 2px var(--ink-3);
+	animation: eb-pulse 1.2s ease-in-out infinite;
+}
+
+.eb-dot-error {
+	background: var(--verdict-contra, var(--hand-r));
+}
+
+@keyframes eb-pulse {
+	50% {
+		opacity: 0.35;
+	}
+}
+
+.eb-state {
+	font-weight: 600;
+	color: var(--ink);
+}
+
+.eb-facts {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.eb-error {
+	color: var(--verdict-contra, var(--hand-r));
+}
+
+.eb-btn {
+	white-space: nowrap;
+	padding: 0.22rem 0.7rem;
+}
+
+.eb-btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.eb-progress {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	white-space: nowrap;
+	color: var(--ink-3);
+}
+
+.eb-track,
+.eb-meter-track {
+	position: relative;
+	display: inline-block;
+	width: 64px;
+	height: 6px;
+	border-radius: 3px;
+	background: var(
+		--null-band,
+		color-mix(in oklab, var(--ink-3) 16%, transparent)
+	);
+	overflow: hidden;
+}
+
+.eb-fill,
+.eb-meter-fill {
+	position: absolute;
+	inset: 0 auto 0 0;
+	border-radius: 3px;
+	background: var(--verdict-ok, var(--series-1));
+	transition: width 150ms ease;
+}
+
+.eb-meter-fill.is-low {
+	background: var(--verdict-drift, var(--moiety-r));
+}
+
+.eb-tally {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.2rem 0.7rem;
+}
+
+.eb-tally-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	white-space: nowrap;
+}
+
+.eb-tally-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: currentColor;
+}
+
+.eb-v-ok {
+	color: var(--verdict-ok, var(--series-1));
+}
+.eb-v-drift {
+	color: var(--verdict-drift, var(--moiety-r));
+}
+.eb-v-weak {
+	color: var(--verdict-weak, var(--ink-2));
+}
+.eb-v-contra {
+	color: var(--verdict-contra, var(--hand-r));
+}
+
+.eb-meter {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	white-space: nowrap;
+}
+
+.eb-meter-label {
+	color: var(--ink-3);
+}
+
+.eb-meter-value {
+	color: var(--ink);
+}
+
+.eb-meter-value.is-low {
+	color: var(--verdict-drift, var(--moiety-r));
+}
+
+.eb-runs {
+	white-space: nowrap;
+	color: var(--ink-3);
+}
+
+@media (min-width: 720px) {
+	.engine-bar {
+		flex-wrap: nowrap;
+	}
+	.eb-replicate,
+	.eb-alpha {
+		flex: none;
+	}
+}
+
+@media (max-width: 1100px) and (min-width: 720px) {
+	.eb-runs,
+	.eb-tally {
+		display: none;
+	}
+}
+
+@media (max-width: 719px) {
+	.engine-bar {
+		gap: 0.5rem 0.9rem;
+	}
+	.eb-status {
+		flex-basis: 100%;
+	}
+	.eb-alpha {
+		margin-left: 0;
+		flex-wrap: wrap;
+	}
+	.eb-replicate {
+		flex-wrap: wrap;
+	}
+}
+
+/* ─────────── Run log drawer ─────────── */
+
+.rl-root {
+	position: fixed;
+	inset: 0;
+	z-index: 60;
+}
+
+.rl-backdrop {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	border: 0;
+	padding: 0;
+	background: color-mix(in oklab, var(--ink) 22%, transparent);
+	cursor: default;
+	animation: rl-fade 150ms ease;
+}
+
+.rl-drawer {
+	position: absolute;
+	inset: 0 0 0 auto;
+	width: min(420px, 100%);
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	padding: 1rem 1.1rem 2rem;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	background: var(--surface);
+	border-left: 1px solid var(--hairline);
+	box-shadow: var(--shadow);
+	color: var(--ink);
+	font-size: 0.85rem;
+	animation: rl-fade 150ms ease;
+}
+
+@keyframes rl-fade {
+	from {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.rl-backdrop,
+	.rl-drawer,
+	.eb-dot-loading {
+		animation: none;
+	}
+	.eb-fill,
+	.eb-meter-fill {
+		transition: none;
+	}
+}
+
+@media (max-width: 559px) {
+	.rl-drawer {
+		width: 100%;
+		border-left: 0;
+	}
+}
+
+.rl-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.rl-note {
+	color: var(--ink-2);
+}
+
+.rl-actions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.rl-actions .btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.rl-section h3 {
+	display: flex;
+	align-items: baseline;
+	gap: 0.4rem;
+	margin-bottom: 0.4rem;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--ink-3);
+}
+
+.rl-count {
+	font-weight: 400;
+}
+
+.rl-empty {
+	color: var(--ink-3);
+}
+
+.rl-mono,
+.prov-mono {
+	font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 0.78rem;
+}
+
+.rl-trials,
+.rl-runs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.rl-trials li {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.8rem;
+	padding: 0.3rem 0;
+	border-bottom: 1px solid var(--hairline);
+}
+
+.rl-group {
+	padding-block: 0.5rem;
+	border-top: 1px solid var(--hairline);
+}
+
+.rl-group-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.2rem 0.6rem;
+	margin-bottom: 0.25rem;
+}
+
+.rl-group-label {
+	font-weight: 600;
+}
+
+.rl-group-id {
+	color: var(--ink-3);
+	overflow-wrap: anywhere;
+}
+
+.rl-run {
+	padding: 0.25rem 0 0.3rem 0.6rem;
+	border-left: 2px solid var(--hairline);
+	margin-top: 0.25rem;
+}
+
+.rl-run-main {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.6rem;
+	min-width: 0;
+}
+
+.rl-spec {
+	color: var(--ink-2);
+	overflow-wrap: anywhere;
+	min-width: 0;
+}
+
+.rl-kind {
+	flex: none;
+	color: var(--ink-3);
+	font-size: 0.75rem;
+}
+
+.rl-run-nums {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.15rem 0.75rem;
+	color: var(--ink-2);
+}
+
+.rl-hash {
+	padding: 0 0.3rem;
+	border: 1px solid var(--hairline);
+	border-radius: 4px;
+	color: var(--ink-3);
+}
+
+.rl-spark {
+	display: inline-block;
+	width: 60px;
+	height: 18px;
+	margin-left: auto;
+	fill: var(--null-fill, color-mix(in oklab, var(--ink-3) 38%, transparent));
+}
+
+.rl-spark-none {
+	border-bottom: 1px dashed var(--hairline);
+}
+
+/* ─────────── Provenance card ─────────── */
+
+.prov-card {
+	display: grid;
+	gap: 0.9rem;
+	max-width: 760px;
+}
+
+.prov-list {
+	display: grid;
+	margin: 0;
+	border-top: 1px solid var(--hairline);
+}
+
+.prov-row {
+	display: grid;
+	grid-template-columns: minmax(8rem, 11rem) 1fr;
+	gap: 0.2rem 1rem;
+	padding: 0.35rem 0;
+	border-bottom: 1px solid var(--hairline);
+}
+
+.prov-row dt {
+	color: var(--ink-3);
+	font-size: 0.82rem;
+}
+
+.prov-row dd {
+	margin: 0;
+	min-width: 0;
+	overflow-wrap: anywhere;
+	color: var(--ink);
+}
+
+.prov-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.prov-actions .btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.prov-sealed {
+	color: var(--ink-2);
+	overflow-wrap: anywhere;
+}
+
+.prov-hash {
+	word-break: break-all;
+}
+
+.prov-error {
+	color: var(--verdict-contra, var(--hand-r));
+}
+
+.prov-note {
+	max-width: 66ch;
+	color: var(--ink-3);
+	font-size: 0.82rem;
+}
+
+@media (max-width: 559px) {
+	.prov-row {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,428 @@
+/*
+ * Shared styles for src/components/matching/*. Colours are tokens from
+ * src/styles.css only; every state below is also carried by stroke style,
+ * opacity or a label, not colour alone. Imported by the hub, the chapter
+ * stubs, or directly by a component (safe to import more than once — the
+ * bundler dedupes identical CSS imports).
+ */
+
+/* ---------------------------------------------------------------- trace player */
+
+.trace-player {
+	outline: none;
+}
+
+.trace-player:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 4px;
+	border-radius: 10px;
+}
+
+.trace-bar {
+	flex-wrap: wrap;
+}
+
+.trace-scrubber {
+	flex: 1;
+	min-width: 100px;
+	max-width: 320px;
+	accent-color: var(--accent);
+}
+
+.trace-speeds {
+	display: flex;
+	gap: 0.25rem;
+	margin: 0 0 0 0.4rem;
+	padding: 0;
+	border: none;
+	min-width: 0;
+}
+
+.trace-speed-btn {
+	min-width: 2.2rem;
+	padding: 0.2rem 0.4rem;
+	font-size: 0.78rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.trace-caption {
+	min-height: 2.8em;
+}
+
+/* ---------------------------------------------------------------- number tape */
+
+.number-tape {
+	display: block;
+	overflow: visible;
+}
+
+.tape-tile {
+	cursor: default;
+}
+
+.tape-swatch {
+	stroke: var(--hairline);
+	stroke-width: 1;
+}
+
+.tape-value {
+	font-size: 8px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink-2);
+	text-anchor: middle;
+	pointer-events: none;
+}
+
+.tape-tile-dim .tape-swatch {
+	opacity: 0.32;
+}
+
+.tape-tile-dim .tape-value {
+	opacity: 0.45;
+}
+
+.tape-tile-window .tape-swatch {
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+
+.tape-tile-seed .tape-swatch {
+	stroke: var(--accent-ink);
+	stroke-width: 2;
+	stroke-dasharray: 2 1.4;
+}
+
+.tape-tile-run .tape-swatch {
+	stroke: var(--series-1);
+	stroke-width: 2.5;
+}
+
+.tape-tile-slip .tape-swatch {
+	stroke: var(--moiety-r);
+	stroke-width: 2;
+	stroke-dasharray: 3 2;
+}
+
+.tape-tile-mismatch .tape-swatch {
+	stroke: var(--hand-r);
+	stroke-width: 1.5;
+	stroke-dasharray: 1 2;
+	opacity: 0.6;
+}
+
+.tape-tile-gap .tape-swatch {
+	opacity: 0.3;
+	stroke: var(--ink-3);
+	stroke-dasharray: 1.5 1.5;
+}
+
+.tape-tile-focus .tape-swatch {
+	stroke: var(--focus);
+	stroke-width: 3;
+}
+
+/* ---------------------------------------------------------------- dot plot */
+
+.dot-plot,
+.dot-plot-canvas {
+	display: block;
+}
+
+.dot-plot-frame {
+	fill: var(--surface-2);
+	stroke: var(--hairline);
+}
+
+.dot-plot-dot {
+	fill: var(--ink-3);
+}
+
+.dot-plot-run line {
+	stroke: var(--series-1);
+	stroke-width: 2.5;
+	stroke-linecap: round;
+}
+
+.dot-plot-axis {
+	font-size: 10px;
+	fill: var(--ink-3);
+}
+
+/* ---------------------------------------------------------------- dp grid */
+
+.dp-grid {
+	display: block;
+}
+
+.dp-grid-head {
+	font-size: 9px;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.dp-grid-cell {
+	stroke: var(--hairline);
+	stroke-width: 0.5;
+	cursor: default;
+}
+
+.dp-grid-cell.is-match {
+	stroke: var(--series-1);
+	stroke-width: 2;
+}
+
+.dp-grid-cell.is-slip {
+	stroke: var(--moiety-r);
+	stroke-width: 2;
+	stroke-dasharray: 2 1;
+}
+
+.dp-grid-cell.is-mismatch {
+	stroke: var(--hand-r);
+	stroke-width: 2;
+	stroke-dasharray: 1 1;
+}
+
+.dp-grid-cell.is-gap {
+	stroke: var(--ink-3);
+	stroke-width: 2;
+	stroke-dasharray: 3 2;
+}
+
+/* ---------------------------------------------------------------- permutation arcs / origin strip */
+
+.perm-arcs {
+	display: block;
+}
+
+.perm-line {
+	stroke: var(--rule);
+	stroke-width: 1.25;
+}
+
+.perm-line.is-hl {
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+
+.perm-arc {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-width: 1.75;
+}
+
+.perm-cell {
+	transition: transform 0.4s ease;
+}
+
+.perm-cell circle {
+	fill: var(--surface);
+	stroke: var(--rule);
+	stroke-width: 1.25;
+}
+
+.perm-cell.is-hl circle {
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+
+.perm-cell text {
+	font-size: 8px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink-2);
+	text-anchor: middle;
+	pointer-events: none;
+}
+
+.origin-strip {
+	display: block;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.origin-cell {
+	transition: transform 0.4s ease;
+}
+
+.origin-cell text {
+	pointer-events: none;
+	text-anchor: middle;
+	font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- null histogram */
+
+.null-histogram {
+	display: block;
+}
+
+.null-hist-axis {
+	stroke: var(--rule);
+}
+
+.null-hist-dot {
+	fill: var(--series-context);
+}
+
+.null-hist-tail {
+	fill: var(--accent-wash);
+}
+
+.null-hist-obs {
+	stroke: var(--series-1);
+	stroke-width: 2;
+}
+
+.null-hist-obs-label {
+	font-size: 11px;
+	font-weight: 600;
+	fill: var(--ink);
+	font-variant-numeric: tabular-nums;
+}
+
+.null-hist-p,
+.null-hist-n {
+	font-size: 10px;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- bias matrix */
+
+.bias-matrix {
+	display: block;
+	border: 1px solid var(--hairline);
+	border-radius: 4px;
+}
+
+/* ---------------------------------------------------------------- chapter shell */
+
+.chapter-series-nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+	margin: 0.6rem 0 1.2rem;
+	padding: 0.5rem 0;
+	border-top: 1px solid var(--hairline);
+	border-bottom: 1px solid var(--hairline);
+	font-size: 0.85rem;
+}
+
+.story-head + .chapter-series-nav,
+.chapter-series-nav:last-child {
+	border-top: none;
+}
+
+.chapter-series-nav:first-of-type {
+	margin-top: 0.4rem;
+}
+
+.chapter-series-count {
+	color: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.chapter-series-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem 1rem;
+	align-items: center;
+}
+
+.chapter-series-link.is-disabled {
+	color: var(--ink-3);
+}
+
+.chapter-series-hub {
+	color: var(--ink-2);
+}
+
+@media (max-width: 640px) {
+	.chapter-series-nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+/* ---------------------------------------------------------------- hub page */
+
+.matching-hub-pipeline {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.3rem;
+	margin: 1.2rem 0;
+	font-size: 0.82rem;
+	color: var(--ink-2);
+}
+
+.matching-hub-pipeline-step {
+	padding: 0.25rem 0.6rem;
+	border: 1px solid var(--hairline);
+	border-radius: 999px;
+	background: var(--surface);
+	white-space: nowrap;
+}
+
+.matching-hub-pipeline-arrow {
+	color: var(--ink-3);
+}
+
+.matching-hub-tape-wrap {
+	margin: 1rem 0 1.6rem;
+}
+
+.matching-hub-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 0.9rem;
+	margin: 1.4rem 0;
+}
+
+.matching-hub-card {
+	display: block;
+	padding: 0.9rem 1rem 1rem;
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	background: var(--surface);
+	color: inherit;
+	text-decoration: none;
+	transition: border-color 0.15s ease;
+}
+
+.matching-hub-card:hover {
+	border-color: var(--accent);
+}
+
+.matching-hub-card-no {
+	font-family: var(--font-display);
+	font-size: 1.4rem;
+	color: var(--ink-3);
+}
+
+.matching-hub-card h3 {
+	margin: 0.15rem 0 0.35rem;
+	font-family: var(--font-display);
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: var(--ink);
+}
+
+.matching-hub-card p {
+	margin: 0;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+}
+
+/*
+ * Every matching SVG/canvas component is a fixed pixel size (it draws a
+ * matrix or a tape whose natural width can exceed a phone's viewport) and
+ * renders inside one of these wrappers, so an oversized figure scrolls in
+ * its own box instead of widening the page.
+ */
+.mtx-scroll {
+	max-width: 100%;
+	overflow-x: auto;
+}

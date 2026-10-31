@@ -1,0 +1,1189 @@
+/* ---------------------------------------------------------------------------
+   /next/proving-ground: pair evidence (dotplot, tracks, strip), lineup,
+   link audit (forest plot) and hit strip. Tokens come from next.css
+   (.next-page); every colour here is a token or a color-mix of tokens.
+   --------------------------------------------------------------------------- */
+
+/* thread kinds, as swatches (HTML) and fills (SVG) */
+.pd-kind {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	border-radius: 2px;
+	margin-right: 0.35rem;
+	vertical-align: -1px;
+	background: var(--k);
+	fill: var(--k);
+}
+.pd-kind-exact {
+	--k: var(--thread-exact, var(--accent));
+}
+.pd-kind-near,
+.pd-kind-scaled {
+	--k: var(--thread-near, var(--ink-2));
+}
+.pd-kind-sum {
+	--k: var(--thread-sum, var(--moiety-v));
+}
+.pd-kind-differ {
+	--k: var(--thread-differ, var(--moiety-r));
+}
+.pd-kind-blank,
+.pd-kind-dropped {
+	--k: var(--ink-3);
+}
+.pd-kind-blank,
+.pd-kind-dropped {
+	opacity: 0.6;
+}
+
+/* ─────────── PairEvidence ─────────── */
+
+.pe {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	min-width: 0;
+}
+
+.pe-note {
+	margin: 0;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+	max-width: 68ch;
+}
+
+.pe-plot {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: var(--pane-gap, 20px);
+	align-items: start;
+}
+
+.pe-section h4,
+.pd-list h4 {
+	margin: 0 0 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--ink-2);
+	text-transform: none;
+}
+
+.pe-section {
+	min-width: 0;
+}
+
+.pe-full summary {
+	cursor: pointer;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+}
+
+.pe-diagrams {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 0.75rem;
+}
+
+.pe-diagram {
+	overflow-x: auto;
+	border: 1px solid var(--hairline);
+	border-radius: 8px;
+	background: var(--surface);
+	padding: 0.5rem;
+}
+
+.pe-diagram h5 {
+	margin: 0 0 0.25rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+/* ─────────── EvidenceStrip ─────────── */
+
+.es {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1.5rem;
+	margin: 0;
+	padding: 0.75rem 1rem;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+}
+
+.es-cell {
+	min-width: 0;
+	max-width: 100%;
+}
+
+.es dt {
+	font-size: 0.72rem;
+	color: var(--ink-3);
+	margin-bottom: 0.2rem;
+}
+
+.es dd {
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.3rem 0.6rem;
+	font-size: 0.84rem;
+}
+
+.es-big {
+	font-size: 1.25rem;
+	font-weight: 500;
+	font-variant-numeric: tabular-nums;
+	color: var(--ink);
+}
+
+.es-sub {
+	color: var(--ink-2);
+	font-size: 0.8rem;
+	max-width: 34ch;
+}
+
+.es-nulls {
+	display: block;
+	overflow: visible;
+}
+
+.es-null-dot {
+	fill: var(--null-fill, color-mix(in oklab, var(--ink-3) 38%, transparent));
+}
+
+.es-obs {
+	stroke: var(--obs, var(--ink));
+	stroke-width: 1.5;
+}
+
+.es-break {
+	stroke: var(--ink-3);
+	fill: none;
+}
+
+.es-bar {
+	display: inline-block;
+	width: 80px;
+	height: 6px;
+	border-radius: 3px;
+	background: var(--null-band, var(--surface-2));
+	overflow: hidden;
+}
+
+.es-bar i {
+	display: block;
+	height: 100%;
+	background: var(--thread-exact, var(--accent));
+}
+
+.es-kinds {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.2rem 0.75rem;
+	font-size: 0.8rem;
+	color: var(--ink-2);
+}
+
+.es-chips {
+	gap: 0.35rem;
+}
+
+.es-chip {
+	display: inline-flex;
+	align-items: center;
+	font-size: 0.74rem;
+	padding: 0.28rem 0.55rem;
+	border-radius: 999px;
+	border: 1px solid var(--rule);
+	color: var(--ink-2);
+	background: var(--surface);
+	white-space: nowrap;
+}
+
+.es-prior-published {
+	border-color: var(--ink-2);
+	color: var(--ink);
+}
+
+.es-prior-not-found {
+	border-style: dashed;
+	color: var(--ink-3);
+}
+
+/* ─────────── PairDotplot ─────────── */
+
+.pd {
+	min-width: 0;
+	max-width: 100%;
+}
+
+.pd-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: flex-start;
+}
+
+.pd-main {
+	position: relative;
+	flex: none;
+	max-width: 100%;
+}
+
+.pd-canvas {
+	display: block;
+	touch-action: none;
+	cursor: crosshair;
+}
+
+.pd-brush {
+	position: absolute;
+	border: 1px solid var(--accent);
+	background: var(--accent-wash);
+	pointer-events: none;
+}
+
+.pd-tip {
+	position: absolute;
+	z-index: 5;
+	max-width: 220px;
+	padding: 0.35rem 0.5rem;
+	font-size: 0.76rem;
+	line-height: 1.35;
+	color: var(--ink);
+	background: var(--surface);
+	border: 1px solid var(--rule);
+	border-radius: 6px;
+	box-shadow: var(--shadow);
+	pointer-events: none;
+	font-variant-numeric: tabular-nums;
+}
+
+.pd-mini {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.pd-mini-label {
+	font-size: 0.72rem;
+	color: var(--ink-3);
+}
+
+.pd-tools {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.pd-key {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.2rem 0.4rem;
+	font-size: 0.74rem;
+	color: var(--ink-2);
+}
+
+.pd-key i {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 0.2rem;
+	vertical-align: -1px;
+}
+
+.pd-key > span {
+	white-space: nowrap;
+	margin-right: 0.5rem;
+}
+
+.pd-key-exact {
+	border-radius: 50%;
+	background: var(--thread-exact, var(--accent));
+}
+
+.pd-key-near {
+	border-radius: 50%;
+	border: 1px solid var(--thread-near, var(--ink-2));
+}
+
+.pd-key i.pd-key-run {
+	height: 5px;
+	border-radius: 3px;
+	background: color-mix(
+		in oklab,
+		var(--thread-exact, var(--accent)) 30%,
+		transparent
+	);
+}
+
+.pd-key-ghost {
+	background: var(--null-band, var(--surface-2));
+	border: 1px solid var(--hairline);
+}
+
+.pd-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-height: 340px;
+	overflow-y: auto;
+	min-width: 0;
+	padding-right: 0.25rem;
+}
+
+.pd-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.pd-list button {
+	width: 100%;
+	text-align: left;
+	font: inherit;
+	font-size: 0.8rem;
+	line-height: 1.35;
+	color: var(--ink);
+	background: transparent;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	padding: 0.25rem 0.4rem;
+	cursor: pointer;
+	font-variant-numeric: tabular-nums;
+	overflow-wrap: anywhere;
+}
+
+.pd-list button:hover {
+	background: var(--surface-2);
+}
+
+.pd-list button[aria-pressed="true"] {
+	background: var(--accent-wash);
+	border-color: color-mix(in oklab, var(--accent) 40%, transparent);
+}
+
+.pd-list button:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 1px;
+}
+
+/* ─────────── TrackStack ─────────── */
+
+.ts {
+	min-width: 0;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.ts svg {
+	display: block;
+	max-width: 100%;
+}
+
+.ts-hit {
+	fill: transparent;
+}
+
+.ts-bar {
+	fill: var(--ink-2);
+}
+
+.ts-bar-top {
+	fill: var(--ink-3);
+}
+
+.ts-dye {
+	stroke: var(--cord-casing);
+	stroke-width: 0.3;
+}
+
+.ts-sub {
+	fill: var(--ink-2);
+}
+
+.ts-broken {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-width: 1;
+}
+
+.ts-conflict {
+	fill: var(--verdict-drift, var(--moiety-r));
+}
+
+.ts-kind {
+	fill: var(--k);
+}
+
+.ts-label {
+	font-size: 11px;
+	font-weight: 500;
+	fill: var(--ink);
+}
+
+.ts-range {
+	font-size: 9.5px;
+	fill: var(--ink-3);
+}
+
+.ts-axis {
+	stroke: var(--hairline);
+}
+
+.ts-key {
+	margin: 0.35rem 0 0;
+	font-size: 0.74rem;
+}
+
+/* ─────────── Lineup ─────────── */
+
+.lu {
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+}
+
+.lu-note {
+	margin: 0;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+	max-width: 68ch;
+}
+
+.lu-grid {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 150px));
+	gap: 8px;
+	max-width: 790px;
+}
+
+.lu-cell {
+	position: relative;
+	padding: 0;
+	border: 1px solid var(--hairline);
+	border-radius: 6px;
+	background: var(--surface);
+	cursor: pointer;
+	overflow: hidden;
+	transition: opacity 150ms;
+}
+
+.lu-cell:hover {
+	border-color: var(--rule);
+}
+
+.lu-cell:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 2px;
+}
+
+.lu-canvas {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+}
+
+.lu-num {
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	font-size: 10px;
+	color: var(--ink-3);
+}
+
+.lu-real {
+	border: 2px solid var(--verdict-ok, var(--series-1));
+}
+
+.lu-wrong {
+	border: 2px solid var(--verdict-contra, var(--hand-r));
+}
+
+.lu-dim {
+	opacity: 0.45;
+}
+
+.lu-foot {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+}
+
+.lu-foot p {
+	margin: 0;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+}
+
+/* ─────────── HitStrip ─────────── */
+
+.hs-head {
+	margin: 0 0 0.75rem;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+	max-width: 72ch;
+}
+
+.hs-rows {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.hs-row {
+	display: grid;
+	grid-template-columns: 150px minmax(0, 1fr) 110px 190px;
+	align-items: center;
+	gap: 0.5rem 0.9rem;
+	padding: 0.4rem 0;
+	border-bottom: 1px solid var(--hairline);
+	font-size: 0.82rem;
+}
+
+.hs-label {
+	color: var(--ink);
+	overflow-wrap: anywhere;
+}
+
+.hs-dots {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 3px;
+	min-width: 0;
+}
+
+.hs-dot {
+	display: inline-block;
+	border-radius: 50%;
+	background: var(--obs, var(--ink));
+	opacity: 0.78;
+}
+
+.hs-dot:hover,
+.hs-dot:focus-visible {
+	opacity: 1;
+	outline: 2px solid var(--focus);
+	outline-offset: 1px;
+}
+
+.hs-more {
+	font-size: 0.72rem;
+}
+
+.hs-bars {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.hs-bars i,
+.hs-key i {
+	display: block;
+	height: 5px;
+	border-radius: 2px;
+	min-width: 1px;
+}
+
+.hs-bar-hits {
+	background: var(--thread-exact, var(--accent));
+}
+
+.hs-bar-khipus {
+	background: var(--null-fill, var(--ink-3));
+}
+
+.hs-text {
+	color: var(--ink-2);
+	font-variant-numeric: tabular-nums;
+}
+
+.hs-text-wide {
+	grid-column: span 2;
+}
+
+.hs-controls {
+	grid-template-columns: 150px minmax(0, 1fr) 300px;
+}
+
+.hs-square {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	border: 1.5px solid var(--ink-3);
+	background: transparent;
+}
+
+.hs-square-hit {
+	border-color: var(--verdict-contra, var(--hand-r));
+	background: color-mix(
+		in oklab,
+		var(--verdict-contra, var(--hand-r)) 35%,
+		transparent
+	);
+}
+
+.hs-key {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.3rem;
+	margin: 0.6rem 0 0;
+	font-size: 0.74rem;
+}
+
+.hs-key i {
+	display: inline-block;
+	width: 18px;
+}
+
+.hs-key i.hs-square {
+	width: 9px;
+	height: 9px;
+	border-radius: 0;
+}
+
+.hs-warn {
+	margin: 0.6rem 0 0;
+	padding: 0.5rem 0.7rem;
+	font-size: 0.84rem;
+	border-left: 3px solid var(--verdict-contra, var(--hand-r));
+	background: color-mix(
+		in oklab,
+		var(--verdict-contra, var(--hand-r)) 8%,
+		transparent
+	);
+}
+
+/* ─────────── LinkAudit ─────────── */
+
+.la {
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+	min-width: 0;
+}
+
+.la-tools {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+}
+
+.la-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.la-status {
+	margin: 0;
+	font-size: 0.8rem;
+	color: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.la-lede {
+	margin: 0;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+	max-width: 80ch;
+}
+
+.la-body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pane-gap, 20px);
+	min-width: 0;
+}
+
+.la-context {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	padding: 0.8rem 1rem;
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	background: var(--surface);
+	min-width: 0;
+}
+
+.la-sel-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+}
+
+.la-sel h3 {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.la-close {
+	min-width: 2rem;
+}
+
+.la-sel-note {
+	margin: 0.35rem 0 0.5rem;
+	font-size: 0.84rem;
+	color: var(--ink-2);
+}
+
+.la-sel-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.4rem;
+	margin: 0 0 0.6rem;
+}
+
+.la-sel-stats dt {
+	font-size: 0.72rem;
+	color: var(--ink-3);
+}
+
+.la-sel-stats dd {
+	margin: 0.1rem 0 0;
+	font-size: 0.86rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.la-sel-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.la-flow summary {
+	cursor: pointer;
+	font-size: 0.82rem;
+	color: var(--ink-2);
+}
+
+.la-flow-body {
+	margin-top: 0.5rem;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.la-forest {
+	min-width: 0;
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	background: var(--surface);
+}
+
+.la-row {
+	display: grid;
+	grid-template-columns:
+		minmax(120px, 1.3fr) 132px minmax(140px, 2fr) 34px 40px 48px 68px
+		92px;
+	align-items: center;
+	gap: 0 0.6rem;
+	width: 100%;
+	padding: 0.3rem 0.8rem;
+	font: inherit;
+	font-size: 0.8rem;
+	text-align: left;
+	color: var(--ink);
+	background: transparent;
+	border: 0;
+	border-top: 1px solid var(--hairline);
+	cursor: pointer;
+	font-variant-numeric: tabular-nums;
+}
+
+button.la-row:hover {
+	background: var(--surface-2);
+}
+
+button.la-row:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: -2px;
+}
+
+.la-row.is-selected {
+	background: var(--accent-wash);
+}
+
+.la-head {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	cursor: default;
+	color: var(--ink-3);
+	font-size: 0.72rem;
+	background: var(--surface-2);
+	border-top: 0;
+	border-radius: 10px 10px 0 0;
+	padding-top: 0.45rem;
+	padding-bottom: 0.45rem;
+}
+
+.la-c-num {
+	text-align: right;
+}
+
+.la-c-name {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.la-c-name b {
+	font-weight: 500;
+}
+
+.la-cand {
+	font-size: 0.7rem;
+	color: var(--verdict-drift, var(--moiety-r));
+}
+
+.la-c-rec {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	min-width: 0;
+}
+
+.la-kind i {
+	display: inline-block;
+	width: 16px;
+	height: 0;
+	border-top: 2.5px solid var(--kind, var(--ink));
+}
+
+.la-kind.network-kind-passage i {
+	border-top-style: dashed;
+	border-top-width: 1.5px;
+}
+
+.la-scan {
+	font-size: 0.7rem;
+}
+
+.la-c-rec .conf {
+	font-size: 0.68rem;
+	padding: 0.2rem 0.45rem 0.2rem 0.35rem;
+}
+
+/* inset from its neighbours so a dot at p 1 never touches the Recorded chip */
+.la-c-plot {
+	position: relative;
+	height: 20px;
+	min-width: 0;
+	margin: 0 10px 0 14px;
+}
+
+.la-head .la-c-plot {
+	height: 30px;
+}
+
+.la-unscored {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	font-size: 0.7rem;
+	color: var(--ink-3);
+	font-style: italic;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.la-axis {
+	position: absolute;
+	inset: 0;
+}
+
+.la-tick,
+.la-guide-label {
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.la-tick:first-child {
+	transform: none;
+}
+
+/* the guide lines are named on a second line, under the p ticks */
+.la-guide-label {
+	color: var(--ink-3);
+	top: 15px;
+	font-size: 0.66rem;
+}
+
+.la-guide-label-bonf {
+	color: var(--verdict-ok, var(--series-1));
+}
+
+.la-guide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	border-left: 1px dashed var(--rule);
+}
+
+.la-guide-strong {
+	border-left-style: solid;
+	border-left-color: var(--ink-3);
+}
+
+.la-guide-bonf {
+	border-left: 2px solid var(--verdict-ok, var(--series-1));
+}
+
+.la-c-plot.is-unscored .la-guide {
+	display: none;
+}
+
+.la-dot {
+	position: absolute;
+	top: 50%;
+	width: 9px;
+	height: 9px;
+	margin: -4.5px 0 0 -4.5px;
+	border-radius: 50%;
+	background: var(--surface);
+	border: 1.5px solid var(--ink-2);
+}
+
+.la-dot-strong {
+	background: var(--obs, var(--ink));
+	border-color: var(--obs, var(--ink));
+}
+
+.la-floor {
+	position: absolute;
+	top: 50%;
+	transform: translate(6px, -55%);
+	font-size: 0.72rem;
+	color: var(--ink-2);
+}
+
+.la-pline {
+	display: block;
+	font-size: 0.68rem;
+	color: var(--ink-3);
+}
+
+.la-c-meta {
+	display: none;
+}
+
+.la-c-prior {
+	font-size: 0.74rem;
+	color: var(--ink-2);
+}
+
+.la-c-verdict {
+	font-size: 0.74rem;
+	color: var(--verdict-none, var(--ink-3));
+}
+
+.la-v-reproduces {
+	color: var(--verdict-ok, var(--series-1));
+}
+
+.la-v-weak {
+	color: var(--verdict-weak, var(--ink-2));
+}
+
+.la-v-drift {
+	color: var(--verdict-drift, var(--moiety-r));
+}
+
+.la-v-contradicts {
+	color: var(--verdict-contra, var(--hand-r));
+}
+
+.la-island-head {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0.2rem 1rem;
+	padding: 0.7rem 0.8rem 0.3rem;
+	border-top: 1px solid var(--rule);
+	font-size: 0.82rem;
+	font-weight: 500;
+}
+
+.la-island-head .cell-muted {
+	font-weight: 400;
+	font-size: 0.74rem;
+}
+
+.la-foot {
+	padding: 0.6rem 0.8rem;
+	border-top: 1px solid var(--hairline);
+	font-size: 0.74rem;
+	color: var(--ink-2);
+}
+
+.la-key {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.la-guide-k {
+	display: inline-block;
+	width: 0;
+	height: 12px;
+	margin-left: 0.5rem;
+	border-left: 1px dashed var(--rule);
+}
+
+.la-guide-k.la-guide-strong {
+	border-left: 1px solid var(--ink-3);
+}
+
+.la-guide-k.la-guide-bonf {
+	border-left: 2px solid var(--verdict-ok, var(--series-1));
+}
+
+.la-floor-k {
+	margin-left: 0.3rem;
+}
+
+/* a selection pane beside the forest on wide screens */
+@media (min-width: 1100px) {
+	.la-body:has(.la-context) {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+		align-items: start;
+	}
+	.la-context {
+		order: 2;
+		position: sticky;
+		top: 72px;
+		max-height: calc(100vh - 90px);
+		overflow-y: auto;
+	}
+	.la-forest {
+		order: 1;
+	}
+}
+
+/* the forest scrolls in its own pane on desktop, so its axis stays put */
+@media (min-width: 721px) {
+	.la-forest {
+		max-height: calc(100vh - 140px);
+		overflow-y: auto;
+	}
+}
+
+@media (max-width: 1099px) {
+	.pe-plot {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.pd-list {
+		max-height: 320px;
+	}
+}
+
+/* phones: forest rows become two-line cards, the lineup grid narrows */
+@media (max-width: 720px) {
+	/* the header keeps only its axis, over the cards' plot column */
+	.la-head {
+		position: static;
+		grid-template-areas: "rec plot plot";
+	}
+	.la-head > :not(.la-c-plot) {
+		display: none;
+	}
+	.la-head > .la-c-plot {
+		grid-area: plot;
+	}
+	.la-row {
+		grid-template-columns: 132px minmax(0, 1fr) auto;
+		grid-template-areas:
+			"name name verdict"
+			"rec plot plot"
+			"meta meta meta";
+		gap: 0.25rem 0.6rem;
+		padding: 0.55rem 0.8rem;
+	}
+	.la-row > .la-c-name {
+		grid-area: name;
+	}
+	.la-row > .la-c-verdict {
+		grid-area: verdict;
+		text-align: right;
+	}
+	.la-row > .la-c-rec {
+		grid-area: rec;
+	}
+	.la-row > .la-c-plot {
+		grid-area: plot;
+	}
+	.la-row > .la-c-num,
+	.la-row > .la-c-prior {
+		display: none;
+	}
+	.la-row > .la-c-meta {
+		grid-area: meta;
+		display: block;
+		font-size: 0.72rem;
+		color: var(--ink-3);
+	}
+	.la-body {
+		gap: 12px;
+	}
+	.la-context {
+		padding: 0.7rem;
+	}
+	.lu-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 6px;
+	}
+	.hs-row,
+	.hs-controls {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 0.3rem;
+	}
+	.hs-text-wide {
+		grid-column: auto;
+	}
+	.es {
+		padding: 0.7rem;
+		gap: 0.6rem 1rem;
+	}
+}
+
+@media (max-width: 560px) {
+	.pd-row {
+		flex-direction: column;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lu-cell {
+		transition: none;
+	}
+}

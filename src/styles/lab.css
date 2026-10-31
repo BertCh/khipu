@@ -1,0 +1,815 @@
+.lab-page {
+	--lab-orange: #c7653e;
+	--lab-cream: #f0e2ca;
+	--lab-umber: #1b120d;
+	--lab-line: rgba(224, 190, 151, 0.2);
+	background:
+		radial-gradient(
+			circle at 72% 8%,
+			rgba(121, 69, 39, 0.18),
+			transparent 29rem
+		),
+		linear-gradient(180deg, #18100c 0%, #0f0a08 74%);
+	color: var(--lab-cream);
+	padding-top: 0;
+}
+
+.lab-intro {
+	padding-block: clamp(2rem, 5vw, 4.8rem) clamp(1.8rem, 4vw, 3.4rem);
+}
+
+.lab-kicker {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	color: #a38d78;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.68rem;
+	letter-spacing: 0.17em;
+	border-top: 1px solid var(--lab-line);
+	padding-top: 0.75rem;
+}
+
+.lab-kicker span:first-child {
+	color: var(--lab-orange);
+}
+
+.lab-title-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.55fr);
+	align-items: end;
+	gap: clamp(2rem, 8vw, 8rem);
+	margin-top: clamp(2.5rem, 7vw, 6rem);
+}
+
+.lab-title-row h1 {
+	max-width: 900px;
+	font-size: clamp(4rem, 10vw, 9.8rem);
+	line-height: 0.79;
+	letter-spacing: -0.045em;
+	font-style: italic;
+	color: #f4e5cc;
+	text-shadow: 0 16px 55px rgba(0, 0, 0, 0.34);
+}
+
+.lab-title-row p {
+	color: #b8a692;
+	font-size: clamp(0.88rem, 1.2vw, 1.02rem);
+	line-height: 1.65;
+	padding-bottom: 0.35rem;
+}
+
+.lab-title-row a {
+	color: var(--lab-cream);
+	text-decoration-color: var(--lab-orange);
+}
+.lab-stage {
+	padding-bottom: 2rem;
+}
+
+.luma-lab-shell {
+	border: 1px solid rgba(222, 184, 138, 0.24);
+	background: #18100c;
+	box-shadow:
+		0 40px 120px rgba(0, 0, 0, 0.58),
+		0 0 0 1px rgba(255, 236, 204, 0.025) inset;
+}
+
+.luma-lab-canvas-wrap {
+	position: relative;
+	height: min(72vh, 820px);
+	min-height: 480px;
+	overflow: hidden;
+	background: radial-gradient(circle at 44% 22%, #39271c, #130c09 74%);
+}
+
+.luma-lab-canvas-wrap::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	background:
+		radial-gradient(
+			ellipse at center,
+			transparent 47%,
+			rgba(15, 8, 5, 0.5) 100%
+		),
+		linear-gradient(
+			115deg,
+			rgba(255, 217, 164, 0.035),
+			transparent 32% 72%,
+			rgba(0, 0, 0, 0.12)
+		);
+	mix-blend-mode: soft-light;
+}
+
+.luma-lab-canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: grab;
+	touch-action: none;
+}
+
+.luma-lab-canvas:active {
+	cursor: grabbing;
+}
+
+.luma-lab-canvas:focus {
+	outline: none;
+}
+.luma-lab-canvas:focus-visible {
+	outline: 1px solid rgba(222, 184, 138, 0.55);
+	outline-offset: -1px;
+}
+
+.luma-lab-knot-key {
+	position: absolute;
+	z-index: 2;
+	left: 0.8rem;
+	bottom: 0.8rem;
+	display: flex;
+	gap: 1.1rem;
+	padding: 0.4rem 0.65rem;
+	background: rgba(20, 13, 9, 0.62);
+	backdrop-filter: blur(6px);
+	color: #a9917b;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.6rem;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	pointer-events: none;
+}
+
+.luma-lab-knot-key span {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.luma-lab-knot-key i {
+	display: inline-block;
+	width: 0.42rem;
+	height: 0.42rem;
+	border: 1px solid #816a57;
+	border-radius: 50%;
+}
+
+.luma-lab-panel {
+	position: absolute;
+	z-index: 3;
+	top: 0.8rem;
+	right: 0.8rem;
+	width: min(300px, calc(100% - 1.6rem));
+	max-height: calc(100% - 4.6rem);
+	overflow: auto;
+	padding: 0.55rem 0.75rem 0.7rem;
+	border: 1px solid rgba(224, 190, 151, 0.3);
+	background: rgba(28, 18, 13, 0.9);
+	backdrop-filter: blur(10px);
+	color: var(--lab-cream);
+	font-size: 0.78rem;
+	line-height: 1.4;
+}
+
+.luma-lab-panel.is-collapsed {
+	padding-bottom: 0.55rem;
+}
+
+.luma-lab-panel header {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+	margin-bottom: 0.55rem;
+	padding-bottom: 0.45rem;
+	border-bottom: 1px solid var(--lab-line);
+}
+
+.luma-lab-panel.is-collapsed header {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.luma-lab-panel-kicker {
+	color: var(--lab-orange);
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.58rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.luma-lab-panel header strong {
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.95rem;
+}
+
+.luma-lab-panel-value {
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	color: #e9c98f;
+}
+
+.luma-lab-panel-actions {
+	margin-left: auto;
+	display: flex;
+	gap: 0.25rem;
+}
+
+.luma-lab-panel-actions button,
+.luma-lab-relations button {
+	border: 1px solid rgba(222, 184, 138, 0.28);
+	background: transparent;
+	color: #d5c2ac;
+	font:
+		0.6rem "IBM Plex Mono",
+		ui-monospace,
+		monospace;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 0.25rem 0.45rem;
+	cursor: pointer;
+}
+
+.luma-lab-relations button {
+	text-transform: none;
+	letter-spacing: 0.02em;
+	padding: 0.1rem 0.35rem;
+	margin: 0 0.2rem 0.2rem 0;
+}
+
+.luma-lab-panel-actions button:hover,
+.luma-lab-relations button:hover {
+	border-color: var(--lab-orange);
+	color: white;
+}
+
+.luma-lab-panel dl {
+	display: grid;
+	grid-template-columns: 4.2rem 1fr;
+	gap: 0.3rem 0.6rem;
+	margin: 0;
+}
+
+.luma-lab-panel dt {
+	color: #9f8872;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.58rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	padding-top: 0.15rem;
+}
+
+.luma-lab-panel dd {
+	margin: 0;
+}
+
+.luma-lab-panel dd[title] {
+	cursor: help;
+	text-decoration: underline dotted rgba(224, 190, 151, 0.35);
+	text-underline-offset: 0.2em;
+}
+
+.luma-lab-knots {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.7rem;
+}
+
+.luma-lab-knots li {
+	cursor: help;
+}
+
+.luma-lab-knots li + li {
+	margin-top: 0.15rem;
+}
+
+.luma-lab-relations {
+	margin: 0.6rem 0 0;
+	padding-top: 0.5rem;
+	border-top: 1px solid var(--lab-line);
+	display: grid;
+	gap: 0.2rem;
+	color: #aa9682;
+}
+
+.luma-lab-diagram-link {
+	display: inline-block;
+	margin-top: 0.55rem;
+	color: var(--lab-cream);
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.66rem;
+	letter-spacing: 0.06em;
+	text-decoration-color: var(--lab-orange);
+}
+
+/* Hover label beside the pointer; positioned by transform from script. */
+.luma-lab-tip {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	max-width: 18rem;
+	padding: 0.25rem 0.5rem;
+	border: 1px solid rgba(224, 190, 151, 0.3);
+	background: rgba(20, 13, 9, 0.88);
+	color: var(--lab-cream);
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.66rem;
+	letter-spacing: 0.03em;
+	white-space: nowrap;
+	pointer-events: none;
+}
+
+.luma-lab-tip.is-hidden {
+	visibility: hidden;
+}
+
+/* "?" corner button, the first-visit controls card and the shortcuts sheet. */
+.luma-lab-help-button {
+	position: absolute;
+	z-index: 3;
+	right: 0.8rem;
+	bottom: 0.8rem;
+	width: 1.9rem;
+	height: 1.9rem;
+	border: 1px solid rgba(222, 184, 138, 0.35);
+	border-radius: 50%;
+	background: rgba(20, 13, 9, 0.7);
+	color: var(--lab-cream);
+	font:
+		0.8rem "IBM Plex Mono",
+		ui-monospace,
+		monospace;
+	cursor: pointer;
+}
+
+.luma-lab-help-button:hover,
+.luma-lab-help-button[aria-expanded="true"] {
+	border-color: var(--lab-orange);
+	color: white;
+}
+
+.luma-lab-help {
+	position: absolute;
+	z-index: 4;
+	display: grid;
+	gap: 0.45rem;
+	padding: 0.9rem 1.1rem 1rem;
+	border: 1px solid rgba(224, 190, 151, 0.3);
+	background: rgba(24, 16, 11, 0.9);
+	backdrop-filter: blur(10px);
+	color: var(--lab-cream);
+	font-size: 0.78rem;
+	transition: opacity 0.6s ease;
+}
+
+.luma-lab-help-title {
+	color: var(--lab-orange);
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.6rem;
+	font-weight: normal;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+.luma-lab-help ul {
+	margin: 0 0 0.3rem;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.2rem;
+	color: #cdb9a2;
+}
+
+.luma-lab-help b {
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.68rem;
+	font-weight: normal;
+	color: var(--lab-cream);
+	margin-right: 0.3rem;
+}
+
+.luma-lab-help-intro {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.luma-lab-help-intro.is-fading {
+	opacity: 0;
+}
+
+.luma-lab-help-sheet {
+	right: 0.8rem;
+	bottom: 3.2rem;
+	width: min(21rem, calc(100% - 1.6rem));
+	max-height: calc(100% - 4.2rem);
+	overflow: auto;
+}
+
+.luma-lab-help-close {
+	position: absolute;
+	top: 0.4rem;
+	right: 0.5rem;
+	border: 0;
+	background: transparent;
+	color: #d5c2ac;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+/* Loading, lost context, no WebGL. */
+.luma-lab-overlay {
+	position: absolute;
+	z-index: 5;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.8rem;
+	padding: 2rem;
+	background: rgba(19, 12, 9, 0.72);
+	color: #d0b79d;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.72rem;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.luma-lab-overlay button {
+	border: 1px solid rgba(222, 184, 138, 0.4);
+	background: transparent;
+	color: var(--lab-cream);
+	font: inherit;
+	padding: 0.5rem 0.8rem;
+	cursor: pointer;
+}
+
+.luma-lab-overlay-busy::before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-right: 0.6rem;
+	border-radius: 50%;
+	background: var(--lab-orange);
+	animation: luma-lab-pulse 1.2s ease-in-out infinite;
+}
+
+/* A cord list for keyboard and screen-reader users: hidden until a button
+   in it has focus, then shown as a scrolling column at the left. */
+.luma-lab-cordlist {
+	position: absolute;
+	z-index: 4;
+	top: 0.8rem;
+	left: 0.8rem;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+}
+
+.luma-lab-cordlist:focus-within {
+	width: 10rem;
+	height: auto;
+	max-height: calc(100% - 4.6rem);
+	overflow: auto;
+	clip-path: none;
+	border: 1px solid rgba(224, 190, 151, 0.3);
+	background: rgba(24, 16, 11, 0.92);
+}
+
+.luma-lab-cordlist ul {
+	margin: 0;
+	padding: 0.3rem;
+	list-style: none;
+}
+
+.luma-lab-cordlist button {
+	width: 100%;
+	border: 0;
+	background: transparent;
+	color: #d5c2ac;
+	font:
+		0.68rem "IBM Plex Mono",
+		ui-monospace,
+		monospace;
+	text-align: left;
+	padding: 0.15rem 0.35rem;
+	cursor: pointer;
+}
+
+.luma-lab-cordlist button:focus-visible,
+.luma-lab-cordlist button[aria-current="true"] {
+	outline: 1px solid var(--lab-orange);
+	color: white;
+}
+
+/* Solver status, below the controls rather than on the geometry. */
+.luma-lab-status {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.3rem 1.2rem;
+	padding: 0.55rem 1.2rem;
+	border-top: 1px solid var(--lab-line);
+	color: #9a826e;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.63rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.luma-lab-live {
+	color: #d0b79d;
+}
+
+.luma-lab-live i {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin-right: 0.3rem;
+	border-radius: 50%;
+	background: var(--lab-orange);
+	box-shadow: 0 0 12px var(--lab-orange);
+	animation: luma-lab-pulse 2.4s ease-in-out infinite;
+}
+
+.luma-lab-live.is-paused i {
+	animation: none;
+	background: #7d6a5a;
+	box-shadow: none;
+}
+
+.luma-lab-gpu {
+	margin-left: auto;
+	text-transform: none;
+	letter-spacing: 0.02em;
+}
+
+.luma-lab-gpu summary {
+	cursor: pointer;
+	letter-spacing: 0.1em;
+}
+
+.luma-lab-gpu span {
+	margin-left: 0.5rem;
+}
+
+@keyframes luma-lab-pulse {
+	50% {
+		opacity: 0.35;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.luma-lab-live i,
+	.luma-lab-overlay-busy::before {
+		animation: none;
+	}
+	.luma-lab-help {
+		transition: none;
+	}
+}
+
+.luma-lab-primary-note {
+	margin: 0;
+	padding: 0.7rem 1.2rem 0.9rem;
+	border-top: 1px solid var(--lab-line);
+	color: #a28c78;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.66rem;
+	letter-spacing: 0.06em;
+}
+
+.lab-notes code {
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	color: var(--lab-cream);
+}
+
+.luma-lab-controls {
+	display: grid;
+	grid-template-columns: minmax(110px, 1fr) minmax(110px, 1fr) minmax(
+			110px,
+			1fr
+		) auto auto;
+	align-items: end;
+	gap: clamp(1.2rem, 4vw, 4rem);
+	padding: 1rem 1.2rem 1.25rem;
+	border-top: 1px solid var(--lab-line);
+}
+
+.luma-lab-controls label {
+	display: grid;
+	gap: 0.7rem;
+}
+.luma-lab-controls label > span {
+	display: flex;
+	justify-content: space-between;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.68rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #a58e79;
+}
+
+.luma-lab-controls output {
+	color: var(--lab-cream);
+}
+.luma-lab-controls input {
+	width: 100%;
+	accent-color: var(--lab-orange);
+}
+.luma-lab-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+.luma-lab-actions button,
+.luma-lab-view button {
+	border: 1px solid rgba(222, 184, 138, 0.28);
+	background: transparent;
+	color: #d5c2ac;
+	font:
+		0.7rem "IBM Plex Mono",
+		ui-monospace,
+		monospace;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 0.62rem 0.8rem;
+	cursor: pointer;
+}
+.luma-lab-actions button:hover,
+.luma-lab-view button:hover,
+.luma-lab-view button.active {
+	border-color: var(--lab-orange);
+	color: white;
+}
+
+.luma-lab-view {
+	display: flex;
+}
+
+.luma-lab-view button {
+	margin-left: -1px;
+	padding-inline: 0.62rem;
+}
+
+.luma-lab-view button.active {
+	position: relative;
+	background: rgba(199, 101, 62, 0.16);
+}
+
+.lab-notes {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	background: rgba(222, 184, 138, 0.18);
+	border: 1px solid rgba(222, 184, 138, 0.18);
+	margin-top: clamp(2rem, 5vw, 5rem);
+}
+
+.lab-notes > div {
+	background: #18100c;
+	padding: clamp(1.4rem, 3vw, 2.8rem);
+}
+.lab-note-number {
+	color: var(--lab-orange);
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.67rem;
+}
+.lab-notes h2 {
+	margin: 2.5rem 0 1rem;
+	font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+}
+.lab-notes p {
+	color: #a8937e;
+	max-width: 34ch;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+	.lab-title-row {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	.lab-title-row h1 {
+		font-size: clamp(3.6rem, 18vw, 7rem);
+	}
+	.luma-lab-canvas-wrap {
+		min-height: 520px;
+		height: 68vh;
+	}
+	.luma-lab-controls {
+		grid-template-columns: 1fr;
+	}
+	.luma-lab-view,
+	.luma-lab-actions {
+		justify-content: stretch;
+	}
+	.luma-lab-view button,
+	.luma-lab-actions button {
+		flex: 1;
+	}
+	.lab-notes {
+		grid-template-columns: 1fr;
+	}
+	.luma-lab-knot-key {
+		flex-direction: column;
+		gap: 0.35rem;
+	}
+	.luma-lab-panel {
+		top: auto;
+		bottom: 0.6rem;
+		right: 0.6rem;
+		left: 0.6rem;
+		width: auto;
+		max-height: 45%;
+	}
+	/* the sheet covers the key and the "?" button while a cord is open */
+	.luma-lab-help-sheet {
+		bottom: 3.2rem;
+	}
+}
+
+/* Subject picker in the intro's right column: label + prev/next on one
+   row, the select on its own full-width row so the option text can be read. */
+.lab-subject {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 0.55rem 0.6rem;
+	margin-bottom: 1.1rem;
+	padding-bottom: 0.9rem;
+	border-bottom: 1px solid var(--lab-line);
+}
+
+.lab-subject label {
+	color: var(--lab-orange);
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.68rem;
+	letter-spacing: 0.17em;
+	text-transform: uppercase;
+}
+
+.lab-subject select {
+	grid-column: 1 / -1;
+	min-width: 0;
+	width: 100%;
+	padding: 0.42rem 1.9rem 0.42rem 0.65rem;
+	border: 1px solid rgba(222, 184, 138, 0.3);
+	border-radius: 3px;
+	background: #22160f
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23c7653e' stroke-width='1.5'/%3E%3C/svg%3E")
+		no-repeat right 0.7rem center;
+	color: var(--lab-cream);
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.74rem;
+	letter-spacing: 0.02em;
+	appearance: none;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.lab-subject select:hover,
+.lab-subject select:focus-visible {
+	border-color: var(--lab-orange);
+	outline: none;
+}
+
+.lab-subject-nav {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	color: #a38d78;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.68rem;
+	letter-spacing: 0.08em;
+	white-space: nowrap;
+}
+
+.lab-subject-nav button {
+	width: 1.9rem;
+	height: 1.9rem;
+	border: 1px solid rgba(222, 184, 138, 0.3);
+	border-radius: 3px;
+	background: transparent;
+	color: var(--lab-cream);
+	font: inherit;
+	cursor: pointer;
+}
+
+.lab-subject-nav button:hover:not(:disabled) {
+	border-color: var(--lab-orange);
+	color: var(--lab-orange);
+}
+
+.lab-subject-nav button:disabled {
+	opacity: 0.35;
+	cursor: default;
+}

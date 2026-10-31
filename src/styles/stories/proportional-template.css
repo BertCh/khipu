@@ -1,0 +1,57 @@
+/* proportional-template story: the template strips, the value matrix and the silhouettes */
+
+.pt-strip {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	overflow-x: auto;
+	padding: 0.5rem;
+}
+
+.pt-sil {
+	overflow-x: auto;
+}
+
+.pt-sil svg {
+	max-width: 100%;
+	height: auto;
+}
+
+/* the value matrix: half positions carry the accent, unreadable cells are quiet */
+.pt-matrix th.half,
+.pt-matrix td.half {
+	color: var(--accent);
+}
+
+.pt-matrix td.half {
+	background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.pt-matrix td.broken {
+	color: var(--ink-3);
+}
+
+.pt-matrix td.miss {
+	color: var(--moiety-r);
+	font-weight: 600;
+}
+
+.pt-matrix td.group {
+	white-space: nowrap;
+}
+
+.pt-matrix td.group span {
+	color: var(--ink-3);
+	font-size: 0.8em;
+	margin-left: 0.35em;
+}
+
+.pt-matrix .swatch {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	margin-right: 0.4em;
+	vertical-align: -1px;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}

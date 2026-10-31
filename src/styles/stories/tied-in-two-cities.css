@@ -1,0 +1,212 @@
+/* tied-in-two-cities story: the fifteen leading totals as two strips, and the field colour map */
+
+.ttc-strip {
+	display: grid;
+	grid-template-columns: 6.5rem repeat(15, minmax(2.6rem, 1fr));
+	gap: 3px;
+	font-variant-numeric: tabular-nums;
+	min-width: 640px;
+}
+
+.ttc-strip-label {
+	grid-column: 1;
+	align-self: center;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--ink-2);
+	padding-right: 0.5rem;
+}
+
+.ttc-strip-head {
+	font-size: 0.7rem;
+	color: var(--ink-3);
+	text-align: center;
+	padding-bottom: 2px;
+}
+
+.ttc-cell {
+	position: relative;
+	text-align: center;
+	padding: 0.45rem 0.1rem 0.35rem;
+	font-size: 0.82rem;
+	font-weight: 500;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 4px;
+	color: var(--ink);
+}
+
+.ttc-cell i {
+	display: block;
+	height: 3px;
+	margin: 0 auto 0.3rem;
+	width: 70%;
+	border-radius: 2px;
+	background: var(--rule);
+}
+
+.ttc-cell.is-exact {
+	border-color: var(--accent);
+	background: var(--accent-wash);
+}
+
+.ttc-cell.is-exact i {
+	background: var(--accent);
+}
+
+.ttc-cell.is-register {
+	border-color: var(--moiety-r);
+	background: color-mix(in srgb, var(--moiety-r) 12%, transparent);
+}
+
+.ttc-cell.is-register i {
+	background: var(--moiety-r);
+}
+
+.ttc-cell.is-register small {
+	display: block;
+	font-size: 0.62rem;
+	font-weight: 400;
+	color: var(--ink-2);
+}
+
+.ttc-cell.is-only {
+	border-style: dashed;
+	color: var(--ink-2);
+	font-weight: 400;
+}
+
+.ttc-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem 1.2rem;
+	font-size: 0.78rem;
+	color: var(--ink-2);
+	margin-top: 0.6rem;
+}
+
+.ttc-legend i {
+	display: inline-block;
+	width: 0.9rem;
+	height: 3px;
+	border-radius: 2px;
+	vertical-align: middle;
+	margin-right: 0.35rem;
+}
+
+/* the field colour map: one row per template value, a swatch run per khipu */
+
+.ttc-fields td.ttc-swatches {
+	white-space: normal;
+	min-width: 12rem;
+}
+
+.ttc-swatch {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	margin: 0.1rem 0.5rem 0.1rem 0;
+	font-size: 0.78rem;
+	color: var(--ink-2);
+	white-space: nowrap;
+}
+
+.ttc-swatch i {
+	display: inline-block;
+	width: 0.85rem;
+	height: 0.85rem;
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 1px var(--cord-casing);
+}
+
+.ttc-swatch b {
+	font-weight: 500;
+	color: var(--ink);
+	font-family: var(--font-mono, ui-monospace, monospace);
+	font-size: 0.74rem;
+}
+
+/* the unit reader: two chip rows with matched values marked */
+
+.ttc-unit {
+	display: grid;
+	gap: 0.5rem;
+	margin: 0;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.7rem 0.8rem;
+}
+
+.ttc-unit-row {
+	display: grid;
+	grid-template-columns: 7rem 1fr;
+	gap: 0.6rem;
+	align-items: center;
+}
+
+.ttc-unit-row > span:first-child {
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--ink-2);
+}
+
+.ttc-unit .ttc-lead > .chip {
+	font-weight: 600;
+}
+
+.ttc-unit .ttc-dim > .chip {
+	opacity: 0.5;
+}
+
+.ttc-unit-pick {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+	margin-bottom: 0.6rem;
+}
+
+.ttc-separators {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	align-items: center;
+}
+
+.ttc-sep {
+	display: inline-flex;
+	gap: 0.25rem;
+	align-items: center;
+	font-size: 0.78rem;
+	color: var(--ink-2);
+	border: 1px dashed var(--rule);
+	border-radius: 6px;
+	padding: 0.15rem 0.45rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.ttc-sep b {
+	color: var(--ink);
+	font-weight: 500;
+}
+
+@media (max-width: 560px) {
+	.ttc-unit-row {
+		grid-template-columns: 1fr;
+		gap: 0.2rem;
+	}
+}
+
+/* Step 1 weave: the fifteen leading totals in the lead strip's colours
+   (same total: accent; a register lost: red, set by threadColor), over the
+   faint field threads */
+.strand-weave.ttc-leads .weave-threads path.is-strong {
+	stroke-width: 2;
+	stroke-opacity: 0.9;
+}
+
+/* Step 3: the chosen unit opened out above the chips */
+.strand-weave.ttc-unit-weave {
+	--weave-h: 96px;
+	margin: 0.4rem 0 0.6rem;
+}

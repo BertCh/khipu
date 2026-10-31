@@ -1,0 +1,27 @@
+/* Story: Knots that are not decimal (KH0100). The knot map and height strip
+   are wider than a phone, so they scroll inside their own box. */
+
+.kh0100-scroll {
+	overflow-x: auto;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.6rem 0.8rem 0.4rem;
+}
+
+.kh0100-scroll svg {
+	display: block;
+}
+
+.kh0100-quote {
+	margin: 0.9em 0;
+	padding-left: 1rem;
+	border-left: 2px solid var(--rule);
+	color: var(--ink-2);
+	font-style: italic;
+}
+
+/* a figure caption sits directly on the next paragraph otherwise */
+.kh0100-story .story-figure + .story-prose {
+	margin-top: 1.4rem;
+}

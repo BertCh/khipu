@@ -1,0 +1,274 @@
+{
+ "knotType": {
+  "L": {
+   "label": "long",
+   "notes": null
+  },
+  "E": {
+   "label": "figure eight",
+   "notes": null
+  },
+  "S": {
+   "label": "single",
+   "notes": null
+  },
+  "EE": {
+   "label": "double figure 8",
+   "notes": null
+  },
+  "LL": {
+   "label": "double long ",
+   "notes": "found in Dahlsberg khipu; appears something like a long knot with two axes.  Aschers give it a value of 3."
+  },
+  "BL": {
+   "label": "belted long knot",
+   "notes": "found on UR035; long knot with an extra wrap around the outside"
+  },
+  "SP": {
+   "label": "Spiral Knot",
+   "notes": "Value like a long knot"
+  },
+  "TF": {
+   "label": "turfted knot",
+   "notes": "value = 1"
+  }
+ },
+ "attachment": {
+  "R": {
+   "label": "recto",
+   "notes": null
+  },
+  "V": {
+   "label": "verso",
+   "notes": null
+  },
+  "H": {
+   "label": "overhand knot",
+   "notes": "overhand knot attachment; did't use o because of confusion with zero"
+  },
+  "T": {
+   "label": "top cord",
+   "notes": "cord hangs opposite to the pendants"
+  },
+  "U": {
+   "label": "unknown",
+   "notes": null
+  }
+ },
+ "termination": {
+  "B": {
+   "label": "broken",
+   "notes": "cord has been broken"
+  },
+  "C": {
+   "label": "cut",
+   "notes": "cord has been cut (sharper end than broken)"
+  },
+  "R": {
+   "label": "ravelled",
+   "notes": "plies are coming apart"
+  },
+  "K": {
+   "label": "knotted",
+   "notes": "cord ends with a knot near the bottom"
+  },
+  "D": {
+   "label": "doubled",
+   "notes": "end of cord is doubled over"
+  },
+  "U": {
+   "label": "unfinished",
+   "notes": "not knotted; not broken; not cut... just ends"
+  },
+  "TT": {
+   "label": "canutito",
+   "notes": "end of cord is wrapped with colored thread"
+  }
+ },
+ "fiber": {
+  "A": {
+   "label": "alpaca",
+   "notes": null
+  },
+  "L": {
+   "label": "llama",
+   "notes": null
+  },
+  "CN": {
+   "label": "cotton",
+   "notes": null
+  },
+  "W": {
+   "label": "wool",
+   "notes": "sheep's wool"
+  },
+  "V": {
+   "label": "vegetal",
+   "notes": "vegetal fiber, undetermined"
+  },
+  "CL": {
+   "label": "camelid: llama or alpaca",
+   "notes": null
+  },
+  "CC": {
+   "label": "cotton & camelid",
+   "notes": null
+  },
+  "CW": {
+   "label": "cotton & wool",
+   "notes": null
+  },
+  "X": {
+   "label": "indeterminable",
+   "notes": "fiber classification cannot be determined"
+  },
+  "H": {
+   "label": "human hair",
+   "notes": null
+  },
+  "AH": {
+   "label": "animal hair",
+   "notes": "as described by Aschers; don't know what kind of animal"
+  }
+ },
+ "structure": {
+  "P": {
+   "label": "plied cord",
+   "notes": null
+  },
+  "B": {
+   "label": "braid",
+   "notes": null
+  },
+  "W": {
+   "label": "wrapped",
+   "notes": null
+  }
+ },
+ "beginning": {
+  "B": {
+   "label": "broken",
+   "notes": null
+  },
+  "D": {
+   "label": "doubled",
+   "notes": null
+  },
+  "K": {
+   "label": "knotted",
+   "notes": null
+  },
+  "NB": {
+   "label": "needlework bundle",
+   "notes": null
+  },
+  "WB": {
+   "label": "wooden bar",
+   "notes": null
+  },
+  "X": {
+   "label": "affixed to other cord",
+   "notes": null
+  },
+  "T": {
+   "label": "twisted",
+   "notes": "ascher code $"
+  },
+  "TL": {
+   "label": "tassel/borla",
+   "notes": null
+  },
+  "R": {
+   "label": "ravelled",
+   "notes": "plies are coming apart"
+  }
+ },
+ "colorOperator": {
+  "-": {
+   "label": "barber pole",
+   "notes": "ascher code for two components of different colors twisted together"
+  },
+  ":": {
+   "label": "mottled",
+   "notes": "components are spun from more than one color, resulting in an irregular mottled appearance"
+  },
+  "*": {
+   "label": "special operator",
+   "notes": "see khipu databooks"
+  },
+  "**": {
+   "label": "special operator",
+   "notes": "found on dahlsberg khipu"
+  },
+  "*_": {
+   "label": "special operator",
+   "notes": "see databooks.  found on dahslberg khipu"
+  },
+  "%": {
+   "label": "striped",
+   "notes": null
+  },
+  "/": {
+   "label": "splice",
+   "notes": "colour changes along the cord; ranges in cm"
+  },
+  "^": {
+   "label": "tweed",
+   "notes": null
+  }
+ },
+ "archive": {
+  "100": {
+   "label": "Leymebamba",
+   "notes": "Khipu from the Chachapoyas area discovered at Laguna de los Condores"
+  },
+  "200": {
+   "label": "Ica",
+   "notes": "Khipu with provenance strictly Ica."
+  },
+  "201": {
+   "label": "Circum-Ica",
+   "notes": "Khipu with provenance from places close to Ica: between Ica and Pisco, Ocucaje, Ullujalla y Callengo"
+  },
+  "300": {
+   "label": "Pachacamac",
+   "notes": "Khipu with provenance listed as Pachacamac"
+  },
+  "202": {
+   "label": "Nazca",
+   "notes": "Khipu with provenance stated as Nazca."
+  },
+  "301": {
+   "label": "Puruchuco",
+   "notes": "khipu found at the site of Puruchuco"
+  }
+ },
+ "twist": {
+  "S": {
+   "label": "S-plied",
+   "notes": "final ply twist leans like the middle of an S"
+  },
+  "Z": {
+   "label": "Z-plied",
+   "notes": "final ply twist leans like the middle of a Z"
+  },
+  "U": {
+   "label": "unknown",
+   "notes": null
+  }
+ },
+ "knotDirection": {
+  "S": {
+   "label": "S",
+   "notes": "knot tied with an S slant"
+  },
+  "Z": {
+   "label": "Z",
+   "notes": "knot tied with a Z slant"
+  },
+  "U": {
+   "label": "unknown",
+   "notes": null
+  }
+ }
+}

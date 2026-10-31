@@ -1,0 +1,291 @@
+/* Chapter: Bending the rules. Figure-specific rules only — shared styles live in base.css. */
+
+/* ---------------------------------------------------------------- shared: tapes + legend */
+
+.btr-tapes {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+
+.btr-tape-row {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	flex-wrap: wrap;
+}
+
+.btr-tape-label {
+	font-size: 0.78rem;
+	color: var(--ink-3);
+	min-width: 8rem;
+	flex-shrink: 0;
+}
+
+.btr-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem 1.2rem;
+	margin: 0.6rem 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.82rem;
+	color: var(--ink-2);
+}
+
+.btr-legend li {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.btr-swatch {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 3px;
+	flex-shrink: 0;
+}
+
+.btr-swatch-run {
+	background: var(--series-1);
+}
+
+.btr-swatch-mismatch {
+	background: none;
+	border: 1.5px dashed var(--hand-r);
+	opacity: 0.8;
+}
+
+.btr-source {
+	margin: 0.35rem 0 0;
+	font-size: 0.78rem;
+}
+
+/* ---------------------------------------------------------------- step 2: score explainer */
+
+.btr-score {
+	max-width: 100%;
+}
+
+.btr-score-pickers {
+	align-items: flex-end;
+}
+
+.btr-score-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	font-size: 0.78rem;
+	color: var(--ink-3);
+}
+
+.btr-score-field input {
+	width: 6rem;
+	padding: 0.3rem 0.5rem;
+	border: 1px solid var(--hairline);
+	border-radius: 6px;
+	background: var(--surface);
+	color: var(--ink);
+	font-variant-numeric: tabular-nums;
+	font-size: 0.95rem;
+}
+
+.btr-score-field input:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 1px;
+}
+
+.btr-score-readout {
+	font-size: 0.95rem;
+	color: var(--ink-2);
+}
+
+.btr-score-readout strong {
+	font-variant-numeric: tabular-nums;
+	color: var(--ink);
+}
+
+.btr-score-rule {
+	margin: 0.7rem 0;
+	font-size: 0.86rem;
+	color: var(--ink-2);
+	min-height: 2.6em;
+}
+
+.btr-score-table-wrap {
+	max-height: none;
+	overflow-x: auto;
+}
+
+.btr-score-try {
+	font-size: 0.82rem;
+	padding: 0.25rem 0.55rem;
+}
+
+.btr-score-note {
+	font-size: 0.78rem;
+}
+
+/* ---------------------------------------------------------------- diff reading (steps 3, 4, 5) */
+
+.btr-diff {
+	display: inline-flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 0.5rem 0;
+	font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 0.78rem;
+}
+
+.btr-diff-row {
+	display: flex;
+	align-items: center;
+}
+
+.btr-diff-rowlabel {
+	display: inline-block;
+	min-width: 4.2rem;
+	padding-right: 0.5rem;
+	color: var(--ink-3);
+	font-size: 0.7rem;
+	flex-shrink: 0;
+}
+
+.btr-diff-cell {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 2.2rem;
+	padding: 0.15rem 0.1rem;
+	text-align: center;
+	font-variant-numeric: tabular-nums;
+	color: var(--ink);
+	flex-shrink: 0;
+}
+
+.btr-diff-glyph {
+	font-weight: 600;
+	border-radius: 3px;
+}
+
+.btr-diff-glyph.is-match {
+	color: var(--series-1);
+}
+
+.btr-diff-glyph.is-slip {
+	color: var(--moiety-r);
+}
+
+.btr-diff-glyph.is-mismatch {
+	color: var(--hand-r);
+}
+
+.btr-diff-glyph.is-gap {
+	color: var(--ink-3);
+}
+
+.btr-diff-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem 1.1rem;
+	margin: 0.3rem 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.78rem;
+	color: var(--ink-2);
+}
+
+.btr-diff-legend li {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.btr-diff-legend .btr-diff-glyph {
+	display: inline-block;
+	min-width: 1em;
+	text-align: center;
+}
+
+/* ---------------------------------------------------------------- step 3: grid fill */
+
+.btr-grid-fill {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.btr-reading {
+	transition: opacity 0.4s ease;
+}
+
+.btr-reading.is-pending {
+	opacity: 0.55;
+}
+
+/* ---------------------------------------------------------------- step 4: click traceback */
+
+.btr-click {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+
+.btr-click-readout {
+	font-size: 0.88rem;
+	color: var(--ink-2);
+	min-height: 1.6em;
+}
+
+.btr-click-readout strong {
+	color: var(--ink);
+	font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- step 5: gap sliders */
+
+.btr-gaps {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.btr-gap-sliders {
+	align-items: center;
+}
+
+.btr-slider {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.8rem;
+	color: var(--ink-3);
+}
+
+.btr-slider input[type="range"] {
+	width: 7rem;
+	accent-color: var(--accent);
+}
+
+.btr-slider span {
+	min-width: 2.4rem;
+	color: var(--ink-2);
+	font-variant-numeric: tabular-nums;
+}
+
+.btr-gap-readout {
+	font-size: 0.88rem;
+	color: var(--ink-2);
+}
+
+.btr-gap-readout strong {
+	color: var(--ink);
+	font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- step 6: chance teaser */
+
+.btr-teaser {
+	max-width: 100%;
+}

@@ -1,0 +1,49 @@
+/* ---------------------------------------------------------------------------
+   Matched-pair stories (tied-twice, tied-in-two-cities, rounded-copy,
+   six-fields, brown-eight): the small comparison tables and the lens weave.
+   Brackets over the weave are StrandWeave's own `marks`.
+   --------------------------------------------------------------------------- */
+
+/* a caption line that keys the weave's marks */
+.pair-weave-note {
+	margin: 0.35rem 0 1.2rem;
+	font-size: 0.8rem;
+	color: var(--ink-3);
+}
+
+/* the field tables: numbers sit under their headings */
+.pair-table .match-ledger {
+	max-width: 34rem;
+}
+.pair-table .ledger-table th:nth-child(-n + 3) {
+	text-align: right;
+}
+.pair-table .ledger-table th:last-child,
+.pair-table .ledger-table td:last-child {
+	padding-left: 1.5rem;
+}
+
+/* a passage strip wider than the page scrolls instead of being cut off */
+.pair-scroll {
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+}
+.pair-scroll > * {
+	min-width: max-content;
+}
+
+/* a windowed weave opened on a handful of cords: at this pitch the weave's
+   hairlines vanish, so its cords and threads are drawn as cords */
+.strand-weave.pair-lens .strand-weave-frame {
+	--weave-w: 2.6;
+}
+.strand-weave.pair-lens .strand-weave-frame .weave-cords .is-matched {
+	stroke-width: 4;
+	stroke-opacity: 0.9;
+}
+.strand-weave.pair-lens .strand-weave-frame .weave-cords .is-plain {
+	stroke-width: 2.5;
+}
+.strand-weave.pair-lens .strand-weave-frame .weave-threads path {
+	stroke-opacity: 0.8;
+}

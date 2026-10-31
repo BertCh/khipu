@@ -1,0 +1,3027 @@
+[
+ {
+  "id": "kh0699-section-c-sums",
+  "statement": "KH0699 p138 = 1006 = sum of g21, g21's six cords equal the totals of g24–g29, and p145 = 1007 = sum of g23.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "exact arithmetic recomputed from khipu JSON",
+  "numbers": "g21 terms 5/6 exact (g27 off by 1); 1006, 1007 exact",
+  "script": "scripts/kh0699_ledger.py; src/lib/stories/twinfalls.ts",
+  "story": "/stories/twin-falls",
+  "prior": "KFG group-group-sum page lists 1006=g21, 1007=g23 (no bibliography)",
+  "confounds": "KFG ChangeLog lists ~20 value revisions (Apr 2026); sums depend on them",
+  "repro": "live"
+ },
+ {
+  "id": "kh0699-tens-register",
+  "statement": "KH0699 g1 must be read as tens (8S@5.0 + 6L@18.0 = 86, not 806); so read, g1 = totals of g4–g9 and p7 = 504 = Σg3 = 6×84.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "arithmetic under alternative register readings",
+  "numbers": "g1 vs g4–g9: 4/6 exact at 86, one 72+8 vs 73+8, one 70; 504 exact",
+  "script": "scripts/kh0699_ledger.py; src/lib/stories/twinfalls.ts",
+  "story": "/stories/twin-falls",
+  "prior": "KFG catches only 86 = g5 = g6",
+  "confounds": "KFG ChangeLog lists ~20 value revisions (Apr 2026); sums depend on them",
+  "repro": "live"
+ },
+ {
+  "id": "kh0699-6x200",
+  "statement": "In KH0699 section B, p69 (778) + its subsidiary (422) = 1200 = 6 × 200 = the sum of g11's six pendant+subsidiary units.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "exact arithmetic",
+  "numbers": "1200 = 6×200 exact",
+  "script": "scripts/kh0699_ledger.py; src/lib/stories/twinfalls.ts",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": "KFG ChangeLog lists ~20 value revisions (Apr 2026); sums depend on them; cut cords in g11/g13",
+  "repro": "live"
+ },
+ {
+  "id": "kh0699-cut-cords-units",
+  "statement": "Cut cords in KH0699 g11/g13 (cut at 10–17 cm) lost their units register, which sits ~18–20 cm.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "knot-height inspection vs cut length",
+  "numbers": "cut 10–17 cm; units at 18–20 cm",
+  "script": "scripts/kh0699_ledger.py; src/lib/stories/twinfalls.ts",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": "relies on recorded cord lengths",
+  "repro": "script"
+ },
+ {
+  "id": "kh0699-fig8-labels",
+  "statement": "Lone figure-eight subsidiaries on KH0699 (p1s1, p14s2, p117s1, p202s1) are labels, not values of 1.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "sum exactness with vs without them",
+  "numbers": "excluding them makes two sums exact",
+  "script": "scripts/kh0699_ledger.py; src/lib/stories/twinfalls.ts",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": "post-hoc choice that improves fit",
+  "repro": "script"
+ },
+ {
+  "id": "kh0699-working-ledger",
+  "statement": "KH0699 writes units as long knot + figure-eight on 19 cords (and 4L+3L) — increments of a working ledger, not a fair copy.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "rate vs corpus rate",
+  "numbers": "9.3 per 100 cords vs 0.7/100 corpus",
+  "script": "scripts/kh0699_ledger.py; src/lib/stories/twinfalls.ts",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": "single recorder (Thompson) convention possible",
+  "repro": "script"
+ },
+ {
+  "id": "kh0699-quota-account",
+  "statement": "KH0699 records six units assessed at fixed quotas (6×200, 6×84, 4×86) — a quota account near Lima.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "reading",
+  "status": "open",
+  "test": "interpretive",
+  "numbers": "quotas 200/84/86",
+  "script": "scripts/kh0699_ledger.py; src/lib/stories/twinfalls.ts",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": "provenance only 'likely near Lima'",
+  "repro": "manual"
+ },
+ {
+  "id": "lone-total-before-group",
+  "statement": "A lone knotted cord worth ≥10 immediately before a group of ≥3 that equals the next group's total is rare corpus-wide.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "corpus count over 684 khipus",
+  "numbers": "12 hits in 165 places; 3 on KH0699",
+  "script": "scripts/group_grammar.py",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0699-period10-template",
+  "statement": "KH0699 group sizes follow a period-10 template with four roles (29 groups = 3×10 − 1), unique in the corpus.",
+  "khipus": [
+   "KH0699",
+   "KH0127"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "group-size class agreement vs size shuffle; 158 khipus ≥12 groups screened",
+  "numbers": "agreement 0.90, p<0.005; 9 of 158 pass (≥0.8, p≤0.05), 7 are lone/six alternations",
+  "script": "scripts/group_grammar.py",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": "sizes alone cannot fix phase; sums fix it",
+  "repro": "script"
+ },
+ {
+  "id": "kh0699-9-in-103",
+  "statement": "An ad-hoc '9 in 103' rarity figure for the KH0699 lone-total grammar.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "method",
+  "status": "fell",
+  "test": "re-derivation attempt",
+  "numbers": "could not be re-derived; replaced by 12/165",
+  "script": "scripts/group_grammar.py",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0699-urton-2009",
+  "statement": "An outside draft's claim that KH0699 was illustrated in Urton 2009.",
+  "khipus": [
+   "KH0699"
+  ],
+  "kind": "method",
+  "status": "fell",
+  "test": "literature check",
+  "numbers": "unverifiable; kept out of story",
+  "script": null,
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "as175-ur233-part1",
+  "statement": "Part 1 of AS175 (KH0192 g1–21) is UR233 (KH0470) chunked in sixes with field map [0,1,3,4,5] and a blank cord at position 3.",
+  "khipus": [
+   "KH0192",
+   "KH0470"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "field-by-field alignment",
+  "numbers": "89/104 exact, 6 ±1, 6 by a ten, 1 register, 2 different",
+  "script": "scripts/tied_twice.py; src/lib/stories/tiedtwice.ts",
+  "story": "/stories/tied-twice",
+  "prior": "not in Urton 2005's matched list; not found in open sources",
+  "confounds": "UR233 recorder groups irregular (chunking chosen)",
+  "repro": "live"
+ },
+ {
+  "id": "as175-ur232-part3",
+  "statement": "Part 3 of AS175 (g25–45) is UR232 (KH0469) in the recorder's groups, map [0,1,2,4,5], blank at position 4.",
+  "khipus": [
+   "KH0192",
+   "KH0469"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "field-by-field alignment",
+  "numbers": "72/104 exact, 4 ±1, 10 by a ten, 17 different",
+  "script": "scripts/tied_twice.py; src/lib/stories/tiedtwice.ts",
+  "story": "/stories/tied-twice",
+  "prior": "not found in open sources",
+  "confounds": "chunking in sixes misaligns; recorder groups used",
+  "repro": "live"
+ },
+ {
+  "id": "as175-summary-fits-ur232",
+  "statement": "AS175's part-2 summary (position-by-position sum of part 3) fits UR232's values better than AS175's own.",
+  "khipus": [
+   "KH0192",
+   "KH0469"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "summary equation with each khipu's values",
+  "numbers": "5/15 exact (+1 ±1) own vs 8/15 (+2 ±1) UR232; deep-brown column 78/78 vs 35/36 targets, UR232 exact",
+  "script": "scripts/tied_twice.py; src/lib/stories/tiedtwice.ts",
+  "story": "/stories/tied-twice",
+  "prior": "Aschers noted the summary relation (OKR notes)",
+  "confounds": "small n (15 cells)",
+  "repro": "live"
+ },
+ {
+  "id": "ur233-subs-match-as175",
+  "statement": "All five surviving UR233 subsidiaries equal AS175's W-field subsidiaries.",
+  "khipus": [
+   "KH0470",
+   "KH0192"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "exact match",
+  "numbers": "5/5 (25, 6, 0, 7, 6)",
+  "script": "scripts/tied_twice.py; src/lib/stories/tiedtwice.ts",
+  "story": "/stories/tied-twice",
+  "prior": null,
+  "confounds": "13+9 subsidiary stubs <3 cm lost",
+  "repro": "live"
+ },
+ {
+  "id": "ur232-ur233-one-object",
+  "statement": "UR232 and UR233 (VA 63038 A/B) are one object with primaries spliced beginning-to-end.",
+  "khipus": [
+   "KH0469",
+   "KH0470"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "catalogue + KFG notes",
+  "numbers": "one accession",
+  "script": "scripts/tied_twice.py; src/lib/stories/tiedtwice.ts",
+  "story": "/stories/tied-twice",
+  "prior": "catalogue (VA 63038 A/B)",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "tied-twice-two-findspots",
+  "statement": "AS175 (Pachacamac) and UR232/233 (Huacho) mean one account held at two sites 150 km apart, or one archive with a catalogue provenance error.",
+  "khipus": [
+   "KH0192",
+   "KH0469",
+   "KH0470"
+  ],
+  "kind": "reading",
+  "status": "open",
+  "test": "museum records; radiocarbon UR232/233 333±23 BP (Cherkinsky & Urton 2014)",
+  "numbers": "AS175 undated",
+  "script": null,
+  "story": "/stories/tied-twice",
+  "prior": "Cherkinsky & Urton 2014 (date)",
+  "confounds": "museum provenance free text",
+  "repro": "manual"
+ },
+ {
+  "id": "as175-huacho-direction-split",
+  "statement": "AS175's long knots are Z (145) while the Huacho pair's are all S; UR233 all recto, UR232 all verso.",
+  "khipus": [
+   "KH0192",
+   "KH0469",
+   "KH0470"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "counts",
+  "numbers": "145 Z vs all S",
+  "script": "scripts/tied_twice.py; src/lib/stories/tiedtwice.ts",
+  "story": "/stories/tied-twice",
+  "prior": null,
+  "confounds": "direction/attachment follow recorder",
+  "repro": "script"
+ },
+ {
+  "id": "five-gram-pair-scan",
+  "statement": "104 khipu pairs share ≥1 run of five consecutive values; 9 share ≥5 runs.",
+  "khipus": [
+   "KH0049",
+   "KH0362",
+   "KH0128",
+   "KH0137",
+   "KH0301",
+   "KH0305",
+   "KH0140",
+   "KH0483"
+  ],
+  "kind": "method",
+  "status": "held",
+  "test": "exact 5-window scan",
+  "numbers": "104 pairs ≥1 run; 9 ≥5 runs",
+  "script": "scripts/shared_passages.py",
+  "story": null,
+  "prior": null,
+  "confounds": "KH0121/KH0133 was a KFG duplicate",
+  "repro": "script"
+ },
+ {
+  "id": "kh0081-column-sums",
+  "statement": "KH0081's three opening cords equal the same-colour column sums of the groups that follow (5928, 1120, 934).",
+  "khipus": [
+   "KH0081"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "exact arithmetic on seven-slot colour template",
+  "numbers": "3 exact",
+  "script": "scripts/kh0081_analysis.py; src/lib/stories/kh0081.ts",
+  "story": "/stories/mirror-ledger",
+  "prior": "Ascher observations (partial)",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "kh0081-fourth-sum",
+  "statement": "KH0081 p116 = 686 balances as a column sum only if p141 is read 87 (Urton's Alt_Value).",
+  "khipus": [
+   "KH0081"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "arithmetic under alternate value",
+  "numbers": "1 of 2 readings balances",
+  "script": "scripts/kh0081_analysis.py",
+  "story": "/stories/mirror-ledger",
+  "prior": "Urton transcription (Alt_Value)",
+  "confounds": "depends on disputed knot reading",
+  "repro": "script"
+ },
+ {
+  "id": "kh0081-8sigma-density",
+  "statement": "KH0081's run-sum density is an 8σ anomaly.",
+  "khipus": [
+   "KH0081"
+  ],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "global shuffle vs within-tier shuffle",
+  "numbers": "z 6.9 global vs z −0.02 within tier (tier-layout artefact)",
+  "script": "scripts/kh0081_analysis.py",
+  "story": "/stories/mirror-ledger",
+  "prior": null,
+  "confounds": "layout-structured nulls needed",
+  "repro": "script"
+ },
+ {
+  "id": "kh0081-partB-5513",
+  "statement": "KH0081 part B's W column sums to 5513.",
+  "khipus": [
+   "KH0081"
+  ],
+  "kind": "reading",
+  "status": "fell",
+  "test": "exact arithmetic",
+  "numbers": "near miss 5511/5512",
+  "script": "scripts/kh0081_analysis.py",
+  "story": "/stories/mirror-ledger",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0081-mirrored-halves",
+  "statement": "KH0081's two halves mirror each other's values.",
+  "khipus": [
+   "KH0081"
+  ],
+  "kind": "reading",
+  "status": "fell",
+  "test": "value comparison",
+  "numbers": "same form (17+16 groups, 5 summary/10 detail), not same values",
+  "script": "scripts/kh0081_analysis.py",
+  "story": "/stories/mirror-ledger",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0081-summary-not-detail-total",
+  "statement": "KH0081's summary tier is not a total of its detail tier.",
+  "khipus": [
+   "KH0081"
+  ],
+  "kind": "null-result",
+  "status": "held",
+  "test": "arithmetic search",
+  "numbers": "no match",
+  "script": "scripts/kh0081_analysis.py",
+  "story": "/stories/mirror-ledger",
+  "prior": null,
+  "confounds": "slots 3–5 of openings unread",
+  "repro": "script"
+ },
+ {
+  "id": "ascher-obs8-swap",
+  "statement": "The Aschers' observation 8 on KH0081 (AS068) has positions 2 and 3 swapped.",
+  "khipus": [
+   "KH0081"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "recompute vs published observation",
+  "numbers": "positions 2/3 swapped",
+  "script": "scripts/kh0081_analysis.py",
+  "story": "/stories/mirror-ledger",
+  "prior": "Ascher & Ascher databook",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0028-proportional-template",
+  "statement": "Seven KH0028 groups fit N,N,N/2,N,N,N,N,N,N/2,N/2 at N = 24, 9, 8, 4, 8, 4, 2; odd 9 halves to 4; 8 always tied 4+4; subsidiaries repeat it.",
+  "khipus": [
+   "KH0028"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "template fit per group",
+  "numbers": "5 of 7 exact",
+  "script": "scripts/kh0028_analysis.py; src/lib/stories/kh0028.ts",
+  "story": "/stories/proportional-template",
+  "prior": null,
+  "confounds": "attach/twist unrecorded on all 260 cords",
+  "repro": "live"
+ },
+ {
+  "id": "kh0028-ten-groups",
+  "statement": "A scan claim that ten KH0028 groups follow the proportional template.",
+  "khipus": [
+   "KH0028"
+  ],
+  "kind": "reading",
+  "status": "fell",
+  "test": "recomputation",
+  "numbers": "seven groups, not ten",
+  "script": "scripts/kh0028_analysis.py",
+  "story": "/stories/proportional-template",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0028-kfg-n5-slip",
+  "statement": "The KFG page's N=5 for KH0028 is a slip for 8.",
+  "khipus": [
+   "KH0028"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "recompute",
+  "numbers": "N=8",
+  "script": "scripts/kh0028_analysis.py",
+  "story": "/stories/proportional-template",
+  "prior": "KFG page",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "proportional-pair-unique",
+  "statement": "No other khipu has a proportional-template pair at min group size 5.",
+  "khipus": [
+   "KH0028"
+  ],
+  "kind": "null-result",
+  "status": "held",
+  "test": "corpus screen",
+  "numbers": "0 at size 5; 1 more at size 3",
+  "script": "scripts/kh0028_analysis.py",
+  "story": "/stories/proportional-template",
+  "prior": null,
+  "confounds": "threshold-dependent",
+  "repro": "script"
+ },
+ {
+  "id": "kh0135-colour-template",
+  "statement": "KH0135 is 70 W-B-W triads in 10 blocks of 7 plus 10 seven-cord tails; only block 10 and tail 10 are knotted (21 cords, ordinary decimal).",
+  "khipus": [
+   "KH0135"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "structural parse",
+  "numbers": "70 triads; 21 knotted cords",
+  "script": "scripts/kh0135_analysis.py; src/lib/stories/kh0135.ts",
+  "story": "/stories/colour-without-numbers",
+  "prior": null,
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "kh0135-kfg-sum-artefacts",
+  "statement": "The KFG's three pendant-sum fieldmarks on KH0135 are zero artefacts.",
+  "khipus": [
+   "KH0135"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "recompute sums",
+  "numbers": "3/3 artefacts",
+  "script": "scripts/kh0135_analysis.py",
+  "story": "/stories/colour-without-numbers",
+  "prior": "KFG fieldmark page",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0135-databook-10-5",
+  "statement": "Four KH0135 cords are 1E(10.0) in the Ascher databook but 10.5 in the JSON.",
+  "khipus": [
+   "KH0135"
+  ],
+  "kind": "data-correction",
+  "status": "open",
+  "test": "databook comparison",
+  "numbers": "4 cords",
+  "script": "scripts/kh0135_analysis.py",
+  "story": "/stories/colour-without-numbers",
+  "prior": "Ascher databook",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "kh0034-position-template",
+  "statement": "KH0034 uses one knot register (15.7±1.8 cm), values ≤2, 52 eight-cord cycles (W triplet + LB quintet) with value set by template position.",
+  "khipus": [
+   "KH0034"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "template-position tests",
+  "numbers": "52 cycles; values ≤2",
+  "script": "scripts/registers_analysis.py; src/lib/stories/registers.ts",
+  "story": "/stories/counting-to-two",
+  "prior": null,
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "kh0670-non-numeric-code",
+  "statement": "KH0670 (values 0–5) is a non-numeric code.",
+  "khipus": [
+   "KH0670"
+  ],
+  "kind": "reading",
+  "status": "fell",
+  "test": "structural check",
+  "numbers": "336 is a proper top cord; no sums; one register 8.3±1.3 cm",
+  "script": "scripts/registers_analysis.py",
+  "story": "/stories/counting-to-two",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "counting-to-two-runs",
+  "statement": "Run structure in KH0034/KH0670 beyond templates.",
+  "khipus": [
+   "KH0034",
+   "KH0670"
+  ],
+  "kind": "null-result",
+  "status": "open",
+  "test": "run tests",
+  "numbers": "P≈0.03 (marginal)",
+  "script": "scripts/registers_analysis.py",
+  "story": "/stories/counting-to-two",
+  "prior": null,
+  "confounds": "multiple tests",
+  "repro": "script"
+ },
+ {
+  "id": "kh0100-long-knot-clusters",
+  "statement": "KH0100's 'clusters of 10–13 single knots' are long knots of 10–13 turns (S clusters max 7).",
+  "khipus": [
+   "KH0100"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "knot-token parse",
+  "numbers": "S max 7",
+  "script": "scripts/kh0100_analysis.py",
+  "story": "/stories/knots-that-are-not-decimal",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0100-non-decimal",
+  "statement": "About half KH0100's knotted cords fail decimal grammar; KFG values (e.g. 11115) are mechanical.",
+  "khipus": [
+   "KH0100",
+   "KH0108"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "grammar check per cord",
+  "numbers": "19 long-above-single, 24 two-long, repunits 110/1110/11110",
+  "script": "scripts/kh0100_analysis.py; src/lib/stories/kh0100.ts",
+  "story": "/stories/knots-that-are-not-decimal",
+  "prior": "Aschers declared unreadable",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "long-above-single-family",
+  "statement": "Long-above-single knots form a corpus family, not a KH0100 oddity.",
+  "khipus": [
+   "KH0100",
+   "KH0108"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "corpus count (strict pos<)",
+  "numbers": "493 cords in 71 khipus",
+  "script": "scripts/nonnumeric/long_above_single_family.py",
+  "story": "/stories/knots-that-are-not-decimal",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0110-kh0112-berlin",
+  "statement": "KH0110/KH0112 are Berlin, not Munich.",
+  "khipus": [
+   "KH0110",
+   "KH0112"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "museum canonicalisation",
+  "numbers": "—",
+  "script": "scripts/kh0100_analysis.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "decimal-grammar-violations",
+  "statement": "3,384 of 43,262 knotted cords (7.8%) in 301 khipus break the decimal grammar; 313 of 597 khipus have none, 55 have ≥25%.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "rule-based scan",
+  "numbers": "3384/43262",
+  "script": "scripts/nonnumeric/scan_grammar.py",
+  "story": null,
+  "prior": null,
+  "confounds": "KFG valuation rules differ per khipu",
+  "repro": "script"
+ },
+ {
+  "id": "kfg-three-valuation-rules",
+  "statement": "The KFG values the seven declared-unreadable khipus under three incompatible rules (place-valued singles; single=10 tally; band digits).",
+  "khipus": [
+   "KH0015",
+   "KH0047",
+   "KH0048",
+   "KH0094",
+   "KH0100",
+   "KH0108",
+   "KH0584"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "rule inference",
+  "numbers": "3 rules",
+  "script": "scripts/nonnumeric/scan_grammar.py",
+  "story": null,
+  "prior": "Ascher/OKR notes",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "wari-canuto-no-reading",
+  "statement": "No reading of Wari canuto khipus (sum, base 5/6/10, offsets, reversed) yields sums above chance.",
+  "khipus": [
+   "KH0280",
+   "KH0281",
+   "KH0282",
+   "KH0288",
+   "KH0289",
+   "KH0271",
+   "KH0346",
+   "KH0348",
+   "KH0384"
+  ],
+  "kind": "null-result",
+  "status": "held",
+  "test": "sum counts vs shuffle for each reading",
+  "numbers": "pooled z within ±1",
+  "script": "scripts/nonnumeric/canuto_family.py; scripts/nonnumeric/canuto_offset_readings.py",
+  "story": null,
+  "prior": "Conklin; Urton (Middle Horizon, base-5 suggested)",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "wari-base5",
+  "statement": "Wari canuto knots encode base-5 digits.",
+  "khipus": [
+   "KH0280",
+   "KH0281",
+   "KH0282"
+  ],
+  "kind": "reading",
+  "status": "fell",
+  "test": "turn-range + sum tests",
+  "numbers": "turns 3–8 and 10–15 occur; no fit",
+  "script": "scripts/nonnumeric/canuto_offset_readings.py",
+  "story": null,
+  "prior": "Conklin/Urton suggestion",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "wari-canuto-bundle",
+  "statement": "The real structure of canuto khipus is the bundle: cords in one canuto have similar turn sums and canutos are monochrome.",
+  "khipus": [
+   "KH0280",
+   "KH0281",
+   "KH0282",
+   "KH0288",
+   "KH0289"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "within-bundle similarity vs shuffle",
+  "numbers": "z −3 to −7",
+  "script": "scripts/nonnumeric/canuto_family.py",
+  "story": null,
+  "prior": null,
+  "confounds": "camelid KFG values = sums of turns",
+  "repro": "script"
+ },
+ {
+  "id": "scrambled-order-family",
+  "statement": "A scrambled-order family (KH0100+0108, 0001/0415, 0431/0441, 0676, 0015) places long knots at all heights.",
+  "khipus": [
+   "KH0100",
+   "KH0108",
+   "KH0001",
+   "KH0415",
+   "KH0431",
+   "KH0441",
+   "KH0676",
+   "KH0015"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "P(L below S)",
+  "numbers": "0.4–0.5 vs orthodox 0.85–0.96",
+  "script": "scripts/nonnumeric/long_knot_direction.py; scripts/nonnumeric/scan_grammar.py",
+  "story": null,
+  "prior": null,
+  "confounds": "unrelated to attach/twist/colour/direction/group position",
+  "repro": "script"
+ },
+ {
+  "id": "scrambled-order-readings",
+  "statement": "Six alternative readings of the scrambled-order family (incl. reversed) produce structure.",
+  "khipus": [
+   "KH0100",
+   "KH0108"
+  ],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "sum tests per reading",
+  "numbers": "all at chance",
+  "script": "scripts/nonnumeric/scan_grammar.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "height-inconsistent-unreadables",
+  "statement": "KH0047/0048/0584 were declared unreadable for knot-height inconsistency (type carries tier), not knot order.",
+  "khipus": [
+   "KH0047",
+   "KH0048",
+   "KH0584"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "height by type",
+  "numbers": "—",
+  "script": "scripts/nonnumeric/scan_grammar.py",
+  "story": null,
+  "prior": "Ascher notes",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0094-quai-branly",
+  "statement": "KH0094 is quai Branly, not Gaffron.",
+  "khipus": [
+   "KH0094"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "museum records",
+  "numbers": "—",
+  "script": null,
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "nle-alternative-spelling",
+  "statement": "nL+E compounds (731 cords, 162 khipus) are an alternative spelling of (n+1)L, not a sign.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "exclusivity, band position, contributor split",
+  "numbers": "never exclusive; (n+1)L dominates; contributor-dependent",
+  "script": "scripts/nonnumeric/le_compound_and_direction.py",
+  "story": null,
+  "prior": null,
+  "confounds": "recorder",
+  "repro": "script"
+ },
+ {
+  "id": "le-fraction",
+  "statement": "L+E encodes a fraction.",
+  "khipus": [],
+  "kind": "reading",
+  "status": "fell",
+  "test": "as above",
+  "numbers": "—",
+  "script": "scripts/nonnumeric/le_compound_and_direction.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "direction-fixed-per-khipu",
+  "statement": "Singles and long knots take fixed directions per khipu; where long-knot direction mixes, it runs in blocks along the primary (production episodes).",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "per-khipu direction tables, run tests",
+  "numbers": "Z/Z 155, S/S 84, Z/S 46; 40 mix long-knot direction",
+  "script": "scripts/nonnumeric/le_compound_and_direction.py",
+  "story": null,
+  "prior": null,
+  "confounds": "recorder: Locke 100% Z … Thompson 0%",
+  "repro": "script"
+ },
+ {
+  "id": "kh0607-recto-verso-direction",
+  "statement": "KH0607 alone has knot direction tracking recto/verso attachment.",
+  "khipus": [
+   "KH0607"
+  ],
+  "kind": "reading",
+  "status": "open",
+  "test": "per-khipu correlation",
+  "numbers": "1 khipu",
+  "script": "scripts/nonnumeric/le_compound_and_direction.py",
+  "story": null,
+  "prior": null,
+  "confounds": "multiple testing",
+  "repro": "script"
+ },
+ {
+  "id": "direction-binary-channel",
+  "statement": "Knot direction is a binary information channel.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "type-prediction + run tests",
+  "numbers": "see knot-direction-by-type",
+  "script": "scripts/nonnumeric/le_compound_and_direction.py; scripts/knot_direction_by_type.py",
+  "story": "/stories/which-way-the-knot",
+  "prior": "proposed in literature (Urton 2003)",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "sp-two-conventions",
+  "statement": "KFG uses two incompatible SP conventions: Berlin 2–3-turn long knot (value = turns) vs Incahuasi nSP = n spiral knots with place value.",
+  "khipus": [],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "value-vs-token audit",
+  "numbers": "203/218 turns",
+  "script": "scripts/nonnumeric/rare_knot_types.py; scripts/nonnumeric/rare_knot_types_followup.py",
+  "story": null,
+  "prior": null,
+  "confounds": "normalise before summing",
+  "repro": "script"
+ },
+ {
+  "id": "rare-knot-values",
+  "statement": "Rare knot types are ordinary: TF = tally tufts with place value (KH0449), EE = 1, LL = 3 (KH0082/0083), BL = n.",
+  "khipus": [
+   "KH0449",
+   "KH0082",
+   "KH0083"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "value fit",
+  "numbers": "—",
+  "script": "scripts/nonnumeric/rare_knot_types.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "rare-knots-signs",
+  "statement": "Rare knot types are non-numeric signs.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "as above",
+  "numbers": "—",
+  "script": "scripts/nonnumeric/rare_knot_types_followup.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0417-kh0418-size-classes",
+  "statement": "KH0417/KH0418 U knots are Urton's A/B/C size classes (value 0, 28 cords) — the only genuinely unread residue.",
+  "khipus": [
+   "KH0417",
+   "KH0418"
+  ],
+  "kind": "reading",
+  "status": "open",
+  "test": "inspection",
+  "numbers": "28 cords",
+  "script": "scripts/nonnumeric/rare_knot_types_followup.py",
+  "story": null,
+  "prior": "Urton transcription classes",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "nn-no-script-signature",
+  "statement": "Non-numeric khipus are not more structured than numeric ones (no script signature).",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "entropy, colour types, 3-gram repeats, 37 NN vs 211 NUM",
+  "numbers": "H2/H1 colour 0.79 vs 0.53; 3-gram repeat z 1.2 vs 4.1; only knot-type orders 131 vs 24",
+  "script": "scripts/nonnumeric/sign_entropy.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "benford-vs-grammar",
+  "statement": "Benford conformity tracks decimal-grammar violation.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "correlation",
+  "numbers": "r −0.19",
+  "script": "scripts/nonnumeric/sign_entropy.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "paris-lima-pair",
+  "statement": "KH0097 (Paris) and KH0586 (Lima) are one account tied twice: Paris part 1 = Lima's 15 units, leading four-digit totals in order.",
+  "khipus": [
+   "KH0097",
+   "KH0586"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "sequence alignment of leading totals",
+  "numbers": "13/15 exact, 2 register slips (78/1078, 187/1087)",
+  "script": "scripts/paris_lima_pair.py; src/lib/stories/parislima.ts",
+  "story": "/stories/tied-in-two-cities",
+  "prior": "not found in open sources; Pereyra Sánchez 2011 pp. 225–240 unchecked",
+  "confounds": "template fields recur per unit (weak); cite leading column",
+  "repro": "live"
+ },
+ {
+  "id": "basel-unit-rule",
+  "statement": "Basel fragments KH0682/0689/0690 each carry a KH0450 group counted from its end and the KH0147 ten-cord group of the same index from its start.",
+  "khipus": [
+   "KH0682",
+   "KH0689",
+   "KH0690",
+   "KH0450",
+   "KH0147"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "exact value match per group",
+  "numbers": "3/3 fragments obey (units 14, 1, 4)",
+  "script": "scripts/basel_fragments.py; src/lib/stories/basel.ts",
+  "story": "/stories/pachacamac-fragment",
+  "prior": "not found; Medrano 2022 thesis and KFG notes lean against one khipu",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "basel-fragment-assignments",
+  "statement": "KH0683 = KH0147 unit 13 (reversed), KH0686 = KH0450 unit 7, KH0688 probably KH0450 unit 2.",
+  "khipus": [
+   "KH0683",
+   "KH0686",
+   "KH0688",
+   "KH0450",
+   "KH0147"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "value match",
+  "numbers": "2 firm, 1 likely",
+  "script": "scripts/basel_fragments.py",
+  "story": "/stories/pachacamac-fragment",
+  "prior": null,
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "basel-14-units",
+  "statement": "KH0450 and KH0147 are two accounts over the same 14 units, KH0450 in mirror order; the Basel khipu interleaved them.",
+  "khipus": [
+   "KH0450",
+   "KH0147"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "group-count agreement + unit rule",
+  "numbers": "both exactly 14 big groups (excluding KH0450 g3/g8, KH0147 singletons)",
+  "script": "scripts/basel_fragments.py",
+  "story": "/stories/pachacamac-fragment",
+  "prior": null,
+  "confounds": "exclusions chosen to reach 14",
+  "repro": "script"
+ },
+ {
+  "id": "basel-no-unit-arithmetic",
+  "statement": "There is no unit-wise arithmetic between KH0450 and KH0147.",
+  "khipus": [
+   "KH0450",
+   "KH0147"
+  ],
+  "kind": "null-result",
+  "status": "held",
+  "test": "arithmetic search",
+  "numbers": "none",
+  "script": "scripts/basel_fragments.py",
+  "story": "/stories/pachacamac-fragment",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "basel-third-record",
+  "statement": "Basel fragment subsidiaries differ from KH0147's NB:R subsidiaries — a third record.",
+  "khipus": [
+   "KH0147"
+  ],
+  "kind": "reading",
+  "status": "open",
+  "test": "comparison",
+  "numbers": "—",
+  "script": "scripts/basel_fragments.py",
+  "story": "/stories/pachacamac-fragment",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "knot-direction-by-type",
+  "statement": "Knot direction is mostly a function of knot type: in 94 of 166 mixed-direction khipus type predicts ≥95% of directions.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "type→direction prediction vs majority-letter baseline",
+  "numbers": "singles 70% Z, fig-8 73% Z, long 45% Z; 94/166 (majority alone 5)",
+  "script": "scripts/knot_direction_by_type.py; public/data/stories/knot-direction.json",
+  "story": "/stories/which-way-the-knot",
+  "prior": "compare Ascher 2005 (LAA 16:1) before calling new",
+  "confounds": "multi-letter dir strings; recorder",
+  "repro": "script"
+ },
+ {
+  "id": "kh0285-direction-blocks",
+  "statement": "KH0285's knot direction runs in blocks along the primary (p3–13 S, p14–40 Z, p41–48 S, p53–58 S).",
+  "khipus": [
+   "KH0285"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "run inspection",
+  "numbers": "4 blocks",
+  "script": "scripts/knot_direction_by_type.py",
+  "story": "/stories/which-way-the-knot",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0284-kh0285-direction-flip",
+  "statement": "Figures copied from KH0284 to KH0285 flip S→Z: 23 of 35 exact threads (source p3–p20) are S on the source and Z on the copy.",
+  "khipus": [
+   "KH0284",
+   "KH0285"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "per-thread direction recount",
+  "numbers": "23/35 S→Z (41 vs 41 clusters); 12 S on both",
+  "script": "scripts/knot_direction_copy.py",
+  "story": "/stories/which-way-the-knot",
+  "prior": "Urton 2017 pairs the khipus, not the flip",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0121-kh0473-one-khipu",
+  "statement": "KH0473 (UR237) and KH0121 (AS107) are one khipu recorded from opposite ends.",
+  "khipus": [
+   "KH0121",
+   "KH0473"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "reversed value alignment + end features + cord lengths",
+  "numbers": "30 cords, 129.0 cm, 500 for 50; lengths sd 3 cm vs 19.5 shuffled",
+  "script": "scripts/shared_passages.py; src/lib/stories/parislima.ts",
+  "story": "/stories/tied-in-two-cities",
+  "prior": "not found; UR237 absent from Urton 2017",
+  "confounds": "Aschers found AS107 tied to AS106's bar",
+  "repro": "live"
+ },
+ {
+  "id": "kh0121-kh0473-cord-lengths",
+  "statement": "26 AS107/UR237 cord lengths agree (sd 3 cm vs 19.5 cm for random pairings).",
+  "khipus": [
+   "KH0121",
+   "KH0473"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "length-difference sd vs shuffled pairing",
+  "numbers": "3 vs 19.5 cm",
+  "script": null,
+  "story": "/stories/tied-in-two-cities",
+  "prior": null,
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "kh0133-third-copy",
+  "statement": "KH0133 (AS119) is a third record of AS107/UR237.",
+  "khipus": [
+   "KH0133",
+   "KH0121",
+   "KH0473"
+  ],
+  "kind": "link",
+  "status": "fell",
+  "test": "source audit",
+  "numbers": "KFG cords are AS107's verbatim",
+  "script": "scripts/source_audit.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0133-kfg-duplicate",
+  "statement": "KFG KH0133.xlsx carries AS107's Cords/PrimaryCord/CordGroups sheets verbatim; real AS119 has 7 pendants and a 50.5 cm primary.",
+  "khipus": [
+   "KH0133",
+   "KH0121"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "exact sheet-duplicate check + OKR + Ascher databook p.794 + ChangeLog p6s1",
+  "numbers": "only exact duplicate in corpus",
+  "script": "scripts/source_audit.py; scripts/build_data.py SOURCE_OVERRIDES",
+  "story": null,
+  "prior": "unreported (not in Thompson 2025 corrections, OKR issues)",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "big-number-slot",
+  "statement": "In fixed-size templates the largest value sits in a consistent slot, last in only 5 of 80.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "slot counts",
+  "numbers": "5/80 last",
+  "script": "scripts/corpus_grammar_stats.py; public/data/stories/group-grammar.json",
+  "story": "/stories/where-the-big-number-sits",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "blank-slot-templates",
+  "statement": "25 templates keep one slot blank in ≥80% of groups.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "slot counts",
+  "numbers": "25",
+  "script": "scripts/corpus_grammar_stats.py",
+  "story": "/stories/where-the-big-number-sits",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "values-end-in-zero",
+  "statement": "32% of values ≥10 end in 0.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "count",
+  "numbers": "32% (null ~10%)",
+  "script": "scripts/corpus_grammar_stats.py",
+  "story": "/stories/where-the-big-number-sits",
+  "prior": null,
+  "confounds": "broken cords inflate round numbers",
+  "repro": "script"
+ },
+ {
+  "id": "tariff-khipus",
+  "statement": "KH0457 (60×38), KH0454 (24 with 48 below ×16, no multiple of 10) and KH0141 (21 20 21 12 20 12… ×6) are constant-rate tariff tables.",
+  "khipus": [
+   "KH0457",
+   "KH0454",
+   "KH0141"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "pattern inspection",
+  "numbers": "—",
+  "script": "scripts/corpus_grammar_stats.py",
+  "story": "/stories/where-the-big-number-sits",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "no-pendants-equal-totals",
+  "statement": "No khipu's pendants equal another's group totals (beyond KH0147/KH0690).",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "corpus screen",
+  "numbers": "0 (later superseded by KH0517→KH0502 via group heads)",
+  "script": null,
+  "story": null,
+  "prior": null,
+  "confounds": "screen used pendants not group heads",
+  "repro": "scratchpad"
+ },
+ {
+  "id": "forms-dont-travel",
+  "statement": "No group-size forms or colour templates are shared across khipus (values travel, forms don't).",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "corpus screen",
+  "numbers": "none",
+  "script": null,
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "scratchpad"
+ },
+ {
+  "id": "subsidiary-sums",
+  "statement": "Subsidiary sums occur beyond chance corpus-wide.",
+  "khipus": [
+   "KH0329",
+   "KH0349"
+  ],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "count vs null",
+  "numbers": "127 vs ~89, concentrated in KH0329/KH0349",
+  "script": null,
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "scratchpad"
+ },
+ {
+  "id": "length-vs-value",
+  "statement": "Cord length does not encode value (correlation negative: knots consume cord).",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "correlation",
+  "numbers": "negative r",
+  "script": null,
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "scratchpad"
+ },
+ {
+  "id": "white-big-convention-survey",
+  "statement": "No 'white = big' convention (2026-09-19 survey).",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "corpus screen",
+  "numbers": "superseded by deep vocab_d: z 6.7",
+  "script": null,
+  "story": null,
+  "prior": null,
+  "confounds": "conflicts with white-pendants-larger; screens differ",
+  "repro": "scratchpad"
+ },
+ {
+  "id": "register-spacing-fingerprint",
+  "statement": "Knot register spacing can fingerprint recorders or khipu makers.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "spread",
+  "numbers": "7.7±2.7 cm too uniform",
+  "script": null,
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "scratchpad"
+ },
+ {
+  "id": "group-alternation-templates",
+  "statement": "Of 158 khipus with ≥12 groups, 9 pass a period template test: 7 lone-cord/six-group alternations, KH0127 'five groups then a lone cord' ×3, KH0699 ten-position.",
+  "khipus": [
+   "KH0127",
+   "KH0699"
+  ],
+  "kind": "grammar",
+  "status": "held",
+  "test": "class agreement vs shuffle",
+  "numbers": "9/158 (≥0.8, p≤0.05)",
+  "script": "scripts/group_grammar.py",
+  "story": "/stories/twin-falls",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0118-kh0471-summary",
+  "statement": "AS104 (KH0118) cords 8–16 are the leading cords of UR234's (KH0471) first nine groups in order — a summary.",
+  "khipus": [
+   "KH0118",
+   "KH0471"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "leaders screen",
+  "numbers": "7 exact, 1 digit swap (3102/3012), 1 blank",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "not found in open sources",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0132-kh0456-copy",
+  "statement": "AS118 (KH0132) g1 = UR218 (KH0456) g1 value for value; g2 same ends, middle broken.",
+  "khipus": [
+   "KH0132",
+   "KH0456"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "group match",
+  "numbers": "7 values (one off by 3); g2 gap = AS118 cords 10–14 broken (Ascher)",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "not found",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0143-kh0591",
+  "statement": "One eleven-cord group aligns cord for cord between KH0143 (Nazca) and KH0591 (Dallas).",
+  "khipus": [
+   "KH0143",
+   "KH0591"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "four-of-five screen",
+  "numbers": "5/11 exact in position",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "not found",
+  "confounds": "6 fields differ",
+  "repro": "script"
+ },
+ {
+  "id": "kh0156-kh0432",
+  "statement": "UR194 (KH0432) g3 holds AS140 (KH0156) g15's nine values reordered; g1 holds them in order with two off by 1–2.",
+  "khipus": [
+   "KH0156",
+   "KH0432"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "groups screen",
+  "numbers": "9/9 as set; 7/9 in order",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "not found",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0511-kh0513-leaders",
+  "statement": "UR273B and UR274B leading four-digit values of the first 13 groups run in the same order.",
+  "khipus": [
+   "KH0511",
+   "KH0513"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "leaders screen",
+  "numbers": "6 exact (2300 2142 1249 1200 1332 1575), rest within 10",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "near-anticipation: Urton & Chu 2015 App. I",
+  "confounds": "consecutive accessions",
+  "repro": "script"
+ },
+ {
+  "id": "kh0404-kh0426",
+  "statement": "Two five-digit values, 24341 and 32587, occur in the same order on KH0404 (Lima) and KH0426 (Paris).",
+  "khipus": [
+   "KH0404",
+   "KH0426"
+  ],
+  "kind": "link",
+  "status": "open",
+  "test": "bigvalues screen",
+  "numbers": "2 values",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "not found",
+  "confounds": "n=2",
+  "repro": "script"
+ },
+ {
+  "id": "kh0114-kh0115-one-object",
+  "statement": "KH0114/KH0115 are AS101 parts 1 and 2 (VA 42528).",
+  "khipus": [
+   "KH0114",
+   "KH0115"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "accession screen",
+  "numbers": "—",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "catalogue (Aschers)",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0138-kh0139-detail",
+  "statement": "KH0139 is the Aschers' 'AS124 Detail 1', a partial second record of KH0138 (VA 24371).",
+  "khipus": [
+   "KH0138",
+   "KH0139"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "accession screen",
+  "numbers": "—",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": "catalogue (Aschers)",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0691-kh0468",
+  "statement": "KH0691 links to KH0468.",
+  "khipus": [
+   "KH0691",
+   "KH0468"
+  ],
+  "kind": "link",
+  "status": "fell",
+  "test": "window4 screen",
+  "numbers": "4-run only",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0197-kh0402",
+  "statement": "KH0197 links to KH0402.",
+  "khipus": [
+   "KH0197",
+   "KH0402"
+  ],
+  "kind": "link",
+  "status": "fell",
+  "test": "screen",
+  "numbers": "coincidence",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "small-leader-coincidences",
+  "statement": "KH0047↔KH0428, KH0440↔KH0435, KH0590↔KH0489 group-leader matches.",
+  "khipus": [
+   "KH0047",
+   "KH0428",
+   "KH0440",
+   "KH0435",
+   "KH0590",
+   "KH0489"
+  ],
+  "kind": "link",
+  "status": "fell",
+  "test": "leaders screen",
+  "numbers": "small-value coincidences",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": null,
+  "confounds": "small values match by chance",
+  "repro": "script"
+ },
+ {
+  "id": "colour-subs-screens",
+  "statement": "Colour n-grams or subsidiary patterns link khipus.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "colours/subs screens",
+  "numbers": "nothing",
+  "script": "scripts/link_screens.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "scan-noise-floor",
+  "statement": "Exact shared-run scan beats a shuffled corpus for runs ≥5, but runs of 4 are mostly noise.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "shuffled-corpus baseline (3 shuffles)",
+  "numbers": "≥6: 24 vs 0.7; =5: 7 vs 1.3; =4: 27 vs 18.3; below 4-window 131 vs 108",
+  "script": "scripts/build_links.py; scripts/shared_passages.py",
+  "story": "/network",
+  "prior": null,
+  "confounds": "only 3 shuffles; floor moves by several pairs",
+  "repro": "script"
+ },
+ {
+  "id": "four-of-five-screen",
+  "statement": "The four-of-five screen has a clean floor (0–1 pairs in shuffles) and generalises best.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "shuffle floor",
+  "numbers": "0–1 pairs",
+  "script": "scripts/link_screens.py",
+  "story": "/network",
+  "prior": null,
+  "confounds": "few shuffles",
+  "repro": "script"
+ },
+ {
+  "id": "strands-thread-verified",
+  "statement": "Every per-cord thread in strands.json is value-verified (95 links / 1099 threads).",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "build-time check",
+  "numbers": "95 links, 1099 threads",
+  "script": "scripts/build_strands.py",
+  "story": "/network/$id",
+  "prior": null,
+  "confounds": "curated rules override scan spans",
+  "repro": "live"
+ },
+ {
+  "id": "kh0517-totals-heads-kh0502",
+  "statement": "UR278 (KH0517) group totals are the heads of UR266 (KH0502) groups in order.",
+  "khipus": [
+   "KH0517",
+   "KH0502",
+   "KH0514"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "ordered-pair scan over 445k with Bonferroni; cord-shuffle/shift nulls; internal-sum null",
+  "numbers": "11 exact 4-digit values; rank 1 of 84k ordered pairs; only Bonferroni survivor; nulls peak at 3",
+  "script": "scripts/deep/arith_chain.py; scripts/deep/tree_grouptotals.py; scripts/mk/mk_ink_totals_null.py; src/lib/stories/totals.ts",
+  "story": "/stories/totals-that-travel",
+  "prior": "not in Medrano & Khosla 2024 or Urton & Chu 2015 (main text unread); Urton 2017 pp.162–178 checked",
+  "confounds": "KH0502 heads are themselves totals via UR275 (addressed)",
+  "repro": "live"
+ },
+ {
+  "id": "kh0507-kh0513-heads",
+  "statement": "UR270 (KH0507) group totals 1200, 1332, 1402, 1300, 1575 head UR274B's (KH0513) groups in order.",
+  "khipus": [
+   "KH0507",
+   "KH0513"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "ordered match",
+  "numbers": "5 values; 1402 unique",
+  "script": "scripts/deep/arith_chain.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "not found",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "kh0507-kh0511-heads",
+  "statement": "UR270 totals head UR273B's groups (1200, 1332, 1575, 1256).",
+  "khipus": [
+   "KH0507",
+   "KH0511"
+  ],
+  "kind": "link",
+  "status": "open",
+  "test": "ordered match",
+  "numbers": "4 values; follows from UR273B/274B pair",
+  "script": "scripts/deep/arith_chain.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "not found",
+  "confounds": "not independent of kh0511-kh0513",
+  "repro": "script"
+ },
+ {
+  "id": "kh0506-third-record",
+  "statement": "UR269 (KH0506) is a third record of the UR266/UR275 series.",
+  "khipus": [
+   "KH0506",
+   "KH0502",
+   "KH0514"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "shared ≥1000 values vs all khipus",
+  "numbers": "5 of 20 shared; others ≤1",
+  "script": "scripts/deep/vocab_g_third_record.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "not found",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0506-kh0514-entry",
+  "statement": "KH0506 and KH0514 share one gross/deduction/net entry 1505/47/1458; 1458, 1505, 1653, 2633 occur only in KH0502/0506/0514.",
+  "khipus": [
+   "KH0506",
+   "KH0514"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "rare-value sharing",
+  "numbers": "4 unique values; order not kept",
+  "script": "scripts/deep/vocab_g_third_record.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "not found",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "ur269-deduction-44-48",
+  "statement": "UR269 runs gross/net/difference triples with a ~44–48 deduction, not fixed 47.",
+  "khipus": [
+   "KH0506"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "triple parse",
+  "numbers": "44–48",
+  "script": null,
+  "story": "/stories/totals-that-travel",
+  "prior": "consistent with Urton: only UR266/UR275 fixed 47",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "kh0505-kh0514-scaled",
+  "statement": "KH0505's first seven groups (33 cords) run 2.8–5.7× KH0514's with matching sizes and colours.",
+  "khipus": [
+   "KH0505",
+   "KH0514"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "ratio permutation test",
+  "numbers": "30/33 in range, median 4.4, p=0.0008",
+  "script": "scripts/deep/arith_ratio.py",
+  "story": null,
+  "prior": "not found",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0510-kh0512-lone-heads",
+  "statement": "Lone values 891, 453, 448, 448 of UR273A (KH0510) head UR274A (KH0512) at p22/32/36/42 in order.",
+  "khipus": [
+   "KH0510",
+   "KH0512"
+  ],
+  "kind": "link",
+  "status": "open",
+  "test": "ordered match",
+  "numbers": "4 values; not significant corpus-wide",
+  "script": "scripts/deep/arith_leadtotal.py",
+  "story": null,
+  "prior": "not found",
+  "confounds": "small values",
+  "repro": "script"
+ },
+ {
+  "id": "inkawasi-accessions-linked",
+  "statement": "8 of 9 Inkawasi accessions 13828–13836 are value-linked; KH0516 (13834) is the open lead.",
+  "khipus": [
+   "KH0516"
+  ],
+  "kind": "link",
+  "status": "open",
+  "test": "value-link count",
+  "numbers": "8/9",
+  "script": "scripts/deep/meta_b_accession.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": "identical accession = multi-part object",
+  "repro": "script"
+ },
+ {
+  "id": "kh0284-kh0285-copy",
+  "statement": "UR053B p1–p32s1 = UR053C p11–p58 on one diagonal, 11 subsidiaries retied as pendants.",
+  "khipus": [
+   "KH0284",
+   "KH0285"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "diagonal alignment incl. subsidiaries",
+  "numbers": "35/48 exact",
+  "script": "scripts/deep/align_gt.py; scripts/deep/align_verify.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "Urton 2005; Urton 2017 pp.146–150, table 8.1",
+  "confounds": "exact-run scans miss it",
+  "repro": "script"
+ },
+ {
+  "id": "leymebamba-passage",
+  "statement": "UR006 (KH0242) p277–p292 subs = KH0245 (reversed, by pendant blocks) = KH0257, ending 20 61 20 with nested 1.",
+  "khipus": [
+   "KH0242",
+   "KH0245",
+   "KH0257"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "alignment",
+  "numbers": "…20 61 20 + nested 1",
+  "script": "scripts/deep/period_ur006.py; scripts/deep/align_scan.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "Urton 2004 Bol. Arq. PUCP 8; Urton 2017 ch.4; KDB CalendarMatches (ours only: UR9 reversed, nested sub, positions)",
+  "confounds": "2026-09-19 survey had dismissed it as low-information",
+  "repro": "script"
+ },
+ {
+  "id": "kh0165-kh0196",
+  "statement": "AS149 (KH0165) repeats 1430/670/3410/820 four times; AS179 (KH0196) opens 1430/670/3424/820 on the same B-GG colour plan.",
+  "khipus": [
+   "KH0165",
+   "KH0196"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "group match",
+  "numbers": "4-value group; 1430 also once in KH0247",
+  "script": "scripts/deep/iso_aligned.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "not found",
+  "confounds": "synthesis wrongly said 1430 'only' here",
+  "repro": "script"
+ },
+ {
+  "id": "kh0152-kh0432",
+  "statement": "AS136 (KH0152) g4 and UR194 (KH0432) g0 agree on 6 of 9 cords; triad with KH0156.",
+  "khipus": [
+   "KH0152",
+   "KH0432",
+   "KH0156"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "permutation",
+  "numbers": "6/9, p=0.001",
+  "script": "scripts/deep/align_rank.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "not found",
+  "confounds": "W:BB (Ascher) = W:KB (Urton)",
+  "repro": "script"
+ },
+ {
+  "id": "kh0067-kh0403",
+  "statement": "Seven pendants of KH0067 and KH0403 agree within ±14% in order (analogous, not copied).",
+  "khipus": [
+   "KH0067",
+   "KH0403"
+  ],
+  "kind": "link",
+  "status": "open",
+  "test": "near-value scan",
+  "numbers": "7 within ±14%",
+  "script": "scripts/deep/graph_nearruns.py",
+  "story": null,
+  "prior": "not found",
+  "confounds": "consecutive Ica accession numbers",
+  "repro": "script"
+ },
+ {
+  "id": "kh0521-kh0525-x5",
+  "statement": "KH0521 p153–p156 × 5 = KH0525's last group.",
+  "khipus": [
+   "KH0521",
+   "KH0525"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "scaled-window scan",
+  "numbers": "4/4 exact ×5 (only ×5 block in corpus)",
+  "script": "scripts/deep/arith_ratio.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "not found",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0464-kh0465-object",
+  "statement": "UR227/UR228 (VA 44677 A) are knotted to each other.",
+  "khipus": [
+   "KH0464",
+   "KH0465"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "KFG notes",
+  "numbers": "—",
+  "script": "scripts/deep/meta_b_accession.py",
+  "story": null,
+  "prior": "catalogue",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "kh0068-kh0242-calendar-twin",
+  "statement": "KH0068 and KH0242 are calendar twins.",
+  "khipus": [
+   "KH0068",
+   "KH0242"
+  ],
+  "kind": "link",
+  "status": "fell",
+  "test": "sceptic re-derivation",
+  "numbers": "no support",
+  "script": "scripts/deep/period_calendar.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "total-on-first-cord",
+  "statement": "A group's total sits on its first cord far more than chance.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "sceptic null",
+  "numbers": "91 vs ≈7 (Inkawasi 73 vs 0.34; elsewhere 18 vs 6.8±2.4; last position 8 vs 7.2)",
+  "script": "scripts/deep/tree_grouptotals.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "partly Medrano & Khosla 2024 (first pendant distinct role)",
+  "confounds": "Inkawasi dominates",
+  "repro": "constant"
+ },
+ {
+  "id": "top-cord-totals-previous",
+  "statement": "A top cord totals the group before it, not after.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "sign test, before against after (47 of the 62 cords that total one neighbour total the one before; an even split gives 31); also a pooled top-cord null and a sceptic's null",
+  "numbers": "before 47, after 15 (even split 31, z 4.1); pooled top-cord null: before 47 vs 0.8, after 15 vs 0.8; sceptic's null: 47 vs 8.3 (after: 15 vs 7.0); +42 near misses vs 19.6",
+  "script": "scripts/deep/tree_topcords.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "Medrano & Khosla 2024 count top-cord sums without direction",
+  "confounds": "~half near misses may be slips",
+  "repro": "constant"
+ },
+ {
+  "id": "totals-left-handedness",
+  "statement": "Pendant sums sit left of their summands 54% vs 50%, explained by a left-to-right magnitude decline.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "value shuffle; split by gradient; within-group shuffle",
+  "numbers": "54.1% vs 50.0% (sd 0.4); decreasing 59%, increasing 46%",
+  "script": "scripts/mk/mk_sig_gradient.py; scripts/build_chance.py",
+  "story": "/stories/totals-that-travel; /stories/what-chance-can-do",
+  "prior": "Medrano & Khosla 2024 (54/46)",
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "white-pendants-larger",
+  "statement": "White pendants carry larger numbers than other colours.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "within-khipu comparison; intact cords; per recorder",
+  "numbers": "z 6.7; 171 khipus vs 121",
+  "script": "scripts/deep/vocab_d_colour.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "Medrano & Khosla 2024 (white starts clusters, not magnitude)",
+  "confounds": "recorder colour vocab",
+  "repro": "constant"
+ },
+ {
+  "id": "colour-tracks-slot",
+  "statement": "Colour tracks slot within group (≈44% of khipus) far more than magnitude (6%).",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "likely",
+  "test": "model comparison",
+  "numbers": "44%; 20/346 add magnitude",
+  "script": "scripts/deep/vocab_d_colour.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "round-numbers-intact",
+  "statement": "On intact (term=K) cords multiples of 10 and 100 are over-represented, units digit 9 avoided; the 1000/10000 glut is broken cords.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "digit distribution vs expectation",
+  "numbers": "3× / 10×; 9 at 0.65–0.7×; 38/52 tokens of 1000 broken",
+  "script": "scripts/deep/vocab_a_values.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": "broken cords",
+  "repro": "constant"
+ },
+ {
+  "id": "round-group-totals",
+  "statement": "Composed group totals are exact hundreds more than chance.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "open",
+  "test": "null",
+  "numbers": "41 vs 29, p≈0.02; khipu totals not round",
+  "script": "scripts/deep/vocab_c_decimal.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": "multiple tests",
+  "repro": "constant"
+ },
+ {
+  "id": "no-diffuse-cross-arithmetic",
+  "statement": "There is no broad network of arithmetic between khipus.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "cross-khipu sums vs shuffled",
+  "numbers": "0.95× null; only four Inkawasi ordered chains",
+  "script": "scripts/deep/arith_sums.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "no-scaled-windows",
+  "statement": "No scaled, constant-difference or constant-sum windows beyond one ×5 block.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "window scan",
+  "numbers": "1 block",
+  "script": "scripts/deep/arith_ratio.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "no-rare-value-edges",
+  "statement": "Order-free rare-value sharing finds no link beyond a magnitude-matched null.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "magnitude-matched null",
+  "numbers": "all edges above null already known",
+  "script": "scripts/deep/vocab_e_rarevalue_links.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "no-communities",
+  "statement": "Community detection finds nothing beyond pairs.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "rewired null",
+  "numbers": "modularity 0.956 vs 0.955",
+  "script": "scripts/deep/graph_analysis.py; scripts/deep/graph_layers.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "no-sequence-isomorphs",
+  "statement": "Knot-type, twist and attachment sequences share no cross-khipu pattern, even allowing relabelling.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "isomorph scan",
+  "numbers": "chance",
+  "script": "scripts/deep/iso_scan.py; scripts/deep/iso_templates.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "isomorph-colour-links",
+  "statement": "Isomorphic colour sequences link khipus.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "isomorph scan with recorder control",
+  "numbers": "= recorder vocabulary",
+  "script": "scripts/deep/iso_homophily.py; scripts/deep/iso_mi.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": "recorder colour vocab",
+  "repro": "constant"
+ },
+ {
+  "id": "no-calendrics",
+  "statement": "No calendrical counts or totals (365, 360, 328, 41, 30, 12) beyond chance; UR006 month parse holds under 1 of 9 counting rules.",
+  "khipus": [
+   "KH0242"
+  ],
+  "kind": "null-result",
+  "status": "held",
+  "test": "count vs null; rule sensitivity",
+  "numbers": "1/9 rules",
+  "script": "scripts/deep/period_calendar.py; scripts/deep/period_ur006.py; scripts/deep/period_cycles.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "Urton 2004 (UR006 calendar reading)",
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "no-base12-colour-number-regional",
+  "statement": "No base-12 preference, no colour coding a number, no regional standard quantity.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "digit/colour/region tests",
+  "numbers": "—",
+  "script": "scripts/deep/vocab_c_decimal.py; scripts/deep/vocab_i_regional_values.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "findspot-from-recorder",
+  "statement": "Find-spot is predicted mostly by who recorded the khipu.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "classifier with recorder held out",
+  "numbers": "0.37–0.44 vs 0.31 chance",
+  "script": "scripts/deep/meta_a_predict.py; scripts/deep/meta_d_recorder.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "recorder-colour-vocab",
+  "statement": "Recorders name the same dye differently (Ascher W:BB = Urton W:KB; Berlin AB 1% vs 21%).",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "recorder cross-tab",
+  "numbers": "AB 1% vs 21%",
+  "script": "scripts/deep/vocab_b_dialects.py; scripts/deep/vocab_b2_within_recorder.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "incahuasi-twist-recorder",
+  "statement": "At Incahuasi twist/attachment follow the recorder and season.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "recorder cross-tab",
+  "numbers": "S on 4490/4490; Z on 1214/1217",
+  "script": "scripts/deep/meta_d_recorder.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "adjacent-accession-no-links",
+  "statement": "Adjacent accession numbers show no value links; identical accession means one object in parts.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "pair count",
+  "numbers": "0 links in 188 adjacent pairs",
+  "script": "scripts/deep/meta_b_accession.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "corpus-null-overreports",
+  "statement": "Shuffling values across the whole corpus over-reports links ~30×; nulls must match magnitude.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "null comparison",
+  "numbers": "~30×",
+  "script": "scripts/deep/graph_common.py; scripts/deep/vocab_e_rarevalue_links.py",
+  "story": "/stories/totals-that-travel",
+  "prior": null,
+  "confounds": null,
+  "repro": "constant"
+ },
+ {
+  "id": "mk-relations-chance",
+  "statement": "Medrano & Khosla's pendant-sum relations 1–3 occur at near-chance rates under within-khipu shuffles; '74% of khipus have sums' is expected by chance.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "held",
+  "test": "within-khipu pendant shuffle, R=200",
+  "numbers": "r1 8648 vs 8525±65; r2 3470 vs 3056; r3 2538 vs 2369; any relation 500 vs 481.6 of 678",
+  "script": "scripts/mk/mk_sig_nulls.py; scripts/build_chance.py; public/data/stories/chance.json",
+  "story": "/stories/what-chance-can-do",
+  "prior": "contests Medrano & Khosla 2024",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "adjacent-sums-real",
+  "statement": "Adjacent pendant sums (sum cord beside its parts) are real.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "shuffle",
+  "numbers": "740 vs 584±24",
+  "script": "scripts/mk/mk_sig_analyse.py; scripts/build_chance.py",
+  "story": "/stories/what-chance-can-do",
+  "prior": "Medrano & Khosla 2024 (as relation 1 subset)",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "sum-khipus-excess",
+  "statement": "About 35–40 khipus show excess sums beyond chance (per-khipu profile: 48 clear / 29 some / 428 none).",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "per-khipu z, min p × tests",
+  "numbers": "48/29/428",
+  "script": "scripts/mk/mk_sig_analyse.py; scripts/build_profiles.py",
+  "story": "/stories/what-chance-can-do",
+  "prior": null,
+  "confounds": "multiple testing correction crude",
+  "repro": "script"
+ },
+ {
+  "id": "mk-top-cord-sums-real",
+  "statement": "Top-cord sums exceed chance (~3×).",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "shuffle",
+  "numbers": "r9 101 vs 32.1±4.5",
+  "script": "scripts/mk/mk_sig_nulls.py; scripts/build_chance.py",
+  "story": "/stories/what-chance-can-do",
+  "prior": "Medrano & Khosla 2024",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "mk-white-starts-sum",
+  "statement": "White pendants start sum clusters (M&K: 41% vs 32%).",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "fell",
+  "test": "control for value decade",
+  "numbers": "vanishes; our lift 48–50% vs 43%",
+  "script": "scripts/mk/mk_sig_whiteclusters.py",
+  "story": "/stories/what-chance-can-do",
+  "prior": "Medrano & Khosla 2024",
+  "confounds": "colour rule differences",
+  "repro": "script"
+ },
+ {
+  "id": "mk-86pct-flanking",
+  "statement": "Sum clusters sit next to other sum clusters or knotless groups (86%).",
+  "khipus": [],
+  "kind": "method",
+  "status": "fell",
+  "test": "same metric on non-sum groups",
+  "numbers": "non-sum 87% — mislabelled metric",
+  "script": "scripts/mk/mk_sig_analyse.py",
+  "story": null,
+  "prior": "Medrano & Khosla 2024",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "mk-working-summary-typology",
+  "statement": "Khipus split into 'working' and 'summary' types by magnitude.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "continuum test; excess vs magnitude",
+  "numbers": "continuum; excess rises with magnitude (1000+: 217 vs 101)",
+  "script": "scripts/mk/mk_type_analyse.py; scripts/mk/mk_type_features.py",
+  "story": "/stories/what-chance-can-do",
+  "prior": "Medrano & Khosla 2024",
+  "confounds": "arithmetic-poor at high magnitude is mechanical",
+  "repro": "script"
+ },
+ {
+  "id": "top-cords-banding",
+  "statement": "Top-cord khipus lean colour-banded.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "held",
+  "test": "proportion",
+  "numbers": "65% vs 41%",
+  "script": "scripts/mk/mk_type_analyse.py; scripts/deep/tree_topcords.py",
+  "story": "/stories/totals-that-travel",
+  "prior": "Medrano & Khosla 2024 (~96% banded)",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "up-hierarchy-magnitude",
+  "statement": "Magnitude rises up the hierarchy in linked pairs.",
+  "khipus": [],
+  "kind": "grammar",
+  "status": "likely",
+  "test": "paired comparison",
+  "numbers": "10/12 linked pairs",
+  "script": "scripts/mk/mk_type_pairs.py",
+  "story": null,
+  "prior": null,
+  "confounds": "small n",
+  "repro": "script"
+ },
+ {
+  "id": "splice-test-no-power",
+  "statement": "The M&K cross-break splice test has no power.",
+  "khipus": [
+   "KH0468"
+  ],
+  "kind": "method",
+  "status": "held",
+  "test": "artificial cuts",
+  "numbers": "0/197 detected; KH0468 p≈0.2; B+A beats A+B",
+  "script": "scripts/mk/mk_join_power.py; scripts/mk/mk_join_kh0468.py; scripts/mk/mk_join_validate.py",
+  "story": null,
+  "prior": "Medrano & Khosla 2024 KH0468 rejoin",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0468-rejoin",
+  "statement": "KH0468 (VA16135a/b) halves rejoin by cross-break sums.",
+  "khipus": [
+   "KH0468"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "splice test",
+  "numbers": "p≈0.2 in our port",
+  "script": "scripts/mk/mk_join_kh0468.py",
+  "story": null,
+  "prior": "Medrano & Khosla 2024",
+  "confounds": "test powerless",
+  "repro": "script"
+ },
+ {
+  "id": "mk-port-reproduces",
+  "statement": "Our port reproduces M&K's instances exactly on the 286 khipus unchanged since 2024; several of their totals (17,414, relation 4, 376 top cords) are not reproducible from their files.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "port vs companion data (Zenodo 10472429)",
+  "numbers": "286 exact; 364 khipus changed in KFG since",
+  "script": "scripts/mk/mk_port_compare.py; scripts/mk/mk_port_validate.py; scripts/mk/mk_port_snapshot.py",
+  "story": null,
+  "prior": "Medrano & Khosla 2024",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "mk-replication-counts",
+  "statement": "Replicated M&K corpus figures: top cords on 59 khipus/366 cords, 108 sum + 18 double on 36 khipus, 75/126 on six-cord groups; right-handed 56%/60% vs 50%/47%.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "replication",
+  "numbers": "see statement",
+  "script": null,
+  "story": null,
+  "prior": "Medrano & Khosla 2024",
+  "confounds": null,
+  "repro": "scratchpad"
+ },
+ {
+  "id": "inkawasi-fixed-deduction",
+  "statement": "The Inkawasi ledgers are best read as fixed deductions (Urton & Chu), with white = first cord, not a sum.",
+  "khipus": [
+   "KH0503",
+   "KH0504",
+   "KH0514",
+   "KH0505",
+   "KH0502"
+  ],
+  "kind": "reading",
+  "status": "held",
+  "test": "compare readings; white in balanced vs unbalanced groups",
+  "numbers": "white equal across balance; brown mirrors balance",
+  "script": "scripts/mk/mk_ink_groups.py; scripts/mk/mk_ink_tally.py",
+  "story": "/stories/inkawasi",
+  "prior": "Urton & Chu 2015; contra Medrano & Khosla 2024 and Clindaniel",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "mk-inkawasi-white-sum",
+  "statement": "At Inkawasi the white first cord is the sum of the rest (a = b + c).",
+  "khipus": [
+   "KH0514",
+   "KH0502",
+   "KH0504",
+   "KH0505",
+   "KH0506",
+   "KH0513"
+  ],
+  "kind": "reading",
+  "status": "fell",
+  "test": "as above",
+  "numbers": "white ≠ sum",
+  "script": "scripts/mk/mk_ink_groups.py",
+  "story": "/stories/inkawasi",
+  "prior": "Medrano & Khosla 2024",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "ur255-blanks-remainder",
+  "statement": "UR255 (KH0491) blanks are always the remainder, fixing the deduction order.",
+  "khipus": [
+   "KH0491"
+  ],
+  "kind": "reading",
+  "status": "likely",
+  "test": "group inspection",
+  "numbers": "always",
+  "script": "scripts/mk/mk_ink_near.py",
+  "story": "/stories/inkawasi",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "inkawasi-sector-b",
+  "statement": "Sector-B Inkawasi relations (10/23) exceed chance.",
+  "khipus": [],
+  "kind": "null-result",
+  "status": "fell",
+  "test": "null",
+  "numbers": "10/23 = null",
+  "script": "scripts/mk/mk_ink_sectorb.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "value-knot-conflicts",
+  "statement": "104 KFG cords on 49 khipus have Value ≠ sum of knot tokens, all KFG-side.",
+  "khipus": [
+   "KH0004",
+   "KH0081",
+   "KH0362",
+   "KH0505"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "ETL recompute",
+  "numbers": "104 cords / 49 khipus (causes: reordered, logged-edit, knot-token, zero-value, no-knots, unexplained)",
+  "script": "scripts/mk/value_knot_conflicts.py; scripts/build_data.py value_conflicts()",
+  "story": null,
+  "prior": null,
+  "confounds": "KH0004 2025 reversal moved knots not Values",
+  "repro": "live"
+ },
+ {
+  "id": "puruchuco-levels",
+  "statement": "Puruchuco hierarchy: level I UR063/UR073, II UR064/UR068, III UR066/UR067; UR065 outside.",
+  "khipus": [
+   "KH0300",
+   "KH0301",
+   "KH0302",
+   "KH0303",
+   "KH0304",
+   "KH0305"
+  ],
+  "kind": "reading",
+  "status": "published-prior",
+  "test": "literature",
+  "numbers": "—",
+  "script": null,
+  "story": null,
+  "prior": "Urton 2017 pp. 90–97; Urton & Brezine 2005",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "inkawasi-mirrors",
+  "statement": "UR267A↔UR255, UR267B↔UR256, UR275↔UR266 are mirror pairs (same sums, fixed deduction moved).",
+  "khipus": [
+   "KH0503",
+   "KH0491",
+   "KH0504",
+   "KH0492",
+   "KH0514",
+   "KH0502"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "shared values group for group",
+  "numbers": "—",
+  "script": "src/lib/stories/derive.ts",
+  "story": "/stories/inkawasi",
+  "prior": "Urton & Chu 2015; Urton 2017 ch. 9",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "inkawasi-fixed-values",
+  "statement": "Inkawasi ledgers deduct fixed 15 (UR267A), 10 (UR267B), 47 (UR275), 208 (UR268).",
+  "khipus": [
+   "KH0503",
+   "KH0504",
+   "KH0514",
+   "KH0505"
+  ],
+  "kind": "reading",
+  "status": "published-prior",
+  "test": "derive in app",
+  "numbers": "—",
+  "script": "src/lib/stories/derive.ts",
+  "story": "/stories/inkawasi",
+  "prior": "Urton & Chu 2015",
+  "confounds": "KFG UR268 p2 = 200 vs paper 208",
+  "repro": "live"
+ },
+ {
+  "id": "kh0498-kh0507-61",
+  "statement": "UR262 and UR270 share 61 values; relation unread.",
+  "khipus": [
+   "KH0498",
+   "KH0507"
+  ],
+  "kind": "link",
+  "status": "open",
+  "test": "value overlap",
+  "numbers": "61 shared",
+  "script": null,
+  "story": "/stories/inkawasi",
+  "prior": null,
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "urton-2005-berlin-pairs",
+  "statement": "Urton's Berlin matched pairs AS114/AS123 (16 in order), AS159/AS173 (7 in order), AS116/AS150 (no shared run found by our scan).",
+  "khipus": [
+   "KH0128",
+   "KH0137",
+   "KH0175",
+   "KH0190",
+   "KH0130",
+   "KH0166"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "exact scan",
+  "numbers": "16 / 7 / 0",
+  "script": "scripts/shared_passages.py",
+  "story": null,
+  "prior": "Urton 2005 LAQ 16",
+  "confounds": "AS116/AS150 not supported by recorded values",
+  "repro": "script"
+ },
+ {
+  "id": "urton-2017-table-6-1",
+  "statement": "Urton's six 'closely matched' Pachacamac pairs (table 6.1) share cord counts/totals but values barely align.",
+  "khipus": [
+   "KH0147",
+   "KH0108",
+   "KH0160",
+   "KH0456",
+   "KH0167",
+   "KH0207",
+   "KH0109",
+   "KH0434",
+   "KH0550",
+   "KH0479",
+   "KH0463",
+   "KH0467"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "best alignment",
+  "numbers": "≤7 exact per pair",
+  "script": "scripts/shared_passages.py",
+  "story": null,
+  "prior": "Urton 2017 pp. 118–120, table 6.1",
+  "confounds": "matching by totals is weak evidence",
+  "repro": "script"
+ },
+ {
+  "id": "puruchuco-pairs",
+  "statement": "UR066↔UR067 (20 values in order) and UR064↔UR068 (runs 14 and 7) are matched.",
+  "khipus": [
+   "KH0303",
+   "KH0304",
+   "KH0301",
+   "KH0305"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "exact scan",
+  "numbers": "20; 14+7",
+  "script": "scripts/shared_passages.py",
+  "story": null,
+  "prior": "Urton & Brezine 2005",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0140-kh0483-one-khipu",
+  "statement": "KH0140 (AS125) and KH0483 (UR247) are one khipu.",
+  "khipus": [
+   "KH0140",
+   "KH0483"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "shared values",
+  "numbers": "12 in order; 14/15 distinct values",
+  "script": "scripts/shared_passages.py",
+  "story": null,
+  "prior": "catalogue (KFG only; naming table keeps apart)",
+  "confounds": "VA42610 vs VA42670",
+  "repro": "script"
+ },
+ {
+  "id": "kh0028-kh0027-object",
+  "statement": "AS026A/AS026B are one Penn accession tied together.",
+  "khipus": [
+   "KH0027",
+   "KH0028"
+  ],
+  "kind": "link",
+  "status": "published-prior",
+  "test": "catalogue",
+  "numbers": "—",
+  "script": null,
+  "story": "/stories/proportional-template",
+  "prior": "catalogue",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "rounded-copy",
+  "statement": "KH0362 is a selectively blanked and rounded copy of KH0049's four 18-field tables.",
+  "khipus": [
+   "KH0049",
+   "KH0362"
+  ],
+  "kind": "link",
+  "status": "likely",
+  "test": "field alignment",
+  "numbers": "38/72 exact",
+  "script": "scripts/cross_khipu_analysis.py; src/lib/stories/crosslinks.ts",
+  "story": "/stories/rounded-copy",
+  "prior": "not found",
+  "confounds": "direction of derivation inferred",
+  "repro": "live"
+ },
+ {
+  "id": "brown-eight",
+  "statement": "A brown group of KH0377 reappears inside a KH0590 group: eight values, order, colour, knot types.",
+  "khipus": [
+   "KH0377",
+   "KH0590"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "exact match",
+  "numbers": "8/8",
+  "script": "scripts/cross_khipu_analysis.py; src/lib/stories/crosslinks.ts",
+  "story": "/stories/brown-eight",
+  "prior": "not found",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "six-fields",
+  "statement": "KH0358 and KH0602 carry the same six nonzero values while colour, attachment and knot height change.",
+  "khipus": [
+   "KH0358",
+   "KH0602"
+  ],
+  "kind": "link",
+  "status": "held",
+  "test": "exact match",
+  "numbers": "6/6",
+  "script": "scripts/cross_khipu_analysis.py; src/lib/stories/crosslinks.ts",
+  "story": "/stories/six-fields",
+  "prior": "not found",
+  "confounds": null,
+  "repro": "live"
+ },
+ {
+  "id": "kh0170-kh0171-accession-pair",
+  "statement": "KH0170↔KH0171 are an accession pair once KH0171 is corrected to VA37867B.",
+  "khipus": [
+   "KH0170",
+   "KH0171"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "source audit (KFG+OKR vs museum+Ascher+registry)",
+  "numbers": "—",
+  "script": "scripts/source_audit.py; scripts/build_data.py SOURCE_OVERRIDES",
+  "story": "/network",
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "santa-valley-census",
+  "statement": "The six Santa valley khipus (133 groups of six) match a 1670 census of 132 tributaries; recto/verso marks moiety.",
+  "khipus": [
+   "KH0323",
+   "KH0324",
+   "KH0325",
+   "KH0326",
+   "KH0327",
+   "KH0328"
+  ],
+  "kind": "reading",
+  "status": "published-prior",
+  "test": "literature; our sextet chunking",
+  "numbers": "134 groups vs authors' 133; first-cord sum 359 not reproduced",
+  "script": "src/lib/stories/derive.ts",
+  "story": "/stories/santa-valley",
+  "prior": "Medrano & Urton 2018; arXiv 2607.00185; FitzPatrick 2024/2026",
+  "confounds": "chunking choices (13 top cords, 5 markers dropped)",
+  "repro": "live"
+ },
+ {
+  "id": "santa-names-from-colours",
+  "statement": "Colours on the Santa khipus encode names.",
+  "khipus": [
+   "KH0323"
+  ],
+  "kind": "reading",
+  "status": "open",
+  "test": "none",
+  "numbers": "—",
+  "script": null,
+  "story": "/stories/santa-valley",
+  "prior": "Medrano 2021",
+  "confounds": null,
+  "repro": "none"
+ },
+ {
+  "id": "collata-cord-types",
+  "statement": "The Collata khipus have 95 cord types (fibre, dye, twist); last three cords may spell a lineage name.",
+  "khipus": [],
+  "kind": "reading",
+  "status": "published-prior",
+  "test": "transcription from Hyland 2017",
+  "numbers": "95 types",
+  "script": "src/lib/stories/collata.ts",
+  "story": "/stories/collata",
+  "prior": "Hyland 2017",
+  "confounds": "not in KFG/OKR — no data to test",
+  "repro": "none"
+ },
+ {
+  "id": "kfg-fieldmark-rule",
+  "statement": "The KFG coloured-pendant-sum rule is reverse engineered (top cords included, zeros removed before windowing, raw Ascher colour key, sum ≥11, ≥3 summands, one-hand window, fewest summands).",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "match against KFG detail tables",
+  "numbers": "15 khipus / 981 sums exact",
+  "script": "scripts/check_sums.mts; src/lib/khipu/fieldmarks.ts",
+  "story": null,
+  "prior": "Khipu Field Guide (no published algorithm)",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kfg-any-colour-rule",
+  "statement": "The KFG plain pendant-pendant sum selection rule.",
+  "khipus": [],
+  "kind": "method",
+  "status": "open",
+  "test": "fit",
+  "numbers": "85/106 best fit; unexplained filter",
+  "script": "scripts/check_sums.mts",
+  "story": null,
+  "prior": "Khipu Field Guide",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kfg-fieldmark-index-stale",
+  "statement": "The KFG fieldmark index page is stale (lists 248; ≥25 more khipus have pages).",
+  "khipus": [
+   "KH0082"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "page crawl",
+  "numbers": "248 vs 273+",
+  "script": null,
+  "story": null,
+  "prior": "KFG",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "knot-count-semantics",
+  "statement": "KFG knot strings: leading number is turns for L/LL/BL/SP but a count for S/E/EE/TF.",
+  "khipus": [],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "ETL",
+  "numbers": "naive 236k knots vs ~126.5k correct",
+  "script": "scripts/build_data.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "zero-length-pendants",
+  "statement": "75 zero-length knotted 'pendants' in 24 workbooks are primary-cord knots (e.g. AS107 p27–29; real AS107 has 26 pendants).",
+  "khipus": [
+   "KH0121",
+   "KH0473"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "source audit + Thompson changelog",
+  "numbers": "75 in 24",
+  "script": "scripts/source_audit.py",
+  "story": null,
+  "prior": "Thompson changelog",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kfg-okr-agreement",
+  "statement": "KFG and OKR level-1 values are identical for 427 of 618 khipus; most differences are logged KFG re-transcriptions.",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "source audit",
+  "numbers": "427/618",
+  "script": "scripts/source_audit.py; public/data/stories/source-audit.json",
+  "story": null,
+  "prior": null,
+  "confounds": "OKR and Ascher are one lineage",
+  "repro": "script"
+ },
+ {
+  "id": "kh0140-provenance",
+  "statement": "KH0140's provenance is Pachacamac, not 'Marquez'.",
+  "khipus": [
+   "KH0140"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "Ascher AS97 list + museum VA 42610",
+  "numbers": "—",
+  "script": "scripts/source_audit.py; scripts/build_data.py SOURCE_OVERRIDES",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "basel-provenance-huacho",
+  "statement": "Basel IVc.366.03 comes from a burial ground near Huacho (Masarey, 1910), not Gaffron.",
+  "khipus": [
+   "KH0682",
+   "KH0683",
+   "KH0684",
+   "KH0685",
+   "KH0686",
+   "KH0687",
+   "KH0688",
+   "KH0689",
+   "KH0690",
+   "KH0691"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "museum 1910 report",
+  "numbers": "—",
+  "script": "scripts/build_data.py SOURCE_OVERRIDES",
+  "story": "/stories/pachacamac-fragment",
+  "prior": "Medrano 2022 St Andrews thesis",
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "as129-accession",
+  "statement": "AS129 (KH0144) is VA47098; the Aschers (and OKR) misread 77098.",
+  "khipus": [
+   "KH0144"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "museum catalogue",
+  "numbers": "—",
+  "script": "scripts/source_audit.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "okr-museum-num-offset",
+  "statement": "~50 OKR khipu_main.MUSEUM_NUM values sit one row off (KH0587–KH0606 and blocks in KH0148–0481).",
+  "khipus": [],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "source audit",
+  "numbers": "~50",
+  "script": "scripts/source_audit.py",
+  "story": null,
+  "prior": null,
+  "confounds": "OKR+Ascher not independent",
+  "repro": "script"
+ },
+ {
+  "id": "metadata-conflicts-open",
+  "statement": "Unresolved metadata conflicts: KH0140 VA42610/42670, KH0099 find-spot, KH0088 provenance, AS149 VA44866C, Dallas QU02/03/14, UR212 VA42508(A).",
+  "khipus": [
+   "KH0140",
+   "KH0099",
+   "KH0088",
+   "KH0165",
+   "KH0452"
+  ],
+  "kind": "data-correction",
+  "status": "open",
+  "test": "source comparison",
+  "numbers": "—",
+  "script": "scripts/source_audit.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "kh0362-p15-value",
+  "statement": "KH0362 p15 is recorded 2700 (KFG) vs 270 (OKR) vs 2070 (log).",
+  "khipus": [
+   "KH0362"
+  ],
+  "kind": "data-correction",
+  "status": "open",
+  "test": "source comparison",
+  "numbers": "3 values",
+  "script": "scripts/source_audit.py",
+  "story": null,
+  "prior": null,
+  "confounds": "affects rounded-copy alignment",
+  "repro": "script"
+ },
+ {
+  "id": "ur268-p2-208",
+  "statement": "KFG records UR268 (KH0505) p2 as 200 where Urton & Chu read 208.",
+  "khipus": [
+   "KH0505"
+  ],
+  "kind": "data-correction",
+  "status": "open",
+  "test": "paper vs data",
+  "numbers": "200 vs 208",
+  "script": null,
+  "story": "/stories/inkawasi",
+  "prior": "Urton & Chu 2015",
+  "confounds": null,
+  "repro": "manual"
+ },
+ {
+  "id": "camelid-turn-sums",
+  "statement": "For the camelid long-knot-only family the KFG 'values' are sums of turns; exclude from decimal screens.",
+  "khipus": [
+   "KH0280",
+   "KH0281",
+   "KH0282",
+   "KH0288",
+   "KH0289",
+   "KH0346",
+   "KH0348"
+  ],
+  "kind": "data-correction",
+  "status": "held",
+  "test": "token parse",
+  "numbers": "—",
+  "script": "scripts/nonnumeric/canuto_family.py",
+  "story": null,
+  "prior": null,
+  "confounds": null,
+  "repro": "script"
+ },
+ {
+  "id": "novelty-tally",
+  "statement": "Of 59 curated links: 18 published, 6 catalogue, 35 not found in open sources (18 firm / 12 likely / 5 open).",
+  "khipus": [],
+  "kind": "method",
+  "status": "held",
+  "test": "literature audit (2 passes; Urton 2017 full text, Khipu-Biblio cross-reference)",
+  "numbers": "18/6/35",
+  "script": "src/lib/stories/links.ts (prior field)",
+  "story": "/network/$id",
+  "prior": "Urton 2017 & Chu 2015/2019 main texts, Urton 2001, Pereyra 2011 still unread",
+  "confounds": "'not found' ≠ novel",
+  "repro": "manual"
+ }
+]

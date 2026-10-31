@@ -1,0 +1,232 @@
+/* Chapter: When the order changes. Figure-specific rules only — shared styles live in base.css. */
+
+.mtx-source {
+	margin: 0.35rem 0 0;
+	font-family: "IBM Plex Mono", ui-monospace, monospace;
+	font-size: 0.72rem;
+	color: var(--ink-3);
+}
+
+/* ---------------------------------------------------------------- field map */
+
+.reorder-fieldmap {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.4rem;
+}
+
+.reorder-fieldmap-key {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 0.7rem;
+	margin: -0.1rem 0 0;
+	font-size: 0.74rem;
+	color: var(--ink-3);
+}
+
+.reorder-verdict-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin: 0.3rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.reorder-verdict {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	padding: 0.15rem 0.5rem;
+	border-radius: 999px;
+	border: 1px solid var(--hairline);
+	font-size: 0.74rem;
+	font-variant-numeric: tabular-nums;
+	color: var(--ink-2);
+}
+
+.reorder-verdict-field {
+	font-weight: 600;
+	color: var(--ink-3);
+}
+
+.reorder-verdict-mark {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.reorder-verdict.is-run .reorder-verdict-mark {
+	background: var(--series-1);
+}
+
+.reorder-verdict.is-slip .reorder-verdict-mark {
+	background: none;
+	border: 2px dashed var(--moiety-r);
+}
+
+.reorder-verdict.is-mismatch .reorder-verdict-mark {
+	background: none;
+	border: 2px dotted var(--hand-r);
+}
+
+.reorder-verdict.is-gap .reorder-verdict-mark {
+	background: none;
+	border: 1px solid var(--ink-3);
+	opacity: 0.5;
+}
+
+/* ---------------------------------------------------------------- unit player */
+
+.reorder-unit-player {
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+}
+
+/* ---------------------------------------------------------------- chunking */
+
+.reorder-chunk-player {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+
+.chunk-strip-label {
+	font-size: 0.76rem;
+	color: var(--ink-3);
+	margin-bottom: 0.25rem;
+}
+
+.chunk-strip-units {
+	display: flex;
+	gap: 2px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.chunk-unit {
+	width: 14px;
+	height: 20px;
+	border-radius: 2px;
+	border: 1px solid var(--hairline);
+	cursor: default;
+}
+
+.chunk-unit.is-strong {
+	background: var(--series-1);
+	opacity: 0.85;
+}
+
+.chunk-unit.is-partial {
+	background: none;
+	border: 2px dashed var(--moiety-r);
+}
+
+.chunk-unit.is-weak {
+	background: none;
+	border: 2px dotted var(--hand-r);
+}
+
+.chunk-unit.is-current {
+	outline: 2px solid var(--focus);
+	outline-offset: 1px;
+}
+
+/* ---------------------------------------------------------------- group sort */
+
+.reorder-sort-player {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	padding: 0.5rem;
+	border-radius: 8px;
+	border: 1px solid transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.reorder-sort-player {
+		transition:
+			background-color 0.4s ease,
+			border-color 0.4s ease;
+	}
+}
+
+.reorder-sort-player.is-matched {
+	background: var(--accent-wash);
+	border-color: var(--accent);
+}
+
+/* ---------------------------------------------------------------- basel ribbons */
+
+.basel-row-label {
+	font-size: 10px;
+	fill: var(--ink-3);
+}
+
+.basel-block rect {
+	stroke: var(--hairline);
+	stroke-width: 1;
+}
+
+.basel-block-white rect {
+	fill: var(--band-b);
+}
+
+.basel-block-brown rect {
+	fill: var(--band-a);
+}
+
+.basel-block text {
+	font-size: 10px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink);
+	text-anchor: middle;
+	pointer-events: none;
+}
+
+.basel-ribbon {
+	fill: none;
+	stroke: var(--accent);
+	stroke-width: 2.5;
+	opacity: 0.75;
+}
+
+.basel-flag {
+	fill: var(--ink-3);
+	stroke: var(--surface);
+	stroke-width: 1;
+}
+
+.basel-flag.is-weak {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-dasharray: 1.5 1;
+}
+
+/* ---------------------------------------------------------------- shelf align */
+
+.shelf-align-label {
+	font-size: 10px;
+	fill: var(--ink-2);
+}
+
+.shelf-align-bar {
+	fill: var(--surface-2);
+	stroke: var(--hairline);
+}
+
+.shelf-align-hl {
+	fill: var(--accent-wash);
+	stroke: var(--accent);
+	stroke-width: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.shelf-align-shift {
+		transition: transform 0.6s ease;
+	}
+}

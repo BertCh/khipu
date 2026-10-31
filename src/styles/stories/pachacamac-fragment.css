@@ -1,0 +1,168 @@
+/* The Basel reconstruction strip and placement table on /stories/pachacamac-fragment */
+
+.basel-strip {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	font-family: var(--font-ui);
+}
+
+.basel-strip text {
+	fill: var(--ink-2);
+	font-size: 9.5px;
+}
+
+.basel-strip .basel-strip-title {
+	fill: var(--ink-3);
+	font-size: 9px;
+	letter-spacing: 0.02em;
+}
+
+.basel-strip .basel-unit {
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.basel-strip .basel-unit.is-fixed {
+	fill: var(--ink);
+	font-weight: 600;
+}
+
+.basel-strip .basel-frag {
+	fill: var(--accent-ink);
+	font-size: 8px;
+	font-variant-numeric: tabular-nums;
+}
+
+.basel-primary {
+	stroke: var(--ink-3);
+	stroke-width: 2;
+}
+
+.basel-blank {
+	fill: var(--ink-3);
+	opacity: 0.55;
+}
+
+:root {
+	/* cord materials, not UI: dyed brown cotton and undyed white, kept legible on both grounds */
+	--basel-brown-cord: #7a4b22;
+	--basel-white-cord: #ece6d9;
+}
+
+:root[data-theme="dark"] {
+	--basel-brown-cord: #a86d38;
+	--basel-white-cord: #d8d2c5;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--basel-brown-cord: #a86d38;
+		--basel-white-cord: #d8d2c5;
+	}
+}
+
+.basel-brown {
+	fill: var(--basel-brown-cord);
+}
+
+.basel-white {
+	fill: var(--basel-white-cord);
+	stroke: var(--ink-3);
+	stroke-width: 0.75;
+}
+
+.basel-brown.is-inferred,
+.basel-white.is-inferred {
+	opacity: 0.32;
+}
+
+.basel-table td:first-child strong {
+	font-variant-numeric: tabular-nums;
+}
+
+.basel-totals td.num {
+	font-variant-numeric: tabular-nums;
+}
+
+/* step 1: three bands at true size, threaded */
+.bands-scroll {
+	overflow-x: auto;
+}
+.basel-bands {
+	display: block;
+	width: 100%;
+	height: auto;
+	font-family: var(--font-ui);
+}
+.basel-bands .bands-primary {
+	stroke: var(--ink-2);
+	stroke-width: 1.4;
+	fill: none;
+}
+.basel-bands .bands-cord {
+	stroke-width: 1.3;
+	fill: none;
+}
+.basel-bands .bands-thread {
+	fill: none;
+	stroke-width: 1.1;
+	opacity: 0.85;
+}
+.basel-bands .bands-thread.is-brown {
+	stroke: var(--basel-brown-cord);
+}
+.basel-bands .bands-thread.is-white {
+	stroke: var(--basel-white-cord);
+}
+.basel-bands .bands-thread-casing {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-width: 2.3;
+	opacity: 0.7;
+}
+.basel-bands .bands-label {
+	font-size: 9px;
+	fill: var(--ink-3);
+}
+.basel-bands .bands-frag {
+	font-size: 8.5px;
+	fill: var(--ink);
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+/* step 6: unit k joined to unit k across the three rows */
+.basel-strip .basel-link {
+	fill: none;
+	stroke-width: 1.4;
+}
+.basel-strip .basel-link.is-brown {
+	stroke: var(--basel-brown-cord);
+}
+.basel-strip .basel-link.is-white {
+	stroke: var(--ink-3);
+}
+.basel-strip .basel-link.is-inferred {
+	opacity: 0.22;
+	stroke-dasharray: 3 3;
+}
+.basel-strip .basel-strip-title {
+	paint-order: stroke;
+	stroke: var(--ground);
+	stroke-width: 4px;
+	stroke-linejoin: round;
+}
+.basel-bands .bands-frag,
+.basel-bands .bands-label {
+	paint-order: stroke;
+	stroke: var(--ground);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+}
+
+/* the subsidiary value runs are wider than a phone: they scroll */
+.pf-scroll {
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+}

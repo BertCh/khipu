@@ -1,0 +1,105 @@
+/* ---------------------------------------------------------------------------
+   Link-story card art and the connected-archive panels (stories index, home).
+   The weave is StrandWeave's inline / divider variant; these rules only size
+   it to the card and add the panel around it.
+   --------------------------------------------------------------------------- */
+
+.story-card-art-weave {
+	padding-block: 1rem;
+}
+.story-card-art-weave .strand-weave {
+	flex: 1;
+	min-width: 0;
+}
+.story-card-weave.strand-weave-inline {
+	--weave-h: 128px;
+	--weave-thread: 0.8;
+	--weave-w: 1;
+}
+
+/* Findings 03: the scan's measure against chance */
+.research-baseline {
+	margin-top: 0.6rem;
+	font-size: 0.82rem;
+	font-variant-numeric: tabular-nums;
+	color: var(--ink-3);
+}
+.research-findings .research-baseline b {
+	font-weight: 600;
+	color: var(--ink-2);
+}
+
+/* the connected-archive band (stories index) and panel (home) */
+.archive-band {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+	gap: 1.25rem 2rem;
+	align-items: center;
+	margin-top: 1.25rem;
+	padding: 1.25rem 1.4rem;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 12px;
+	color: var(--ink);
+	text-decoration: none;
+	transition: border-color 120ms ease;
+}
+.archive-band:hover {
+	border-color: var(--ink-3);
+}
+.archive-band-body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+.archive-band h2 {
+	font-size: 1.5rem;
+}
+.archive-band-body p {
+	color: var(--ink-2);
+	font-size: 0.92rem;
+}
+.archive-band-more {
+	margin-top: 0.3rem;
+	font-size: 0.88rem;
+	color: var(--accent-ink);
+}
+.archive-band-art .strand-weave {
+	margin: 0;
+}
+.archive-band-caption {
+	margin-top: 0.45rem;
+	font-size: 0.76rem;
+	color: var(--ink-3);
+}
+
+@media (max-width: 760px) {
+	.archive-band {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* home: stories and the connected archive side by side */
+.home-panels {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+	gap: 1.25rem;
+}
+.home-panel.archive-band {
+	grid-template-columns: 1fr;
+	align-content: start;
+	margin-top: 0;
+	gap: 1rem;
+}
+.home-panel .archive-band-more {
+	margin-top: auto;
+}
+.archive-panel-art .strand-weave {
+	margin: 0;
+}
+
+/* a bold card (undyed pair): heavier than the dyed cards, not a glare */
+.story-card-weave .weave-threads .is-strong {
+	stroke-width: calc(var(--weave-w) * 1.4);
+	stroke-opacity: 0.85;
+}

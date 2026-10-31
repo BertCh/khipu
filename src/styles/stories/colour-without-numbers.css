@@ -1,0 +1,4 @@
+/* Colour without numbers: breathing room where a figure is followed by prose. */
+.story-cwn .story-figure + .story-prose {
+	margin-top: 1.4rem;
+}

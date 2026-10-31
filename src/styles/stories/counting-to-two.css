@@ -1,0 +1,38 @@
+/* Story: Counting to two (KH0034 and KH0670). The grids and the register
+   plots are wider than a phone, so each scrolls inside its own box. */
+
+.ctt-scroll {
+	overflow-x: auto;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.6rem 0.8rem 0.4rem;
+}
+
+.ctt-scroll svg {
+	display: block;
+}
+
+/* the figure grid keeps two figures side by side where there is room */
+.ctt-pair {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+	gap: 1rem;
+	align-items: start;
+}
+
+/* a figure caption sits directly on the next paragraph otherwise */
+.ctt-story .story-figure + .story-prose {
+	margin-top: 1.4rem;
+}
+
+.ctt-story .ledger-table td.wrap {
+	white-space: normal;
+	max-width: 32ch;
+}
+
+/* the silhouettes are drawn at a fixed width; let them shrink on a phone */
+.ctt-story .figure .kh-silhouette {
+	max-width: 100%;
+	height: auto;
+}

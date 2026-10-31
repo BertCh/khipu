@@ -1,0 +1,235 @@
+/* Chapter: Seed and extend. Figure-specific rules only — shared styles live in base.css. */
+
+.sae-source {
+	display: block;
+	margin-top: 0.3rem;
+	color: var(--ink-3);
+	font-size: 0.78rem;
+}
+
+.sae-closing {
+	max-width: 62ch;
+}
+
+/* ---------------------------------------------------------------- shared legend */
+
+.sae-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem 0.9rem;
+	margin-top: 0.6rem;
+	font-size: 0.8rem;
+	color: var(--ink-2);
+}
+
+.sae-legend-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.sae-legend-swatch {
+	flex: none;
+	overflow: visible;
+}
+
+.is-yes {
+	color: var(--series-1);
+}
+
+.is-no {
+	color: var(--ink-3);
+}
+
+/* ---------------------------------------------------------------- step 2: window */
+
+.sae-window-fig {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.sae-w-toggle {
+	border: none;
+	padding: 0;
+	margin: 0;
+	min-width: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------------------- step 3: index */
+
+.sae-index-tapes {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.sae-index-buckets {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+	padding: 0.5rem;
+	min-height: 2.4rem;
+	background: var(--surface-2);
+	border: 1px solid var(--hairline);
+	border-radius: 8px;
+}
+
+.sae-index-empty {
+	color: var(--ink-3);
+	font-size: 0.8rem;
+	align-self: center;
+}
+
+.sae-bucket {
+	display: inline-flex;
+	flex-direction: column;
+	gap: 0.1rem;
+	padding: 0.25rem 0.5rem;
+	border: 1px solid var(--rule);
+	border-radius: 6px;
+	background: var(--surface);
+	font-size: 0.72rem;
+	line-height: 1.3;
+	transition:
+		border-color 0.3s ease,
+		background 0.3s ease;
+}
+
+.sae-bucket code {
+	font-size: 0.72rem;
+	color: var(--ink);
+}
+
+.sae-bucket-at {
+	color: var(--ink-3);
+}
+
+.sae-bucket.is-current {
+	border-color: var(--accent);
+	background: var(--accent-wash);
+}
+
+.sae-bucket.is-current code {
+	color: var(--accent-ink);
+	font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- step 4: extend */
+
+.sae-extend-tapes {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+/* ---------------------------------------------------------------- step 5: dotter */
+
+.sae-dotter {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+
+.sae-dotter-tools {
+	border: none;
+	padding: 0;
+	margin: 0;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.sae-dotter-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: 0.85rem;
+}
+
+.sae-dotter-label {
+	color: var(--ink-3);
+	font-size: 0.8rem;
+}
+
+.sae-dotter-slider {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	margin-left: 0.3rem;
+}
+
+.sae-dotter-slider input[type="range"] {
+	width: 140px;
+	accent-color: var(--accent);
+}
+
+.sae-dotter-stats {
+	margin: 0;
+	color: var(--ink-2);
+	font-size: 0.85rem;
+	font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- step 6: flip */
+
+.sae-flip {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.6rem;
+}
+
+.sae-flip-btn[aria-pressed="true"] {
+	background: var(--accent-wash);
+	border-color: var(--accent);
+	color: var(--accent-ink);
+}
+
+.sae-flip-stats {
+	margin: 0;
+	color: var(--ink-2);
+	font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------------------- step 7: corpus */
+
+.sae-corpus-note {
+	margin-top: 0.6rem;
+}
+
+/* ---------------------------------------------------------------- step 1: knots */
+
+.sae-knot-table {
+	min-width: 420px;
+}
+
+.sae-knot-clusters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem 0.7rem;
+}
+
+.sae-knot-cluster {
+	font-variant-numeric: tabular-nums;
+	color: var(--ink-2);
+	white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+	.sae-dotter-row {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.sae-dotter-slider {
+		margin-left: 0;
+	}
+}

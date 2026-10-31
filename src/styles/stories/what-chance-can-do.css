@@ -1,0 +1,218 @@
+/* Story: What chance can do (a re-check of Medrano & Khosla 2024). */
+
+/* ---- scatter */
+
+.wcc-plot-wrap {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.6rem 0.8rem 0.5rem;
+}
+
+.wcc-plot {
+	display: block;
+	width: 100%;
+	max-width: 680px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.wcc-grid {
+	stroke: var(--hairline);
+	stroke-width: 1;
+}
+
+.wcc-diag {
+	stroke: var(--rule);
+	stroke-width: 1.5;
+}
+
+.wcc-tk {
+	font-size: 10px;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.wcc-axis-t {
+	font-size: 11px;
+	fill: var(--ink-2);
+}
+
+.wcc-pt {
+	fill: var(--series-context);
+	fill-opacity: 0.6;
+	stroke: var(--surface);
+	stroke-width: 1;
+}
+
+.wcc-pt.is-sig {
+	fill: var(--series-1);
+	fill-opacity: 0.9;
+}
+
+.wcc-pt.is-marked {
+	stroke: var(--ink);
+	stroke-width: 1.5;
+	fill-opacity: 1;
+}
+
+.wcc-pt.is-hover {
+	fill: var(--ink);
+	fill-opacity: 1;
+}
+
+.wcc-plot-caption {
+	font-size: 0.82rem;
+	color: var(--ink-2);
+	min-height: 2.6em;
+	margin-top: 0.4rem;
+	font-variant-numeric: tabular-nums;
+}
+
+/* ---- shuffle demo */
+
+.wcc-demo {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.8rem 0.9rem 0.7rem;
+}
+
+.wcc-demo-tools {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wcc-demo-tools .diagram-tools {
+	margin: 0;
+}
+
+.wcc-demo-tools .layer-tabs {
+	margin: 0;
+}
+
+.wcc-shuffle {
+	font-weight: 600;
+}
+
+.wcc-demo-count {
+	margin: 0.8rem 0 0.4rem;
+	font-size: 0.9rem;
+	color: var(--ink-2);
+}
+
+.wcc-demo-count strong {
+	font-family: var(--font-display);
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--ink);
+	margin-right: 0.3rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.wcc-barcode,
+.wcc-strip {
+	width: 100%;
+}
+
+.wcc-barcode svg,
+.wcc-strip svg {
+	display: block;
+}
+
+.wcc-demo-caption {
+	font-size: 0.78rem;
+	color: var(--ink-3);
+	margin: 0.3rem 0 0.9rem;
+}
+
+.wcc-null {
+	fill: var(--series-context);
+	opacity: 0.75;
+}
+
+.wcc-mine {
+	fill: var(--surface);
+	stroke: var(--ink);
+	stroke-width: 1.5;
+}
+
+.chart-legend .wcc-legend-mine {
+	background: var(--surface);
+	border: 1.5px solid var(--ink);
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+.wcc-strip-label {
+	font-size: 11px;
+	fill: var(--ink);
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+.wcc-demo-verdict {
+	margin: 0.6rem 0 0;
+	font-size: 0.88rem;
+	color: var(--ink);
+	max-width: 70ch;
+}
+
+/* ---- scorecard */
+
+.story .wcc-score {
+	margin-top: 1.4rem;
+	max-height: none;
+	overflow-x: auto;
+}
+
+.wcc-score td {
+	vertical-align: top;
+}
+
+.wcc-score td.muted {
+	color: var(--ink-3);
+}
+
+.wcc-demo .chart-legend {
+	flex-wrap: wrap;
+	gap: 0.3rem 1rem;
+}
+
+/* the scatter scales down with its viewBox; keep its labels legible on a phone */
+@media (max-width: 640px) {
+	.wcc-plot .wcc-tk {
+		font-size: 16px;
+	}
+	.wcc-plot .wcc-axis-t {
+		font-size: 17px;
+	}
+}
+
+/* on a phone the scorecard wraps instead of scrolling; the Paper column goes */
+@media (max-width: 640px) {
+	.story .wcc-score .ledger-table th,
+	.story .wcc-score .ledger-table td {
+		white-space: normal;
+		min-width: 0;
+	}
+	.wcc-score th:nth-child(2),
+	.wcc-score td:nth-child(2) {
+		display: none;
+	}
+}
+
+/* ---- Step 8: two woven pairs, a firm account over a chance-level run */
+
+.wcc-weaves {
+	display: grid;
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.step:has(.wcc-weaves) .story-figure + .story-prose {
+	margin-top: 1.5rem;
+}

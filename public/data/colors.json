@@ -1,0 +1,770 @@
+{
+ "0B": {
+  "name": "moderate olive brown",
+  "hex": "#64400f",
+  "rgb": [
+   100,
+   64,
+   15
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 95
+ },
+ "0D": {
+  "name": "dark grayish olive green",
+  "hex": "#27261a",
+  "rgb": [
+   39,
+   38,
+   26
+  ],
+  "family": "G",
+  "intensity": 4,
+  "isccNbs": 128
+ },
+ "0G": {
+  "name": "light grayish olive",
+  "hex": "#8b734b",
+  "rgb": [
+   139,
+   115,
+   75
+  ],
+  "family": "L",
+  "intensity": 2,
+  "isccNbs": 109
+ },
+ "0K": {
+  "name": "olive black",
+  "hex": "#121910",
+  "rgb": [
+   18,
+   25,
+   16
+  ],
+  "family": "Z",
+  "intensity": 5,
+  "isccNbs": 114
+ },
+ "0L": {
+  "name": "dark grayish olive",
+  "hex": "#2b2517",
+  "rgb": [
+   43,
+   37,
+   23
+  ],
+  "family": "L",
+  "intensity": 4,
+  "isccNbs": 111
+ },
+ "0R": {
+  "name": "deep orange",
+  "hex": "#c34d0a",
+  "rgb": [
+   195,
+   77,
+   10
+  ],
+  "family": "N",
+  "intensity": 3,
+  "isccNbs": 51
+ },
+ "0Y": {
+  "name": "dark orange yellow",
+  "hex": "#c37629",
+  "rgb": [
+   195,
+   118,
+   41
+  ],
+  "family": "Y",
+  "intensity": 3,
+  "isccNbs": 72
+ },
+ "AB": {
+  "name": "light brown",
+  "hex": "#a86540",
+  "rgb": [
+   168,
+   101,
+   64
+  ],
+  "family": "B",
+  "intensity": 2,
+  "isccNbs": 57
+ },
+ "B": {
+  "name": "moderate yellowish brown",
+  "hex": "#7d512d",
+  "rgb": [
+   125,
+   81,
+   45
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 77
+ },
+ "BB": {
+  "name": "dark yellowish brown",
+  "hex": "#3f2512",
+  "rgb": [
+   63,
+   37,
+   18
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 78
+ },
+ "BD": {
+  "name": "dark grayish yellowish brown",
+  "hex": "#3d2b1f",
+  "rgb": [
+   61,
+   43,
+   31
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 81
+ },
+ "BG": {
+  "name": "grayish blue",
+  "hex": "#4a545c",
+  "rgb": [
+   74,
+   84,
+   92
+  ],
+  "family": "H",
+  "intensity": 3,
+  "isccNbs": 186
+ },
+ "BL": {
+  "name": "pale blue",
+  "hex": "#919192",
+  "rgb": [
+   145,
+   145,
+   146
+  ],
+  "family": "H",
+  "intensity": 2,
+  "isccNbs": 185
+ },
+ "BS": {
+  "name": "strong brown",
+  "hex": "#753313",
+  "rgb": [
+   117,
+   51,
+   19
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 55
+ },
+ "BY": {
+  "name": "light grayish yellowish brown",
+  "hex": "#b48764",
+  "rgb": [
+   180,
+   135,
+   100
+  ],
+  "family": "B",
+  "intensity": 2,
+  "isccNbs": 79
+ },
+ "CB": {
+  "name": "dark grayish brown",
+  "hex": "#32221a",
+  "rgb": [
+   50,
+   34,
+   26
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 62
+ },
+ "D0": {
+  "name": "dark olive",
+  "hex": "#362c12",
+  "rgb": [
+   54,
+   44,
+   18
+  ],
+  "family": "L",
+  "intensity": 4,
+  "isccNbs": 108
+ },
+ "DB": {
+  "name": "deep brown",
+  "hex": "#4d220e",
+  "rgb": [
+   77,
+   34,
+   14
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 56
+ },
+ "DG": {
+  "name": "dark olive green",
+  "hex": "#232c16",
+  "rgb": [
+   35,
+   44,
+   22
+  ],
+  "family": "G",
+  "intensity": 4,
+  "isccNbs": 126
+ },
+ "EB": {
+  "name": "grayish yellowish brown",
+  "hex": "#785840",
+  "rgb": [
+   120,
+   88,
+   64
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 80
+ },
+ "FB": {
+  "name": "brownish black",
+  "hex": "#140f0b",
+  "rgb": [
+   20,
+   15,
+   11
+  ],
+  "family": "Z",
+  "intensity": 5,
+  "isccNbs": 65
+ },
+ "FR": {
+  "name": "strong reddish brown",
+  "hex": "#7f180d",
+  "rgb": [
+   127,
+   24,
+   13
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 40
+ },
+ "G": {
+  "name": "grayish olive green",
+  "hex": "#48442d",
+  "rgb": [
+   72,
+   68,
+   45
+  ],
+  "family": "L",
+  "intensity": 3,
+  "isccNbs": 127
+ },
+ "G0": {
+  "name": "grayish olive",
+  "hex": "#52442c",
+  "rgb": [
+   82,
+   68,
+   44
+  ],
+  "family": "L",
+  "intensity": 3,
+  "isccNbs": 110
+ },
+ "GA": {
+  "name": "brownish gray",
+  "hex": "#503d33",
+  "rgb": [
+   80,
+   61,
+   51
+  ],
+  "family": "M",
+  "intensity": 4,
+  "isccNbs": 64
+ },
+ "GB": {
+  "name": "light grayish reddish brown",
+  "hex": "#966a57",
+  "rgb": [
+   150,
+   106,
+   87
+  ],
+  "family": "B",
+  "intensity": 2,
+  "isccNbs": 45
+ },
+ "GG": {
+  "name": "grayish green",
+  "hex": "#575e4e",
+  "rgb": [
+   87,
+   94,
+   78
+  ],
+  "family": "G",
+  "intensity": 3,
+  "isccNbs": 150
+ },
+ "GL": {
+  "name": "moderate greenish blue",
+  "hex": "#30626b",
+  "rgb": [
+   48,
+   98,
+   107
+  ],
+  "family": "H",
+  "intensity": 3,
+  "isccNbs": 173
+ },
+ "GR": {
+  "name": "dark green",
+  "hex": "#49423d",
+  "rgb": [
+   73,
+   66,
+   61
+  ],
+  "family": "G",
+  "intensity": 4,
+  "isccNbs": 266
+ },
+ "GY": {
+  "name": "olive gray",
+  "hex": "#4d4234",
+  "rgb": [
+   77,
+   66,
+   52
+  ],
+  "family": "M",
+  "intensity": 4,
+  "isccNbs": 113
+ },
+ "HB": {
+  "name": "grayish brown",
+  "hex": "#5a3d30",
+  "rgb": [
+   90,
+   61,
+   48
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 61
+ },
+ "KB": {
+  "name": "dark brown",
+  "hex": "#38170c",
+  "rgb": [
+   56,
+   23,
+   12
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 59
+ },
+ "KG": {
+  "name": "dark greenish gray",
+  "hex": "#45433b",
+  "rgb": [
+   69,
+   67,
+   59
+  ],
+  "family": "M",
+  "intensity": 4,
+  "isccNbs": 156
+ },
+ "LA": {
+  "name": "bluish gray",
+  "hex": "#7d746d",
+  "rgb": [
+   125,
+   116,
+   109
+  ],
+  "family": "M",
+  "intensity": 3,
+  "isccNbs": 191
+ },
+ "LB": {
+  "name": "deep yellowish brown",
+  "hex": "#593315",
+  "rgb": [
+   89,
+   51,
+   21
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 75
+ },
+ "LC": {
+  "name": "dark grayish blue",
+  "hex": "#2c3337",
+  "rgb": [
+   44,
+   51,
+   55
+  ],
+  "family": "H",
+  "intensity": 4,
+  "isccNbs": 187
+ },
+ "LD": {
+  "name": "dark bluish gray",
+  "hex": "#464544",
+  "rgb": [
+   70,
+   69,
+   68
+  ],
+  "family": "M",
+  "intensity": 4,
+  "isccNbs": 192
+ },
+ "LG": {
+  "name": "light greenish gray",
+  "hex": "#baaf96",
+  "rgb": [
+   186,
+   175,
+   150
+  ],
+  "family": "M",
+  "intensity": 2,
+  "isccNbs": 154
+ },
+ "LK": {
+  "name": "black",
+  "hex": "#131313",
+  "rgb": [
+   19,
+   19,
+   19
+  ],
+  "family": "Z",
+  "intensity": 5,
+  "isccNbs": 267
+ },
+ "MB": {
+  "name": "moderate brown",
+  "hex": "#673923",
+  "rgb": [
+   103,
+   57,
+   35
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 58
+ },
+ "MG": {
+  "name": "medium gray",
+  "hex": "#817066",
+  "rgb": [
+   129,
+   112,
+   102
+  ],
+  "family": "M",
+  "intensity": 3,
+  "isccNbs": 265
+ },
+ "NB": {
+  "name": "strong yellowish brown",
+  "hex": "#95500c",
+  "rgb": [
+   149,
+   80,
+   12
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 74
+ },
+ "PB": {
+  "name": "deep blue",
+  "hex": "#002f55",
+  "rgb": [
+   0,
+   47,
+   85
+  ],
+  "family": "H",
+  "intensity": 3,
+  "isccNbs": 179
+ },
+ "PG": {
+  "name": "pale green",
+  "hex": "#8d917a",
+  "rgb": [
+   141,
+   145,
+   122
+  ],
+  "family": "G",
+  "intensity": 2,
+  "isccNbs": 149
+ },
+ "PK": {
+  "name": "unknown Urton color",
+  "hex": "#ee9086",
+  "rgb": [
+   238,
+   144,
+   134
+  ],
+  "family": "R",
+  "intensity": 2,
+  "isccNbs": 0
+ },
+ "PR": {
+  "name": "deep reddish brown",
+  "hex": "#490005",
+  "rgb": [
+   73,
+   0,
+   5
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 41
+ },
+ "R": {
+  "name": "dark reddish orange",
+  "hex": "#9b2f1f",
+  "rgb": [
+   155,
+   47,
+   31
+  ],
+  "family": "N",
+  "intensity": 4,
+  "isccNbs": 38
+ },
+ "R0": {
+  "name": "gray reddish orange",
+  "hex": "#b85d43",
+  "rgb": [
+   184,
+   93,
+   67
+  ],
+  "family": "N",
+  "intensity": 3,
+  "isccNbs": 39
+ },
+ "RB": {
+  "name": "moderate reddish brown",
+  "hex": "#712f26",
+  "rgb": [
+   113,
+   47,
+   38
+  ],
+  "family": "B",
+  "intensity": 3,
+  "isccNbs": 43
+ },
+ "RD": {
+  "name": "grayish reddish brown",
+  "hex": "#5e3830",
+  "rgb": [
+   94,
+   56,
+   48
+  ],
+  "family": "B",
+  "intensity": 4,
+  "isccNbs": 46
+ },
+ "RG": {
+  "name": "greenish gray",
+  "hex": "#7a7666",
+  "rgb": [
+   122,
+   118,
+   102
+  ],
+  "family": "M",
+  "intensity": 3,
+  "isccNbs": 155
+ },
+ "RL": {
+  "name": "light reddish brown",
+  "hex": "#aa6651",
+  "rgb": [
+   170,
+   102,
+   81
+  ],
+  "family": "B",
+  "intensity": 2,
+  "isccNbs": 42
+ },
+ "RM": {
+  "name": "moderate red",
+  "hex": "#ab343a",
+  "rgb": [
+   171,
+   52,
+   58
+  ],
+  "family": "R",
+  "intensity": 3,
+  "isccNbs": 15
+ },
+ "SB": {
+  "name": "brownish orange",
+  "hex": "#b15124",
+  "rgb": [
+   177,
+   81,
+   36
+  ],
+  "family": "N",
+  "intensity": 3,
+  "isccNbs": 54
+ },
+ "SR": {
+  "name": "strong red",
+  "hex": "#bf2233",
+  "rgb": [
+   191,
+   34,
+   51
+  ],
+  "family": "R",
+  "intensity": 3,
+  "isccNbs": 12
+ },
+ "SY": {
+  "name": "strong yellow",
+  "hex": "#e59e1f",
+  "rgb": [
+   229,
+   158,
+   31
+  ],
+  "family": "Y",
+  "intensity": 3,
+  "isccNbs": 84
+ },
+ "TG": {
+  "name": "dark bluish green",
+  "hex": "#013a33",
+  "rgb": [
+   1,
+   58,
+   51
+  ],
+  "family": "H",
+  "intensity": 4,
+  "isccNbs": 165
+ },
+ "VB": {
+  "name": "vivid dark greenish blue",
+  "hex": "#022027",
+  "rgb": [
+   2,
+   32,
+   39
+  ],
+  "family": "H",
+  "intensity": 4,
+  "isccNbs": 175
+ },
+ "VG": {
+  "name": "vivid dark green",
+  "hex": "#16251c",
+  "rgb": [
+   22,
+   37,
+   28
+  ],
+  "family": "G",
+  "intensity": 4,
+  "isccNbs": 147
+ },
+ "VR": {
+  "name": "vivid deep red",
+  "hex": "#4f0014",
+  "rgb": [
+   79,
+   0,
+   20
+  ],
+  "family": "R",
+  "intensity": 4,
+  "isccNbs": 14
+ },
+ "W": {
+  "name": "white",
+  "hex": "#f4f4f4",
+  "rgb": [
+   244,
+   244,
+   244
+  ],
+  "family": "A",
+  "intensity": 1,
+  "isccNbs": 0
+ },
+ "YB": {
+  "name": "light yellowish brown",
+  "hex": "#bb8b54",
+  "rgb": [
+   187,
+   139,
+   84
+  ],
+  "family": "B",
+  "intensity": 2,
+  "isccNbs": 76
+ },
+ "YG": {
+  "name": "dark grayish green",
+  "hex": "#313830",
+  "rgb": [
+   49,
+   56,
+   48
+  ],
+  "family": "G",
+  "intensity": 4,
+  "isccNbs": 151
+ },
+ "YY": {
+  "name": "pale yellow",
+  "hex": "#ffdb8b",
+  "rgb": [
+   255,
+   219,
+   139
+  ],
+  "family": "Y",
+  "intensity": 2,
+  "isccNbs": 89
+ }
+}

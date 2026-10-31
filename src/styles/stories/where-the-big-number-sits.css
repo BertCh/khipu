@@ -1,0 +1,75 @@
+/* where-the-big-number-sits story: value matrices, the position bars, silhouettes */
+
+.gg-matrix td.group {
+	white-space: nowrap;
+	color: var(--ink-2);
+}
+
+.gg-matrix .swatch {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	margin-right: 0.4em;
+	vertical-align: -1px;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+/* the always-empty seventh column */
+.gg-matrix th.blank-col,
+.gg-matrix td.blank-col {
+	background: color-mix(in srgb, var(--moiety-r) 8%, transparent);
+	color: var(--moiety-r);
+}
+
+.gg-matrix td.zero {
+	color: var(--ink-3);
+}
+
+/* cells that depart from the column's schedule value */
+.gg-matrix td.miss {
+	color: var(--moiety-r);
+	font-weight: 600;
+}
+
+.gg-matrix tr.mode td {
+	border-top: 2px solid var(--rule);
+	color: var(--accent);
+	font-weight: 500;
+}
+
+.gg-matrix tr.mode td.group {
+	color: var(--accent);
+}
+
+.gg-matrix tr.after td {
+	color: var(--ink-2);
+}
+
+.gg-matrix tr.after:first-of-type td {
+	border-top: 1px solid var(--rule);
+}
+
+.gg-matrix .muted {
+	color: var(--ink-3);
+	font-weight: 400;
+	font-size: 0.85em;
+}
+
+.gg-bars {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.75rem 1rem;
+}
+
+.gg-sils {
+	display: grid;
+	gap: 0.75rem;
+	overflow-x: auto;
+}
+
+.gg-sils svg {
+	max-width: 100%;
+	height: auto;
+}

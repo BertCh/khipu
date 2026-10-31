@@ -1,0 +1,1073 @@
+/* ---------------------------------------------------------------------------
+   /network — the map of linked khipus
+   --------------------------------------------------------------------------- */
+
+.network-page {
+	--kind-account: var(--accent);
+	--kind-derived: var(--moiety-r);
+	--kind-object: var(--ink);
+	--kind-passage: var(--series-context);
+}
+
+.network-stats {
+	margin-top: 1.5rem;
+}
+
+/* the kind toggles, one row above the map */
+.network-tools {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem 0.6rem;
+	margin-top: 1.75rem;
+	padding-bottom: 0.9rem;
+	border-bottom: 1px solid var(--hairline);
+}
+
+.network-kind {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.network-kind i,
+.network-key-row i,
+.network-kind-tag i,
+.network-link-head i,
+.network-detail-kind i {
+	display: inline-block;
+	width: 18px;
+	height: 0;
+	border-top: 2.5px solid var(--kind, var(--ink));
+	flex: none;
+}
+
+.network-kind-account,
+.link-edge-account {
+	--kind: var(--kind-account);
+}
+.network-kind-derived,
+.link-edge-derived {
+	--kind: var(--kind-derived);
+}
+.network-kind-object,
+.link-edge-object {
+	--kind: var(--kind-object);
+}
+.network-kind-passage,
+.link-edge-passage {
+	--kind: var(--kind-passage);
+}
+.network-kind-passage i,
+.network-key-row.network-kind-passage i,
+.network-kind-tag.network-kind-passage i {
+	border-top-style: dashed;
+	border-top-width: 1.5px;
+}
+
+.network-kind[aria-pressed="false"] {
+	color: var(--ink-3);
+	background: transparent;
+}
+.network-kind[aria-pressed="false"] i {
+	opacity: 0.35;
+}
+
+.network-weak {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: 0.85rem;
+	color: var(--ink-2);
+	margin-left: auto;
+}
+
+@media (max-width: 720px) {
+	.network-weak {
+		margin-left: 0;
+	}
+}
+
+/* the map */
+.link-map {
+	position: relative;
+	margin-top: 1rem;
+}
+
+.link-map svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.link-set {
+	fill: var(--surface);
+	stroke: var(--surface);
+	stroke-width: 56;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	paint-order: stroke;
+}
+
+/* a find-spot is the widest outline: a dashed hairline on the ground */
+.link-set-place {
+	fill: color-mix(in oklab, var(--surface) 55%, var(--ground));
+	stroke: color-mix(in oklab, var(--surface) 55%, var(--ground));
+	stroke-width: 76;
+}
+
+/* one museum number: a solid plate inside it */
+.link-set-accession {
+	fill: var(--surface);
+	stroke: var(--surface);
+	stroke-width: 48;
+}
+
+.link-edge-hit {
+	stroke: transparent;
+	stroke-width: 14;
+	cursor: pointer;
+}
+
+.link-edge-line {
+	stroke: var(--kind);
+	stroke-linecap: round;
+	pointer-events: none;
+	transition: opacity 120ms ease;
+}
+
+.link-edge-passage .link-edge-line,
+.link-edge-open .link-edge-line {
+	stroke-dasharray: 5 4;
+}
+.link-edge-account.link-edge-open .link-edge-line {
+	stroke-dasharray: 3 5;
+}
+
+.has-focus .link-edge:not(.is-lit) .link-edge-line {
+	opacity: 0.18;
+}
+.link-edge.is-lit .link-edge-line,
+.link-edge.is-selected .link-edge-line {
+	opacity: 1;
+}
+.link-edge.is-selected .link-edge-line {
+	stroke-width: 4;
+}
+
+.link-node {
+	cursor: pointer;
+	transition: opacity 120ms ease;
+}
+.has-focus .link-node:not(.is-lit) {
+	opacity: 0.3;
+}
+
+.link-node-halo {
+	fill: var(--surface);
+	stroke: transparent;
+	opacity: 0;
+}
+.link-node.is-lit .link-node-halo,
+.link-node:hover .link-node-halo {
+	opacity: 1;
+	stroke: var(--rule);
+}
+.link-node.is-selected .link-node-halo {
+	opacity: 1;
+	stroke: var(--accent);
+	stroke-width: 1.5;
+}
+
+.link-node-label {
+	font-size: 9.5px;
+	fill: var(--ink-2);
+	font-variant-numeric: tabular-nums;
+	pointer-events: none;
+}
+.link-node.is-selected .link-node-label,
+.link-node.is-lit .link-node-label {
+	fill: var(--ink);
+	font-weight: 600;
+}
+
+.link-island-label {
+	font-family: var(--font-display);
+	font-size: 15px;
+	fill: var(--ink);
+}
+
+.link-island-sub {
+	font-size: 10.5px;
+	fill: var(--ink-3);
+}
+
+.link-tip {
+	position: absolute;
+	transform: translate(-50%, -100%);
+	display: flex;
+	flex-direction: column;
+	gap: 0.1rem;
+	min-width: 200px;
+	max-width: 280px;
+	padding: 0.5rem 0.7rem;
+	background: var(--surface);
+	border: 1px solid var(--rule);
+	border-radius: 8px;
+	box-shadow: var(--shadow);
+	font-size: 0.8rem;
+	color: var(--ink-2);
+	pointer-events: none;
+	z-index: 2;
+}
+.link-tip b {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+/* below the map: the reading panel and the key */
+.network-below {
+	display: grid;
+	grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+	align-items: start;
+}
+
+@media (max-width: 860px) {
+	.network-below {
+		grid-template-columns: 1fr;
+	}
+}
+
+.network-detail {
+	padding: 1.1rem 1.25rem 1.25rem;
+	min-height: 160px;
+}
+
+.network-detail-empty {
+	color: var(--ink-3);
+	max-width: 44ch;
+}
+
+.network-detail-body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+}
+
+.network-detail-kind {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: 0.9rem;
+}
+
+.network-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	min-width: 0;
+}
+
+.network-card-art {
+	appearance: none;
+	background: var(--surface-2);
+	border: 1px solid var(--hairline);
+	border-radius: 8px;
+	padding: 0.6rem 0.6rem 0.2rem;
+	cursor: pointer;
+	text-align: left;
+	max-width: 100%;
+	overflow: hidden;
+}
+.network-card-art:hover {
+	border-color: var(--rule);
+}
+.network-card-art svg {
+	max-width: 100%;
+	height: auto;
+}
+
+.network-card-body h3 {
+	font-family: var(--font-display);
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+.network-card-body h3 span {
+	font-family: var(--font-ui);
+	font-size: 0.85rem;
+	color: var(--ink-3);
+	margin-left: 0.4rem;
+}
+.network-card-body p {
+	font-size: 0.88rem;
+	color: var(--ink-2);
+}
+
+.network-pair {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+	gap: 1rem;
+}
+
+.network-detail-note {
+	color: var(--ink);
+	max-width: 60ch;
+}
+
+.network-set-note {
+	font-size: 0.88rem;
+	color: var(--ink-2);
+	padding: 0.6rem 0.8rem;
+	background: var(--surface-2);
+	border-radius: 6px;
+}
+
+.network-link-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+.network-link-list li {
+	padding: 0.7rem 0;
+	border-top: 1px solid var(--hairline);
+}
+.network-link-list p {
+	font-size: 0.88rem;
+	color: var(--ink-2);
+	margin-top: 0.25rem;
+}
+
+.network-link-head {
+	appearance: none;
+	background: none;
+	border: 0;
+	padding: 0;
+	font: inherit;
+	color: var(--ink-2);
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	cursor: pointer;
+	text-align: left;
+}
+.network-link-head:hover {
+	color: var(--ink);
+}
+.network-link-head b {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+.network-story-link {
+	font-size: 0.88rem;
+	display: inline-block;
+	margin-top: 0.3rem;
+}
+
+.network-key {
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+	padding-top: 0.25rem;
+}
+.network-key-row {
+	display: grid;
+	grid-template-columns: 26px 1fr;
+	gap: 0.6rem;
+	align-items: start;
+}
+.network-key-row i {
+	margin-top: 0.55rem;
+}
+.network-key-row b {
+	font-size: 0.9rem;
+}
+.network-key-row p {
+	font-size: 0.85rem;
+	color: var(--ink-2);
+	margin-top: 0.1rem;
+}
+.network-key-set i {
+	width: 18px;
+	height: 12px;
+	border: 0;
+	border-radius: 6px;
+	background: var(--surface);
+	box-shadow: 0 0 0 1px var(--hairline);
+	margin-top: 0.3rem;
+}
+
+/* the table twin */
+.network-table-wrap {
+	overflow-x: auto;
+	margin-top: 1.25rem;
+}
+.network-table {
+	min-width: 760px;
+}
+.network-table tbody tr {
+	cursor: pointer;
+}
+.network-table td {
+	vertical-align: top;
+}
+.network-table td.network-note,
+.network-table td.network-read {
+	white-space: normal;
+	min-width: 26ch;
+}
+.network-table td.network-note {
+	min-width: 40ch;
+	max-width: 52ch;
+}
+.network-note .conf {
+	margin-left: 0.3rem;
+	vertical-align: middle;
+}
+.network-cell {
+	display: flex;
+	flex-direction: column;
+	white-space: nowrap;
+}
+.network-cell .cell-muted {
+	font-size: 0.8rem;
+}
+.network-kind-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	white-space: nowrap;
+	font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.link-edge-line,
+	.link-node {
+		transition: none;
+	}
+}
+
+fieldset.network-tools {
+	border: 0;
+	border-bottom: 1px solid var(--hairline);
+	padding-inline: 0;
+	margin-inline: 0;
+	min-width: 0;
+}
+
+.network-tools-sets {
+	margin-top: 0;
+	padding-top: 0.75rem;
+}
+.network-tools-label {
+	font-size: 0.85rem;
+	color: var(--ink-2);
+}
+.network-tools-gap {
+	flex: 1 1 0;
+}
+.network-tools-hint {
+	font-size: 0.82rem;
+	color: var(--ink-3);
+	flex-basis: 100%;
+}
+@media (min-width: 900px) {
+	.network-tools-hint {
+		flex-basis: auto;
+		margin-left: auto;
+	}
+}
+.network-run .btn-count i {
+	font-style: normal;
+	opacity: 0.6;
+}
+.network-set-toggle i {
+	display: inline-block;
+	width: 18px;
+	height: 11px;
+	border-radius: 6px;
+	background: var(--surface);
+	box-shadow: 0 0 0 1px var(--rule);
+	margin-right: 0.45rem;
+}
+.network-set-toggle-place i {
+	background: color-mix(in oklab, var(--surface) 55%, var(--ground));
+	box-shadow: 0 0 0 1px var(--hairline);
+}
+.network-set-note-place {
+	background: color-mix(in oklab, var(--surface-2) 60%, var(--ground));
+}
+
+/* ---------------------------------------------------------------------------
+   /network/$id — one island, cord by cord
+   --------------------------------------------------------------------------- */
+
+.link-island-title.is-link {
+	cursor: pointer;
+}
+.link-island-title.is-link:hover .link-island-label {
+	fill: var(--accent);
+}
+.link-island-open {
+	fill: var(--ink-3);
+	font-size: 12px;
+}
+.link-island-title.is-link:hover .link-island-open {
+	fill: var(--accent);
+}
+
+.network-open-island {
+	display: inline-block;
+	margin-bottom: 0.9rem;
+	font-size: 0.88rem;
+	font-weight: 600;
+}
+
+.crumbs {
+	font-size: 0.85rem;
+	color: var(--ink-3);
+	margin-bottom: 0.6rem;
+}
+
+.island-top {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+	align-items: start;
+}
+@media (max-width: 860px) {
+	.island-top {
+		grid-template-columns: 1fr;
+	}
+}
+
+.island-inset {
+	padding: 1rem 1.1rem 1.1rem;
+}
+.island-inset h2,
+.island-sets h2 {
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: 1.25rem;
+	margin: 0 0 0.25rem;
+}
+.island-inset .link-map {
+	margin-top: 0.25rem;
+}
+.island-inset > .cell-muted {
+	font-size: 0.85rem;
+	margin-top: 0.4rem;
+}
+
+.island-sets {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.island-index summary {
+	cursor: pointer;
+	font-size: 0.88rem;
+	color: var(--ink-2);
+}
+.shelf-index {
+	margin: 0.5rem 0 0;
+	padding-left: 1.4rem;
+	font-size: 0.85rem;
+	color: var(--ink-2);
+	columns: 2;
+	column-gap: 1.5rem;
+}
+.shelf-index li {
+	padding: 0.1rem 0;
+	break-inside: avoid;
+}
+.shelf-index li.is-selected {
+	color: var(--accent-ink);
+	font-weight: 600;
+}
+.shelf-index button {
+	appearance: none;
+	background: none;
+	border: 0;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+.shelf-index button:hover {
+	color: var(--accent);
+}
+.shelf-index a {
+	font-size: 0.78rem;
+	color: var(--ink-3);
+}
+
+/* the shelf itself */
+.island-shelf-section {
+	margin-top: 1.75rem;
+	padding: 0.75rem 0 1rem;
+	border-top: 1px solid var(--hairline);
+	border-bottom: 1px solid var(--hairline);
+}
+
+.island-shelf-scroll {
+	overflow-x: auto;
+}
+.island-shelf svg {
+	display: block;
+}
+
+.shelf-ribbon {
+	cursor: pointer;
+	transition: opacity 120ms ease;
+}
+.shelf-ribbon-fill {
+	fill: var(--kind);
+	fill-opacity: 0.22;
+	stroke: var(--kind);
+	stroke-width: 0.8;
+	stroke-opacity: 0.55;
+}
+.shelf-ribbon-open .shelf-ribbon-fill,
+.link-edge-passage .shelf-ribbon-fill {
+	fill-opacity: 0.14;
+	stroke-dasharray: 4 3;
+}
+.shelf-ribbon.is-lit .shelf-ribbon-fill,
+.shelf-ribbon.is-selected .shelf-ribbon-fill {
+	fill-opacity: 0.5;
+	stroke-opacity: 1;
+	stroke-width: 1.2;
+}
+.has-focus .shelf-ribbon:not(.is-lit) {
+	opacity: 0.25;
+}
+
+.shelf-connector-hit {
+	fill: none;
+	stroke: transparent;
+	stroke-width: 14;
+}
+.shelf-connector {
+	fill: none;
+	stroke: var(--kind);
+	stroke-width: 2;
+	stroke-linecap: round;
+	pointer-events: none;
+}
+.shelf-ribbon-open .shelf-connector,
+.link-edge-passage .shelf-connector {
+	stroke-dasharray: 5 4;
+}
+.shelf-ribbon.is-lit .shelf-connector,
+.shelf-ribbon.is-selected .shelf-connector {
+	stroke-width: 3.5;
+}
+
+.shelf-ribbon-label {
+	font-size: 11px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink);
+	stroke: var(--surface);
+	stroke-width: 4;
+	paint-order: stroke;
+	stroke-linejoin: round;
+	pointer-events: none;
+}
+
+.shelf-row {
+	cursor: pointer;
+	transition: opacity 120ms ease;
+}
+.has-focus .shelf-row:not(.is-lit) {
+	opacity: 0.45;
+}
+.shelf-row-halo {
+	fill: transparent;
+	stroke: transparent;
+}
+.shelf-row:hover .shelf-row-halo,
+.shelf-row.is-lit .shelf-row-halo {
+	fill: color-mix(in oklab, var(--surface) 70%, transparent);
+	stroke: var(--hairline);
+}
+.shelf-row.is-selected .shelf-row-halo {
+	stroke: var(--accent);
+}
+
+.shelf-band {
+	fill: var(--kind);
+	fill-opacity: 0.16;
+}
+.shelf-row.is-lit .shelf-band {
+	fill-opacity: 0.3;
+}
+
+/* labels sit where ribbons cross on a narrow screen, so they carry a halo */
+.shelf-label text {
+	stroke: var(--ground);
+	stroke-width: 3.5;
+	paint-order: stroke;
+	stroke-linejoin: round;
+}
+.shelf-label-id {
+	font-size: 12.5px;
+	fill: var(--ink);
+	font-variant-numeric: tabular-nums;
+}
+.shelf-label-alias {
+	fill: var(--ink-2);
+	font-weight: 400;
+}
+.shelf-label-sub,
+.shelf-label-set {
+	font-size: 10.5px;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+.shelf-label-set {
+	fill: var(--ink-2);
+}
+
+/* the rest of a big island, as a strip of thumbnails */
+.island-rest {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 0.9rem;
+	margin-top: 0.75rem;
+}
+.island-rest-item {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.15rem;
+	padding: 0.4rem 0.5rem 0.3rem;
+	border: 1px solid var(--hairline);
+	border-radius: 6px;
+	background: var(--surface);
+	color: var(--ink-2);
+	font-size: 0.72rem;
+	text-decoration: none;
+}
+.island-rest-item:hover {
+	border-color: var(--rule);
+	color: var(--ink);
+}
+
+/* the link list, with the runs each carries */
+.island-links li.is-selected {
+	background: var(--accent-wash);
+	margin: 0 -0.6rem;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	border-radius: 6px;
+}
+.island-spans {
+	margin: 0.35rem 0 0;
+	padding-left: 1.3rem;
+	font-size: 0.82rem;
+	color: var(--ink-2);
+	font-variant-numeric: tabular-nums;
+}
+.island-spans li {
+	padding: 0.1rem 0;
+	border: 0;
+}
+.island-span-where {
+	color: var(--ink-3);
+}
+.island-span-values {
+	display: block;
+	color: var(--ink);
+}
+.island-foot {
+	margin-top: 2rem;
+}
+/* the literature status of a link: one quiet line, sources on demand */
+.network-link-list .island-prior {
+	margin-top: 0.25rem;
+	font-size: 0.8rem;
+	color: var(--ink-3);
+}
+.island-prior summary {
+	cursor: pointer;
+	width: fit-content;
+}
+.island-prior summary:hover {
+	color: var(--ink-2);
+}
+.network-link-list .island-prior p {
+	margin: 0.2rem 0 0;
+	font-size: inherit;
+	color: inherit;
+	max-width: 70ch;
+}
+.island-index .network-set-note {
+	margin-top: 0.5rem;
+}
+
+/* the island's relationship diagram: named cards, labelled edges */
+.island-flow-section h2 {
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: 1.5rem;
+	margin: 0 0 0.5rem;
+}
+.island-flow {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.75rem 0.5rem 0.25rem;
+	overflow: hidden;
+}
+.island-flow svg {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+.flow-card {
+	cursor: pointer;
+	transition: opacity 120ms ease;
+}
+.flow-card-box {
+	fill: var(--ground);
+	stroke: var(--rule);
+	stroke-width: 1;
+}
+.flow-card.is-current .flow-card-box {
+	stroke: var(--ink);
+	stroke-width: 1.6;
+}
+.flow-card.is-lit .flow-card-box,
+.flow-card.is-selected .flow-card-box {
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+.has-focus .flow-card:not(.is-lit) {
+	opacity: 0.35;
+}
+.flow-card-id {
+	font-size: 11.5px;
+	fill: var(--ink);
+}
+.flow-card-alias {
+	fill: var(--ink-3);
+	font-weight: 400;
+}
+.flow-edge .link-edge-line {
+	stroke-width: 2;
+}
+.flow-edge.is-selected .link-edge-line {
+	stroke-width: 3.2;
+}
+.flow-arrow {
+	fill: var(--kind);
+}
+.flow-edge-label rect {
+	fill: var(--surface);
+	stroke: var(--kind);
+	stroke-width: 0.8;
+}
+.flow-edge-label text {
+	font-size: 10px;
+	fill: var(--ink-2);
+}
+.flow-edge {
+	transition: opacity 120ms ease;
+}
+.has-focus .flow-edge:not(.is-lit) {
+	opacity: 0.25;
+}
+.flow-caption {
+	min-height: 3.2em;
+	padding: 0.5rem 0.75rem 0.6rem;
+	font-size: 0.9rem;
+	color: var(--ink-2);
+	border-top: 1px solid var(--hairline);
+	margin-top: 0.5rem;
+}
+.flow-caption p {
+	margin: 0;
+}
+.flow-caption i {
+	display: inline-block;
+	width: 1.1rem;
+	margin-right: 0.45rem;
+	vertical-align: middle;
+	border-top: 2.5px solid var(--kind, var(--ink));
+}
+.island-about {
+	margin-top: 1.5rem;
+}
+
+/* ---------------------------------------------------------------------------
+   shelf threads: one strand per matched pair of cords (strands.json)
+   --------------------------------------------------------------------------- */
+
+/* a ribbon whose cords are also threaded steps back to a faint underlay */
+.shelf-ribbon.is-threaded .shelf-ribbon-fill {
+	fill-opacity: 0.07;
+	stroke: none;
+}
+.shelf-ribbon.is-threaded.is-lit .shelf-ribbon-fill,
+.shelf-ribbon.is-threaded.is-selected .shelf-ribbon-fill {
+	fill-opacity: 0.14;
+	stroke: none;
+}
+.shelf-band.is-threaded {
+	fill-opacity: 0.06;
+}
+
+.shelf-strand {
+	cursor: pointer;
+	transition: opacity 120ms ease;
+}
+.shelf-strand.is-far {
+	opacity: 0.4;
+}
+.has-focus .shelf-strand:not(.is-lit) {
+	opacity: 0.12;
+}
+.has-focus .shelf-strand.is-lit {
+	opacity: 1;
+}
+
+.shelf-thread-hit {
+	fill: none;
+	stroke: transparent;
+	stroke-width: 7;
+}
+.shelf-thread-line {
+	fill: none;
+	stroke: var(--kind);
+	stroke-width: 1;
+	stroke-opacity: 0.7;
+	stroke-linecap: round;
+	pointer-events: none;
+}
+.shelf-thread-near .shelf-thread-line {
+	stroke-dasharray: 3 2.5;
+	stroke-linecap: butt;
+}
+.shelf-thread-scaled .shelf-thread-line {
+	stroke-dasharray: 0.1 3;
+	stroke-width: 1.6;
+}
+/* both cords blank: an agreeing field, drawn as a whisper */
+.shelf-thread-blank .shelf-thread-line {
+	stroke: var(--ink-3);
+	stroke-width: 0.7;
+	stroke-dasharray: 1 3;
+	stroke-opacity: 0.4;
+}
+/* paired by the rule, values disagree: faint red with a bar across */
+.shelf-thread-differ .shelf-thread-line {
+	stroke: var(--hand-r);
+	stroke-width: 0.8;
+	stroke-opacity: 0.4;
+	stroke-dasharray: 4 3;
+}
+.shelf-thread-strike {
+	fill: none;
+	stroke: var(--hand-r);
+	stroke-width: 1.2;
+	stroke-opacity: 0.7;
+	pointer-events: none;
+}
+/* a value on one side only: the blank end is a hollow ring */
+.shelf-thread-dropped .shelf-thread-line {
+	stroke: var(--ink-3);
+	stroke-width: 0.8;
+	stroke-dasharray: 1 3;
+	stroke-opacity: 0.7;
+}
+.shelf-thread-hollow {
+	fill: var(--ground);
+	stroke: var(--ink-3);
+	stroke-width: 1;
+	pointer-events: none;
+}
+.shelf-thread-sum .shelf-thread-line {
+	stroke-width: 1.2;
+}
+.shelf-thread-joint {
+	fill: var(--kind);
+	stroke: var(--ground);
+	stroke-width: 1;
+	pointer-events: none;
+}
+.shelf-strand.is-lit .shelf-thread-line {
+	stroke-opacity: 1;
+	stroke-width: 1.4;
+}
+.shelf-strand.is-lit .shelf-thread-scaled .shelf-thread-line {
+	stroke-width: 2;
+}
+.shelf-strand .shelf-thread:hover .shelf-thread-line {
+	stroke-opacity: 1;
+	stroke-width: 2.6;
+}
+
+/* the matched cords on each row: a bead at the head of each (the focused
+   link's cords are tinted whole by .shelf-strand-cord) */
+.shelf-mark-dot {
+	fill: var(--kind);
+	fill-opacity: 0.85;
+}
+
+/* the focused link: its cords outlined and the value at every thread end */
+.shelf-strand-focus {
+	pointer-events: none;
+}
+.shelf-strand-cord {
+	fill: var(--kind);
+	fill-opacity: 0.14;
+	stroke: var(--kind);
+	stroke-width: 1;
+}
+.shelf-thread-label {
+	font-size: 10.5px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink);
+	stroke: var(--ground);
+	stroke-width: 3.5;
+	paint-order: stroke;
+	stroke-linejoin: round;
+}
+.shelf-row.is-lit .shelf-band.is-threaded {
+	fill-opacity: 0.08;
+}
+.has-focus .shelf-mark-dot {
+	fill-opacity: 0.35;
+}
+/* at a fine pitch outlines would merge into one block: tint only */
+.shelf-strand-focus.is-dense .shelf-strand-cord {
+	stroke: none;
+	fill-opacity: 0.2;
+}
+
+/* "How the links were found": the scan's shuffled floor as dot rows */
+.network-floor {
+	max-width: 52rem;
+	margin: 1.25rem 0 1.5rem;
+}
+.network-floor-note {
+	margin: 0.5rem 0 0;
+	font-size: 0.8rem;
+	color: var(--ink-3);
+	max-width: 44rem;
+}
+
+/* long museum names wrap under the khipu id, so the note column keeps its
+   room at desktop widths (the table still scrolls sideways below ~800px) */
+.network-cell .cell-muted {
+	white-space: normal;
+	max-width: 22ch;
+}

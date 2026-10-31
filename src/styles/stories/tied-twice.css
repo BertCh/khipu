@@ -1,0 +1,654 @@
+/* tied-twice story: object files with photographs, the cast, the timeline,
+   the quoted documents, the coast map and the radiocarbon strip */
+
+/* --- object files ------------------------------------------------------- */
+
+.object-files {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+	align-items: start;
+}
+
+.object-file {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 1rem 1.1rem 1.1rem;
+	min-width: 0;
+}
+
+.object-file-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.2rem 0.75rem;
+	margin-bottom: 0.8rem;
+}
+
+.object-file-head h3 {
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: 1.35rem;
+}
+
+.object-file-head p {
+	font-size: 0.82rem;
+	color: var(--ink-3);
+}
+
+.object-file-rows {
+	margin: 0.9rem 0 0;
+	font-size: 0.86rem;
+	display: grid;
+	gap: 0;
+}
+
+.object-file-rows > div {
+	display: grid;
+	grid-template-columns: 7.5rem minmax(0, 1fr);
+	gap: 0.6rem;
+	padding: 0.42rem 0;
+	border-top: 1px solid var(--hairline);
+}
+
+.object-file-rows dt {
+	color: var(--ink-3);
+	font-size: 0.74rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	padding-top: 0.15rem;
+}
+
+.object-file-rows dd {
+	margin: 0;
+	color: var(--ink);
+	overflow-wrap: anywhere;
+}
+
+.object-file-rows dd q {
+	color: var(--ink-2);
+	font-style: italic;
+}
+
+.object-file-note {
+	margin-top: 0.8rem;
+	font-size: 0.82rem;
+	color: var(--ink-2);
+}
+
+/* --- photographs -------------------------------------------------------- */
+
+.photo {
+	min-width: 0;
+}
+
+.photo-box {
+	position: relative;
+	overflow: hidden;
+	border-radius: 6px;
+	background: var(--surface-2);
+}
+
+.photo-box img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.photo-mark {
+	position: absolute;
+	border: 1.5px solid var(--accent);
+	border-radius: 3px;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+.photo-mark.is-muted {
+	border-color: var(--band-a);
+	border-style: dashed;
+}
+
+.photo-mark span {
+	position: absolute;
+	left: 0;
+	font-size: 0.72rem;
+	font-weight: 600;
+	line-height: 1.1;
+	padding: 0.15rem 0.4rem;
+	border-radius: 3px;
+	background: var(--accent);
+	color: #fff;
+	white-space: nowrap;
+}
+
+.photo-mark.is-muted span {
+	background: var(--band-a);
+}
+
+.photo-mark.is-above span {
+	bottom: 100%;
+	margin-bottom: 3px;
+}
+
+.photo-mark.is-below span {
+	top: 100%;
+	margin-top: 3px;
+}
+
+.photo-credit {
+	margin-top: 0.4rem;
+	font-size: 0.72rem;
+	color: var(--ink-3);
+}
+
+.photo-pair {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+	gap: 1.25rem;
+	align-items: start;
+}
+
+.photo-pair .figure {
+	padding: 0.9rem 1rem 0.8rem;
+}
+
+/* --- profiles ----------------------------------------------------------- */
+
+.profiles {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+	gap: 1rem;
+}
+
+.profile {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 1rem 1.1rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	min-width: 0;
+}
+
+.profile header {
+	display: grid;
+	gap: 0.15rem;
+}
+
+.profile h3 {
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: 1.3rem;
+	line-height: 1.15;
+}
+
+.profile-dates {
+	font-size: 0.78rem;
+	color: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.profile-role {
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-top: 0.2rem;
+}
+
+.profile-body {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--ink);
+}
+
+.profile-saw {
+	margin-top: auto;
+	padding-top: 0.6rem;
+	border-top: 1px solid var(--hairline);
+	font-size: 0.84rem;
+	line-height: 1.45;
+	color: var(--ink-2);
+}
+
+.profile-saw span {
+	display: block;
+	font-size: 0.7rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--ink-3);
+	margin-bottom: 0.2rem;
+}
+
+/* --- timeline ----------------------------------------------------------- */
+
+.timeline {
+	--tl-object: var(--accent);
+	--tl-record: var(--moiety-r);
+	--tl-world: var(--ink-3);
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 1rem 1.2rem 0.6rem;
+}
+
+.timeline-key {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem 1.2rem;
+	font-size: 0.76rem;
+	color: var(--ink-2);
+	margin-bottom: 0.6rem;
+}
+
+.timeline-key span {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.timeline-key i {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.timeline-key .is-object i {
+	background: var(--tl-object);
+}
+
+.timeline-key .is-record i {
+	background: var(--tl-record);
+}
+
+.timeline-key .is-world i {
+	background: var(--tl-world);
+}
+
+.timeline-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.timeline-list::before {
+	content: "";
+	position: absolute;
+	left: calc(7.5rem + 6px);
+	top: 0.5rem;
+	bottom: 0.5rem;
+	width: 1px;
+	background: var(--rule);
+}
+
+.timeline-event {
+	display: grid;
+	grid-template-columns: 7.5rem 13px minmax(0, 1fr);
+	gap: 0 0.9rem;
+	padding: 0.5rem 0;
+	align-items: start;
+}
+
+.timeline-when {
+	font-variant-numeric: tabular-nums;
+	font-size: 0.86rem;
+	font-weight: 600;
+	text-align: right;
+	color: var(--ink-2);
+	padding-top: 0.1rem;
+}
+
+.timeline-dot {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	margin-top: 0.25rem;
+	background: var(--tl-world);
+	box-shadow: 0 0 0 3px var(--surface);
+}
+
+.timeline-event.is-object .timeline-dot {
+	background: var(--tl-object);
+}
+
+.timeline-event.is-record .timeline-dot {
+	background: var(--tl-record);
+}
+
+.timeline-event.is-span .timeline-dot {
+	border-radius: 4px;
+	height: 22px;
+}
+
+.timeline-body {
+	font-size: 0.9rem;
+	line-height: 1.45;
+}
+
+.timeline-body strong {
+	font-weight: 600;
+}
+
+.timeline-body p {
+	margin-top: 0.15rem;
+	color: var(--ink-2);
+	font-size: 0.86rem;
+	max-width: 62ch;
+}
+
+/* --- quoted documents --------------------------------------------------- */
+
+.pull-quote {
+	margin: 0;
+	padding: 1.2rem 1.4rem 1rem;
+	border-left: 3px solid var(--accent);
+	background: var(--surface);
+	border-radius: 0 10px 10px 0;
+	max-width: 72ch;
+}
+
+.pull-quote-label {
+	font-size: 0.72rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 650;
+	margin-bottom: 0.5rem;
+}
+
+.pull-quote blockquote {
+	margin: 0;
+}
+
+.pull-quote-translation {
+	font-family: var(--font-display);
+	font-size: 1.35rem;
+	line-height: 1.3;
+	color: var(--ink);
+}
+
+.pull-quote-original {
+	margin-top: 0.8rem;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--ink-2);
+	font-style: italic;
+}
+
+.pull-quote figcaption {
+	margin-top: 0.8rem;
+	font-size: 0.8rem;
+	color: var(--ink-3);
+}
+
+.facsimile {
+	margin: 0;
+	background: var(--surface-2);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 1rem 1.2rem;
+	font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+	font-size: 0.8rem;
+	line-height: 1.55;
+	color: var(--ink);
+}
+
+.facsimile-head {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.2rem 1rem;
+	align-items: baseline;
+	font-family: var(--font-ui);
+	margin-bottom: 0.7rem;
+}
+
+.facsimile-head strong {
+	font-weight: 600;
+}
+
+.facsimile-head span {
+	font-size: 0.78rem;
+	color: var(--ink-3);
+}
+
+.facsimile-lines {
+	margin: 0;
+	padding-left: 1.6rem;
+	display: grid;
+	gap: 0.45rem;
+	max-width: 80ch;
+}
+
+.facsimile-lines li::marker {
+	color: var(--ink-3);
+}
+
+.facsimile figcaption {
+	margin-top: 0.8rem;
+	font-family: var(--font-ui);
+	font-size: 0.78rem;
+	color: var(--ink-3);
+}
+
+/* --- the two readers, side by side -------------------------------------- */
+
+.hands {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 1.25rem;
+}
+
+/* --- coast map ---------------------------------------------------------- */
+
+.coast-map {
+	max-width: 440px;
+	margin: 0;
+}
+
+.coast-map svg {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 10px;
+	border: 1px solid var(--hairline);
+	font-family: var(--font-ui);
+}
+
+.coast-sea {
+	fill: color-mix(in srgb, var(--accent) 9%, var(--surface));
+}
+
+.coast-land {
+	fill: var(--surface-2);
+}
+
+.coast-line {
+	fill: none;
+	stroke: var(--rule);
+	stroke-width: 1.2;
+	stroke-linejoin: round;
+}
+
+.coast-chord {
+	stroke: var(--accent);
+	stroke-width: 1.4;
+	stroke-dasharray: 5 4;
+}
+
+.coast-distance {
+	font-size: 15px;
+	font-weight: 600;
+	fill: var(--accent-ink);
+}
+
+.coast-distance-sub {
+	font-size: 11px;
+	font-weight: 400;
+	fill: var(--ink-3);
+}
+
+.coast-place circle {
+	fill: var(--ink-3);
+	stroke: var(--surface);
+	stroke-width: 2;
+}
+
+.coast-place.is-site circle {
+	fill: var(--accent);
+}
+
+.coast-place text {
+	font-size: 13px;
+	fill: var(--ink-2);
+}
+
+.coast-place.is-site text {
+	font-size: 15px;
+	font-weight: 600;
+	fill: var(--ink);
+}
+
+.coast-ocean {
+	font-size: 12px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	fill: var(--ink-3);
+}
+
+.coast-inset > rect {
+	fill: var(--surface);
+	stroke: var(--hairline);
+}
+
+.coast-inset-land {
+	fill: var(--surface-2);
+	stroke: var(--rule);
+	stroke-width: 0.6;
+}
+
+.coast-inset-peru {
+	fill: color-mix(in srgb, var(--accent) 22%, var(--surface-2));
+	stroke: var(--accent);
+	stroke-width: 0.6;
+}
+
+.coast-inset-box {
+	fill: none;
+	stroke: var(--accent-ink);
+	stroke-width: 1.4;
+}
+
+.map-split {
+	display: grid;
+	grid-template-columns: minmax(280px, 440px) minmax(0, 1fr);
+	gap: 1.5rem;
+	align-items: start;
+}
+
+/* --- radiocarbon strip -------------------------------------------------- */
+
+.radiocarbon svg {
+	width: 100%;
+	max-width: 640px;
+	height: auto;
+	display: block;
+	font-family: var(--font-ui);
+}
+
+.rc-axis {
+	stroke: var(--rule);
+	stroke-width: 1;
+}
+
+.rc-tick {
+	font-size: 11px;
+	fill: var(--ink-3);
+}
+
+.rc-range {
+	fill: var(--accent);
+	opacity: 0.75;
+}
+
+.rc-range-label {
+	font-size: 11px;
+	fill: var(--ink-2);
+	font-variant-numeric: tabular-nums;
+}
+
+.rc-mark {
+	stroke: var(--moiety-r);
+	stroke-width: 1.2;
+	stroke-dasharray: 3 3;
+}
+
+.rc-mark-label {
+	font-size: 11px;
+	fill: var(--moiety-r);
+	font-weight: 600;
+}
+
+/* --- responsive --------------------------------------------------------- */
+
+@media (max-width: 860px) {
+	.object-files,
+	.hands,
+	.map-split {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 560px) {
+	.timeline-list::before {
+		left: calc(5rem + 6px);
+	}
+
+	.timeline-event {
+		grid-template-columns: 5rem 13px minmax(0, 1fr);
+		gap: 0 0.6rem;
+	}
+
+	.timeline-when {
+		font-size: 0.78rem;
+	}
+
+	.object-file-rows > div {
+		grid-template-columns: 1fr;
+		gap: 0.1rem;
+	}
+
+	.pull-quote-translation {
+		font-size: 1.15rem;
+	}
+}
+
+/* steps 4 and 5: the whole account as a thin locator, its part lit */
+.strand-weave.tt-locator {
+	margin: 0.2rem 0 0;
+}
+
+/* step 8: the fifteen summary cords as buttons, marked by UR232's verdict */
+.tt-fan-pick {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+	margin-bottom: 0.4rem;
+}
+.tt-fan-pick .btn {
+	font-variant-numeric: tabular-nums;
+	min-width: 3rem;
+}
+.tt-fan-pick .btn.is-ten,
+.tt-fan-pick .btn.is-register,
+.tt-fan-pick .btn.is-no {
+	color: var(--hand-r);
+	border-style: dashed;
+	border-color: color-mix(in oklab, var(--hand-r) 55%, transparent);
+}
+.tt-fan-pick .btn.is-one {
+	text-decoration: underline dashed;
+	text-underline-offset: 3px;
+}

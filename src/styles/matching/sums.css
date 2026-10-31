@@ -1,0 +1,328 @@
+/*
+ * Chapter 4: Sums inside a khipu. Figure-specific rules only — shared
+ * trace-player / number-tape / legend / ledger styles live in base.css and
+ * src/styles.css. Colours are tokens only; every colour state here is also
+ * carried by position (above/below an axis), a dashed/solid line, a label or
+ * a shape, never by colour alone.
+ */
+
+.trace-figure {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+/* ---------------------------------------------------------------- figure 1: running sum */
+
+.sum-bar {
+	display: block;
+	overflow: visible;
+}
+
+.sum-bar-track {
+	fill: var(--surface-2);
+	stroke: var(--hairline);
+}
+
+.sum-bar-seg {
+	stroke: var(--surface);
+	stroke-width: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.sum-bar-seg {
+		transition:
+			width 0.35s ease,
+			x 0.35s ease;
+	}
+}
+
+.sum-bar-val {
+	font-size: 10px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--surface);
+	paint-order: stroke;
+	stroke: rgba(0, 0, 0, 0.35);
+	stroke-width: 2;
+	pointer-events: none;
+}
+
+.sum-bar-target {
+	stroke: var(--ink);
+	stroke-width: 2;
+	stroke-dasharray: 4 3;
+}
+
+.sum-bar-target-label,
+.sum-bar-running {
+	font-size: 10px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink-2);
+}
+
+.sum-bar-running {
+	font-weight: 600;
+	fill: var(--series-1);
+}
+
+/* ---------------------------------------------------------------- figure 2: all sums at once */
+
+.sum-arcs-svg {
+	display: block;
+}
+
+.sum-arcs-axis {
+	stroke: var(--rule);
+}
+
+.sum-arcs-grouptick {
+	stroke: var(--hairline);
+	stroke-width: 1;
+	opacity: 0.6;
+}
+
+.sum-arc {
+	fill: none;
+	stroke-width: 1.1;
+	cursor: default;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.sum-arc {
+		transition:
+			stroke-width 0.15s ease,
+			opacity 0.15s ease;
+	}
+}
+
+.sum-arc-right {
+	stroke: var(--hand-r);
+	opacity: 0.3;
+}
+
+.sum-arc-left {
+	stroke: var(--hand-l);
+	opacity: 0.3;
+}
+
+.sum-arc.is-hover {
+	stroke-width: 2.5;
+	opacity: 1;
+}
+
+.sum-arc-mark {
+	pointer-events: none;
+}
+
+.sum-arc-mark-right {
+	fill: var(--hand-r);
+}
+
+.sum-arc-mark-left {
+	fill: var(--hand-l);
+}
+
+.sum-arcs-caption {
+	min-height: 1.4em;
+	font-size: 0.85rem;
+	color: var(--ink-2);
+}
+
+/* ---------------------------------------------------------------- figure 3: prefix search */
+
+.prefix-track {
+	stroke: var(--rule);
+	stroke-width: 2;
+}
+
+.prefix-tick-label {
+	font-size: 9px;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.prefix-bracket {
+	fill: var(--accent-wash);
+	stroke: var(--accent);
+	stroke-width: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.prefix-bracket,
+	.prefix-mid {
+		transition:
+			x 0.4s ease,
+			width 0.4s ease,
+			transform 0.4s ease;
+	}
+}
+
+.prefix-mid {
+	stroke: var(--surface);
+	stroke-width: 1.5;
+}
+
+.prefix-mid.is-low {
+	fill: var(--hand-r);
+}
+
+.prefix-mid.is-high {
+	fill: var(--hand-l);
+}
+
+.prefix-mid.is-found {
+	fill: var(--series-1);
+	r: 6;
+}
+
+.prefix-mid-label {
+	font-size: 10px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink);
+}
+
+.prefix-target-label {
+	font-size: 10px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink-2);
+}
+
+/* ---------------------------------------------------------------- figure 4: summary converge */
+
+.converge-group-btns {
+	display: inline-flex;
+	gap: 0.2rem;
+	margin-right: 0.4rem;
+}
+
+.converge-pair {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.converge {
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 8px;
+	padding: 0.5rem 0.6rem 0.3rem;
+}
+
+.converge-label {
+	font-size: 0.78rem;
+	color: var(--ink-3);
+	margin-bottom: 0.1rem;
+}
+
+.converge svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.converge-line {
+	fill: none;
+	stroke: var(--rule);
+	stroke-width: 1.25;
+}
+
+.converge-term circle,
+.converge-term {
+	fill: var(--surface-2);
+	stroke: var(--ink-3);
+	stroke-width: 1;
+}
+
+.converge-term-val {
+	font-size: 9px;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink);
+	pointer-events: none;
+}
+
+.converge-term-name {
+	font-size: 8px;
+	fill: var(--ink-3);
+	pointer-events: none;
+}
+
+.converge-target {
+	stroke-width: 2;
+	fill: var(--surface);
+}
+
+.converge-target.is-exact {
+	stroke: var(--series-1);
+}
+
+.converge-target.is-one,
+.converge-target.is-ten,
+.converge-target.is-register {
+	stroke: var(--moiety-r);
+	stroke-dasharray: 3 2;
+}
+
+.converge-target.is-no,
+.converge-target.is-na {
+	stroke: var(--ink-3);
+	stroke-dasharray: 1 2;
+	opacity: 0.7;
+}
+
+.converge-target-val {
+	font-size: 12px;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+	fill: var(--ink);
+}
+
+.converge-target-name {
+	font-size: 9px;
+	fill: var(--ink-2);
+}
+
+.converge-verdict {
+	font-size: 0.82rem;
+	font-variant-numeric: tabular-nums;
+	color: var(--ink-2);
+	padding: 0.1rem 0 0.4rem;
+}
+
+.converge-verdict.is-exact {
+	color: var(--ink);
+}
+
+/* ---------------------------------------------------------------- figure 5: totals that travel */
+
+.totals-preview-arrow {
+	text-align: center;
+	color: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.totals-preview tr.is-exact td {
+	color: var(--ink);
+}
+
+.totals-preview tr.is-miss td {
+	color: var(--ink-3);
+}
+
+.totals-preview tr.is-exact .totals-preview-arrow {
+	color: var(--series-1);
+	font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- figure 6: shuffle warning */
+
+.shuffle-warning-count {
+	font-size: 0.95rem;
+	font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+	.diagram-tools .btn {
+		font-size: 0.78rem;
+		padding: 0.26rem 0.6rem;
+	}
+}

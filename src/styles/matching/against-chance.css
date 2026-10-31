@@ -1,0 +1,219 @@
+/* Chapter: Against chance. Figure-specific rules only — shared styles live in base.css. */
+
+.ac-figure {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.ac-source {
+	display: block;
+	margin-top: 0.3em;
+	font-size: 0.78rem;
+}
+
+.ac-source code {
+	font-size: 0.95em;
+}
+
+.ac-source-block {
+	color: var(--ink-3);
+	font-size: 0.8rem;
+	max-width: 80ch;
+	margin-top: 0.4rem;
+}
+
+.ac-seed-line {
+	font-size: 0.85rem;
+}
+
+.ac-seed-line .btn {
+	margin-left: 0.4rem;
+}
+
+/* ---------------------------------------------------------------- step 2: null cards */
+
+.ac-null-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1rem;
+	margin: 1rem 0 0.6rem;
+}
+
+.ac-null-card {
+	padding: 0.9rem 1rem 1rem;
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	background: var(--surface);
+}
+
+.ac-null-card h3 {
+	margin: 0 0 0.3rem;
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: 1.15rem;
+}
+
+.ac-null-card .prose {
+	font-size: 0.88rem;
+	max-width: none;
+	margin-bottom: 0.6rem;
+}
+
+.ac-null-figs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.9rem;
+	align-items: flex-start;
+}
+
+.ac-null-fig {
+	margin: 0;
+}
+
+.ac-null-fig figcaption {
+	max-width: 220px;
+}
+
+.ac-why {
+	margin-top: 0.7rem;
+	font-size: 0.82rem;
+}
+
+/* ---------------------------------------------------------------- step 3 / 5: live runs */
+
+.ac-pair-toggles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem 1.2rem;
+}
+
+.ac-toggle-label {
+	color: var(--ink-3);
+}
+
+.ac-guess-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	align-items: flex-start;
+}
+
+.ac-guess-axis-wrap {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.ac-guess-axis-wrap:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 3px;
+}
+
+.ac-guess-axis {
+	display: block;
+}
+
+.ac-guess-track {
+	stroke: var(--rule);
+	stroke-width: 2;
+}
+
+.ac-guess-track.is-locked {
+	cursor: default;
+	opacity: 0.6;
+}
+
+.ac-guess-tick line {
+	stroke: var(--rule);
+}
+
+.ac-guess-tick text {
+	font-size: 10px;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.ac-guess-mark {
+	transition: transform 0.3s ease;
+}
+
+.ac-guess-mark line {
+	stroke: var(--accent);
+	stroke-width: 2;
+	stroke-dasharray: 3 2;
+}
+
+.ac-guess-mark circle {
+	fill: var(--accent);
+}
+
+.ac-guess-mark text {
+	font-size: 11px;
+	font-weight: 600;
+	fill: var(--accent-ink);
+	text-anchor: middle;
+}
+
+.ac-reveal-btn {
+	align-self: flex-start;
+}
+
+.ac-progress-bar {
+	height: 6px;
+	border-radius: 999px;
+	background: var(--surface-2);
+	overflow: hidden;
+	max-width: 480px;
+}
+
+.ac-progress-fill {
+	height: 100%;
+	background: var(--series-1);
+	transition: width 0.15s linear;
+}
+
+.ac-progress-label {
+	font-size: 0.82rem;
+	color: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.ac-power {
+	gap: 0.8rem;
+}
+
+.ac-control-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1rem;
+}
+
+.ac-control-card {
+	padding: 0.8rem 0.9rem 0.9rem;
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	background: var(--surface);
+}
+
+.ac-control-card h4 {
+	margin: 0 0 0.5rem;
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: 1.05rem;
+}
+
+.ac-control-card .muted {
+	margin-top: 0.5rem;
+	font-size: 0.82rem;
+}
+
+/* ---------------------------------------------------------------- step 6: search size */
+
+.ac-search-stats {
+	margin-top: 0;
+}
+
+.ac-closing {
+	max-width: 70ch;
+}

@@ -1,0 +1,3345 @@
+{
+"generated": "scripts/knot_direction_by_type.py --json",
+"unit": "recorded knot clusters (one S/Z reading per S, L or E entry)",
+"nKhipus": 684,
+"table": {
+"S": {
+"S": 7846,
+"Z": 18047
+},
+"L": {
+"S": 14904,
+"Z": 12417
+},
+"E": {
+"S": 2206,
+"Z": 6106
+}
+},
+"mixed": [
+{
+"id": "KH0032",
+"aliases": [
+"AS030",
+"UR043"
+],
+"recorder": "Ascher",
+"provenance": "La puntilla, between Paracas and Pisco",
+"n": 60,
+"S": 26,
+"Z": 34,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.817,
+"baseline": 0.567,
+"deviant": 0.183
+},
+{
+"id": "KH0033",
+"aliases": [
+"AS031",
+"UR1031",
+"UR044"
+],
+"recorder": "Ascher",
+"provenance": "La puntilla, between Paracas and Pisco",
+"n": 120,
+"S": 39,
+"Z": 81,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.675,
+"baseline": 0.675,
+"deviant": 0.325
+},
+{
+"id": "KH0034",
+"aliases": [
+"UR1032",
+"AS032"
+],
+"recorder": "Ascher",
+"provenance": "Nazca",
+"n": 235,
+"S": 104,
+"Z": 131,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.843,
+"baseline": 0.557,
+"deviant": 0.157
+},
+{
+"id": "KH0057",
+"aliases": [
+"HP041",
+"AS046"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 114,
+"S": 93,
+"Z": 21,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "S"
+},
+"explained": 0.816,
+"baseline": 0.816,
+"deviant": 0.184
+},
+{
+"id": "KH0058",
+"aliases": [
+"AS047",
+"HP035"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 255,
+"S": 220,
+"Z": 35,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "S"
+},
+"explained": 0.863,
+"baseline": 0.863,
+"deviant": 0.137
+},
+{
+"id": "KH0062",
+"aliases": [
+"UR1051",
+"AS051"
+],
+"recorder": "Ascher",
+"provenance": "Hacienda Ullujalla y Callengo",
+"n": 70,
+"S": 39,
+"Z": 31,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "S"
+},
+"explained": 0.971,
+"baseline": 0.557,
+"deviant": 0.029
+},
+{
+"id": "KH0068",
+"aliases": [
+"UR1057",
+"AS057"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 196,
+"S": 69,
+"Z": 127,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.969,
+"baseline": 0.648,
+"deviant": 0.031
+},
+{
+"id": "KH0083",
+"aliases": [
+"UR035",
+"AS070"
+],
+"recorder": "Ascher",
+"provenance": "Mollepampa",
+"n": 532,
+"S": 476,
+"Z": 56,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.994,
+"baseline": 0.895,
+"deviant": 0.006
+},
+{
+"id": "KH0088",
+"aliases": [
+"AS075"
+],
+"recorder": "Ascher",
+"provenance": "Nazca Valley; Ancon, Central Coast",
+"n": 83,
+"S": 54,
+"Z": 29,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.94,
+"baseline": 0.651,
+"deviant": 0.06
+},
+{
+"id": "KH0092",
+"aliases": [
+"AS079"
+],
+"recorder": "Ascher",
+"provenance": "Nazca Valley; Ancon, Central Coast",
+"n": 42,
+"S": 31,
+"Z": 11,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.738,
+"deviant": 0.0
+},
+{
+"id": "KH0093",
+"aliases": [
+"AS080"
+],
+"recorder": "Ascher",
+"provenance": "Nazca Valley; Ancon, Central Coast",
+"n": 44,
+"S": 25,
+"Z": 19,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.977,
+"baseline": 0.568,
+"deviant": 0.023
+},
+{
+"id": "KH0097",
+"aliases": [
+"UR1084",
+"AS084"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 498,
+"S": 334,
+"Z": 164,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.699,
+"baseline": 0.671,
+"deviant": 0.301
+},
+{
+"id": "KH0099",
+"aliases": [
+"MM1086",
+"AS086"
+],
+"recorder": "Medrano",
+"provenance": "Dr Franz Xavier Weizinger, 1921",
+"n": 49,
+"S": 18,
+"Z": 31,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.755,
+"baseline": 0.633,
+"deviant": 0.245
+},
+{
+"id": "KH0104",
+"aliases": [
+"UR1091",
+"AS091"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 101,
+"S": 16,
+"Z": 85,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.99,
+"baseline": 0.842,
+"deviant": 0.01
+},
+{
+"id": "KH0108",
+"aliases": [
+"UR1095",
+"AS095/N4"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 359,
+"S": 67,
+"Z": 292,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.919,
+"baseline": 0.813,
+"deviant": 0.081
+},
+{
+"id": "KH0110",
+"aliases": [
+"UR1097",
+"AS097"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 47,
+"S": 22,
+"Z": 25,
+"rule": {
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.532,
+"deviant": 0.0
+},
+{
+"id": "KH0113",
+"aliases": [
+"UR1100",
+"AS100"
+],
+"recorder": "Ascher",
+"provenance": "Ica",
+"n": 85,
+"S": 8,
+"Z": 77,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.906,
+"deviant": 0.0
+},
+{
+"id": "KH0118",
+"aliases": [
+"UR1104",
+"AS104",
+"UR224"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 79,
+"S": 38,
+"Z": 41,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.608,
+"baseline": 0.519,
+"deviant": 0.392
+},
+{
+"id": "KH0127",
+"aliases": [
+"UR1113",
+"AS113"
+],
+"recorder": "Ascher",
+"provenance": "Between Ica and Pisco",
+"n": 210,
+"S": 176,
+"Z": 34,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "S"
+},
+"explained": 0.838,
+"baseline": 0.838,
+"deviant": 0.162
+},
+{
+"id": "KH0132",
+"aliases": [
+"UR1118",
+"AS118"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 50,
+"S": 12,
+"Z": 38,
+"rule": {
+"S": "Z",
+"L": "S"
+},
+"explained": 1.0,
+"baseline": 0.76,
+"deviant": 0.0
+},
+{
+"id": "KH0141",
+"aliases": [
+"UR1126",
+"AS126"
+],
+"recorder": "Ascher",
+"provenance": "Ica",
+"n": 195,
+"S": 30,
+"Z": 165,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.846,
+"deviant": 0.0
+},
+{
+"id": "KH0147",
+"aliases": [
+"UR1131",
+"AS131"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 388,
+"S": 183,
+"Z": 205,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "S"
+},
+"explained": 0.997,
+"baseline": 0.528,
+"deviant": 0.003
+},
+{
+"id": "KH0152",
+"aliases": [
+"UR1136",
+"AS136"
+],
+"recorder": "Ascher",
+"provenance": "Nazca",
+"n": 398,
+"S": 9,
+"Z": 389,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.977,
+"baseline": 0.977,
+"deviant": 0.023
+},
+{
+"id": "KH0160",
+"aliases": [
+"UR1144",
+"AS144"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 116,
+"S": 40,
+"Z": 76,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.974,
+"baseline": 0.655,
+"deviant": 0.026
+},
+{
+"id": "KH0161",
+"aliases": [
+"UR1145",
+"AS145"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 140,
+"S": 71,
+"Z": 69,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.507,
+"deviant": 0.0
+},
+{
+"id": "KH0166",
+"aliases": [
+"UR1150",
+"AS150"
+],
+"recorder": "Ascher",
+"provenance": "Ica",
+"n": 70,
+"S": 62,
+"Z": 8,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.886,
+"deviant": 0.0
+},
+{
+"id": "KH0168",
+"aliases": [
+"UR1152",
+"AS152"
+],
+"recorder": "Ascher",
+"provenance": "Ica",
+"n": 160,
+"S": 18,
+"Z": 142,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.887,
+"deviant": 0.0
+},
+{
+"id": "KH0169",
+"aliases": [
+"AS153"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 47,
+"S": 18,
+"Z": 29,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.617,
+"baseline": 0.617,
+"deviant": 0.383
+},
+{
+"id": "KH0183",
+"aliases": [
+"UR1166",
+"AS166"
+],
+"recorder": "Ascher",
+"provenance": "Ica",
+"n": 289,
+"S": 15,
+"Z": 274,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.986,
+"baseline": 0.948,
+"deviant": 0.014
+},
+{
+"id": "KH0192",
+"aliases": [
+"UR1175",
+"AS175"
+],
+"recorder": "Ascher",
+"provenance": "Pachacamac",
+"n": 412,
+"S": 27,
+"Z": 385,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.961,
+"baseline": 0.934,
+"deviant": 0.039
+},
+{
+"id": "KH0217",
+"aliases": [
+"AS199"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 158,
+"S": 22,
+"Z": 136,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.861,
+"baseline": 0.861,
+"deviant": 0.139
+},
+{
+"id": "KH0228",
+"aliases": [
+"AS208",
+"UR083"
+],
+"recorder": "Ascher",
+"provenance": "Huaura Valley, near Lima, on Santa Rosalia Hacienda",
+"n": 218,
+"S": 191,
+"Z": 27,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.982,
+"baseline": 0.876,
+"deviant": 0.018
+},
+{
+"id": "KH0232",
+"aliases": [
+"AS212"
+],
+"recorder": "Ascher",
+"provenance": null,
+"n": 41,
+"S": 22,
+"Z": 19,
+"rule": {
+"L": "S"
+},
+"explained": 0.537,
+"baseline": 0.537,
+"deviant": 0.463
+},
+{
+"id": "KH0237",
+"aliases": [
+"UR001"
+],
+"recorder": "Urton",
+"provenance": "Leymebamba",
+"n": 463,
+"S": 9,
+"Z": 454,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.981,
+"baseline": 0.981,
+"deviant": 0.019
+},
+{
+"id": "KH0239",
+"aliases": [
+"UR003"
+],
+"recorder": "Brezine",
+"provenance": "Leymebamba",
+"n": 485,
+"S": 120,
+"Z": 365,
+"rule": {
+"S": "S",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.755,
+"baseline": 0.753,
+"deviant": 0.245
+},
+{
+"id": "KH0240",
+"aliases": [
+"UR004"
+],
+"recorder": "Urton",
+"provenance": "Leymebamba",
+"n": 585,
+"S": 61,
+"Z": 524,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.896,
+"baseline": 0.896,
+"deviant": 0.104
+},
+{
+"id": "KH0242",
+"aliases": [
+"UR006"
+],
+"recorder": "Urton",
+"provenance": "Leymebamba",
+"n": 598,
+"S": 33,
+"Z": 565,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.945,
+"baseline": 0.945,
+"deviant": 0.055
+},
+{
+"id": "KH0243",
+"aliases": [
+"UR007"
+],
+"recorder": "Brezine",
+"provenance": "Leymebamba",
+"n": 44,
+"S": 24,
+"Z": 20,
+"rule": {
+"S": "S",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.909,
+"baseline": 0.545,
+"deviant": 0.091
+},
+{
+"id": "KH0246",
+"aliases": [
+"UR010"
+],
+"recorder": "Brezine",
+"provenance": "Leymebamba",
+"n": 245,
+"S": 13,
+"Z": 232,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.955,
+"baseline": 0.947,
+"deviant": 0.045
+},
+{
+"id": "KH0252",
+"aliases": [
+"UR016"
+],
+"recorder": "Brezine",
+"provenance": "Leymebamba",
+"n": 407,
+"S": 175,
+"Z": 232,
+"rule": {
+"S": "S",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.926,
+"baseline": 0.57,
+"deviant": 0.074
+},
+{
+"id": "KH0253",
+"aliases": [
+"UR017"
+],
+"recorder": "Urton",
+"provenance": "Leymebamba",
+"n": 135,
+"S": 17,
+"Z": 118,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.874,
+"baseline": 0.874,
+"deviant": 0.126
+},
+{
+"id": "KH0263",
+"aliases": [
+"UR028"
+],
+"recorder": "Brezine",
+"provenance": "Atarco",
+"n": 71,
+"S": 43,
+"Z": 28,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.986,
+"baseline": 0.606,
+"deviant": 0.014
+},
+{
+"id": "KH0264",
+"aliases": [
+"UR029"
+],
+"recorder": "Brezine",
+"provenance": "Atarco",
+"n": 58,
+"S": 34,
+"Z": 24,
+"rule": {
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.586,
+"deviant": 0.0
+},
+{
+"id": "KH0267",
+"aliases": [
+"UR034"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 243,
+"S": 21,
+"Z": 222,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.938,
+"baseline": 0.914,
+"deviant": 0.062
+},
+{
+"id": "KH0269",
+"aliases": [
+"UR037"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 182,
+"S": 170,
+"Z": 12,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.989,
+"baseline": 0.934,
+"deviant": 0.011
+},
+{
+"id": "KH0276",
+"aliases": [
+"UR046"
+],
+"recorder": "Urton",
+"provenance": "Pueblo Libre, Lima, Peru",
+"n": 83,
+"S": 73,
+"Z": 10,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.904,
+"baseline": 0.88,
+"deviant": 0.096
+},
+{
+"id": "KH0279",
+"aliases": [
+"UR049"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 388,
+"S": 271,
+"Z": 117,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.765,
+"baseline": 0.698,
+"deviant": 0.235
+},
+{
+"id": "KH0280",
+"aliases": [
+"UR050"
+],
+"recorder": "Brezine",
+"provenance": null,
+"n": 501,
+"S": 402,
+"Z": 99,
+"rule": {
+"L": "S"
+},
+"explained": 0.802,
+"baseline": 0.802,
+"deviant": 0.198
+},
+{
+"id": "KH0285",
+"aliases": [
+"UR053C"
+],
+"recorder": "Brezine",
+"provenance": null,
+"n": 104,
+"S": 49,
+"Z": 55,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.529,
+"baseline": 0.529,
+"deviant": 0.471
+},
+{
+"id": "KH0289",
+"aliases": [
+"UR055"
+],
+"recorder": "Brezine",
+"provenance": null,
+"n": 704,
+"S": 690,
+"Z": 14,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.999,
+"baseline": 0.98,
+"deviant": 0.001
+},
+{
+"id": "KH0294",
+"aliases": [
+"UR058A"
+],
+"recorder": "Urton",
+"provenance": "Playa Miller #6, Arica, Chile",
+"n": 246,
+"S": 153,
+"Z": 93,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.98,
+"baseline": 0.622,
+"deviant": 0.02
+},
+{
+"id": "KH0295",
+"aliases": [
+"UR058B"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 180,
+"S": 121,
+"Z": 59,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.939,
+"baseline": 0.672,
+"deviant": 0.061
+},
+{
+"id": "KH0297",
+"aliases": [
+"UR060"
+],
+"recorder": "Brezine",
+"provenance": "Huaquerones",
+"n": 87,
+"S": 58,
+"Z": 29,
+"rule": {
+"S": "S",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.989,
+"baseline": 0.667,
+"deviant": 0.011
+},
+{
+"id": "KH0300",
+"aliases": [
+"UR063"
+],
+"recorder": "Brezine",
+"provenance": null,
+"n": 77,
+"S": 29,
+"Z": 48,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.948,
+"baseline": 0.623,
+"deviant": 0.052
+},
+{
+"id": "KH0301",
+"aliases": [
+"UR064"
+],
+"recorder": "Brezine",
+"provenance": "Huaquerones",
+"n": 69,
+"S": 16,
+"Z": 53,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.957,
+"baseline": 0.768,
+"deviant": 0.043
+},
+{
+"id": "KH0305",
+"aliases": [
+"UR068"
+],
+"recorder": "Brezine",
+"provenance": null,
+"n": 72,
+"S": 18,
+"Z": 54,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.75,
+"deviant": 0.0
+},
+{
+"id": "KH0310",
+"aliases": [
+"UR073"
+],
+"recorder": "Brezine",
+"provenance": null,
+"n": 50,
+"S": 13,
+"Z": 37,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.9,
+"baseline": 0.74,
+"deviant": 0.1
+},
+{
+"id": "KH0311",
+"aliases": [
+"UR074"
+],
+"recorder": "Brezine",
+"provenance": "Huaquerones",
+"n": 82,
+"S": 56,
+"Z": 26,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.976,
+"baseline": 0.683,
+"deviant": 0.024
+},
+{
+"id": "KH0321",
+"aliases": [
+"UR085"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 498,
+"S": 388,
+"Z": 110,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.859,
+"baseline": 0.779,
+"deviant": 0.141
+},
+{
+"id": "KH0323",
+"aliases": [
+"UR087"
+],
+"recorder": "Brezine",
+"provenance": "Santa",
+"n": 363,
+"S": 40,
+"Z": 323,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.89,
+"baseline": 0.89,
+"deviant": 0.11
+},
+{
+"id": "KH0326",
+"aliases": [
+"UR090"
+],
+"recorder": "Brezine",
+"provenance": "Santa",
+"n": 180,
+"S": 13,
+"Z": 167,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.928,
+"baseline": 0.928,
+"deviant": 0.072
+},
+{
+"id": "KH0329",
+"aliases": [
+"UR093"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 347,
+"S": 169,
+"Z": 178,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.948,
+"baseline": 0.513,
+"deviant": 0.052
+},
+{
+"id": "KH0332",
+"aliases": [
+"UR096"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 70,
+"S": 10,
+"Z": 60,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.857,
+"baseline": 0.857,
+"deviant": 0.143
+},
+{
+"id": "KH0333",
+"aliases": [
+"UR097"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 172,
+"S": 94,
+"Z": 78,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.959,
+"baseline": 0.547,
+"deviant": 0.041
+},
+{
+"id": "KH0338",
+"aliases": [
+"UR102"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 55,
+"S": 41,
+"Z": 14,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.745,
+"deviant": 0.0
+},
+{
+"id": "KH0346",
+"aliases": [
+"UR110"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 139,
+"S": 95,
+"Z": 44,
+"rule": {
+"S": "S",
+"L": "S"
+},
+"explained": 0.683,
+"baseline": 0.683,
+"deviant": 0.317
+},
+{
+"id": "KH0349",
+"aliases": [
+"UR113"
+],
+"recorder": "Urton",
+"provenance": "Nazca",
+"n": 865,
+"S": 429,
+"Z": 436,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.963,
+"baseline": 0.504,
+"deviant": 0.037
+},
+{
+"id": "KH0350",
+"aliases": [
+"UR114"
+],
+"recorder": "Urton",
+"provenance": "Nazca",
+"n": 128,
+"S": 98,
+"Z": 30,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.766,
+"deviant": 0.0
+},
+{
+"id": "KH0358",
+"aliases": [
+"UR118"
+],
+"recorder": "Urton",
+"provenance": "Paracas",
+"n": 506,
+"S": 459,
+"Z": 47,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.998,
+"baseline": 0.907,
+"deviant": 0.002
+},
+{
+"id": "KH0359",
+"aliases": [
+"UR119"
+],
+"recorder": "Urton",
+"provenance": "Paracas",
+"n": 491,
+"S": 443,
+"Z": 48,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.902,
+"deviant": 0.0
+},
+{
+"id": "KH0360",
+"aliases": [
+"UR120"
+],
+"recorder": "Urton",
+"provenance": "Huacho",
+"n": 148,
+"S": 50,
+"Z": 98,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.662,
+"deviant": 0.0
+},
+{
+"id": "KH0362",
+"aliases": [
+"UR122"
+],
+"recorder": "Urton",
+"provenance": "Nazca",
+"n": 284,
+"S": 253,
+"Z": 31,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.891,
+"deviant": 0.0
+},
+{
+"id": "KH0369",
+"aliases": [
+"UR130"
+],
+"recorder": "Urton",
+"provenance": "Playa Miller #6, Arica, Chile",
+"n": 106,
+"S": 98,
+"Z": 8,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.925,
+"deviant": 0.0
+},
+{
+"id": "KH0373",
+"aliases": [
+"UR132"
+],
+"recorder": "Urton",
+"provenance": "Playa Miller #6, Arica, Chile",
+"n": 43,
+"S": 30,
+"Z": 13,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.93,
+"baseline": 0.698,
+"deviant": 0.07
+},
+{
+"id": "KH0382",
+"aliases": [
+"UR142"
+],
+"recorder": "Urton",
+"provenance": "Valle de Ica Hacienda Callango Ocucaje",
+"n": 204,
+"S": 182,
+"Z": 22,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.985,
+"baseline": 0.892,
+"deviant": 0.015
+},
+{
+"id": "KH0383",
+"aliases": [
+"UR143"
+],
+"recorder": "Urton",
+"provenance": "Valle de Ica Hacienda Callango Ocucaje",
+"n": 195,
+"S": 178,
+"Z": 17,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.913,
+"deviant": 0.0
+},
+{
+"id": "KH0386",
+"aliases": [
+"UR146"
+],
+"recorder": "Urton",
+"provenance": "Donation from the collection Belli",
+"n": 96,
+"S": 12,
+"Z": 84,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.875,
+"baseline": 0.875,
+"deviant": 0.125
+},
+{
+"id": "KH0405",
+"aliases": [
+"UR166",
+"LL02",
+"N5"
+],
+"recorder": "Urton",
+"provenance": "Huando, Chancay, Peru (Gaffron Collection)",
+"n": 64,
+"S": 44,
+"Z": 20,
+"rule": {
+"S": "S",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.688,
+"baseline": 0.688,
+"deviant": 0.312
+},
+{
+"id": "KH0408",
+"aliases": [
+"UR169"
+],
+"recorder": "Urton",
+"provenance": "Ica Valley, near Callango",
+"n": 144,
+"S": 103,
+"Z": 41,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.715,
+"deviant": 0.0
+},
+{
+"id": "KH0409",
+"aliases": [
+"UR170"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 46,
+"S": 19,
+"Z": 27,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.87,
+"baseline": 0.587,
+"deviant": 0.13
+},
+{
+"id": "KH0422",
+"aliases": [
+"UR184"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 40,
+"S": 28,
+"Z": 12,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.7,
+"deviant": 0.0
+},
+{
+"id": "KH0424",
+"aliases": [
+"UR186"
+],
+"recorder": "Urton",
+"provenance": "Hda. Huando, Chancay",
+"n": 87,
+"S": 77,
+"Z": 10,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.977,
+"baseline": 0.885,
+"deviant": 0.023
+},
+{
+"id": "KH0425",
+"aliases": [
+"UR187"
+],
+"recorder": "Urton",
+"provenance": "Ica Valley, near Callango",
+"n": 248,
+"S": 229,
+"Z": 19,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.923,
+"deviant": 0.0
+},
+{
+"id": "KH0427",
+"aliases": [
+"UR189"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 113,
+"S": 16,
+"Z": 97,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.991,
+"baseline": 0.858,
+"deviant": 0.009
+},
+{
+"id": "KH0430",
+"aliases": [
+"UR192"
+],
+"recorder": "Urton",
+"provenance": "Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)",
+"n": 55,
+"S": 25,
+"Z": 30,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.982,
+"baseline": 0.545,
+"deviant": 0.018
+},
+{
+"id": "KH0432",
+"aliases": [
+"UR194"
+],
+"recorder": "Urton",
+"provenance": "Ica",
+"n": 101,
+"S": 83,
+"Z": 18,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.822,
+"deviant": 0.0
+},
+{
+"id": "KH0433",
+"aliases": [
+"UR195"
+],
+"recorder": "Urton",
+"provenance": "Huacho",
+"n": 155,
+"S": 82,
+"Z": 73,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "S"
+},
+"explained": 0.71,
+"baseline": 0.529,
+"deviant": 0.29
+},
+{
+"id": "KH0434",
+"aliases": [
+"UR196"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 98,
+"S": 49,
+"Z": 49,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.949,
+"baseline": 0.5,
+"deviant": 0.051
+},
+{
+"id": "KH0435",
+"aliases": [
+"UR197"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 220,
+"S": 53,
+"Z": 167,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.995,
+"baseline": 0.759,
+"deviant": 0.005
+},
+{
+"id": "KH0436",
+"aliases": [
+"UR198"
+],
+"recorder": "Urton",
+"provenance": "Santa Clara, Nazca",
+"n": 355,
+"S": 217,
+"Z": 138,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.977,
+"baseline": 0.611,
+"deviant": 0.023
+},
+{
+"id": "KH0437",
+"aliases": [
+"UR199"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 134,
+"S": 87,
+"Z": 47,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.649,
+"deviant": 0.0
+},
+{
+"id": "KH0440",
+"aliases": [
+"UR202"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 101,
+"S": 16,
+"Z": 85,
+"rule": {
+"S": "Z",
+"L": "S"
+},
+"explained": 1.0,
+"baseline": 0.842,
+"deviant": 0.0
+},
+{
+"id": "KH0441",
+"aliases": [
+"UR203"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 305,
+"S": 54,
+"Z": 251,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.859,
+"baseline": 0.823,
+"deviant": 0.141
+},
+{
+"id": "KH0446",
+"aliases": [
+"UR208"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 151,
+"S": 27,
+"Z": 124,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.821,
+"deviant": 0.0
+},
+{
+"id": "KH0448",
+"aliases": [
+"UR210"
+],
+"recorder": "Urton",
+"provenance": "Ica/Pisco",
+"n": 43,
+"S": 17,
+"Z": 26,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.977,
+"baseline": 0.605,
+"deviant": 0.023
+},
+{
+"id": "KH0450",
+"aliases": [
+"UR212"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 266,
+"S": 128,
+"Z": 138,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.519,
+"deviant": 0.0
+},
+{
+"id": "KH0453",
+"aliases": [
+"UR215"
+],
+"recorder": "Urton",
+"provenance": "Chancay",
+"n": 258,
+"S": 9,
+"Z": 249,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.965,
+"baseline": 0.965,
+"deviant": 0.035
+},
+{
+"id": "KH0456",
+"aliases": [
+"UR218"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 127,
+"S": 45,
+"Z": 82,
+"rule": {
+"S": "Z",
+"L": "S"
+},
+"explained": 1.0,
+"baseline": 0.646,
+"deviant": 0.0
+},
+{
+"id": "KH0463",
+"aliases": [
+"UR226"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 99,
+"S": 33,
+"Z": 66,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.667,
+"deviant": 0.0
+},
+{
+"id": "KH0466",
+"aliases": [
+"UR229"
+],
+"recorder": "Urton",
+"provenance": "Ica",
+"n": 178,
+"S": 15,
+"Z": 163,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.916,
+"deviant": 0.0
+},
+{
+"id": "KH0467",
+"aliases": [
+"UR230"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 73,
+"S": 55,
+"Z": 18,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "S"
+},
+"explained": 0.753,
+"baseline": 0.753,
+"deviant": 0.247
+},
+{
+"id": "KH0469",
+"aliases": [
+"UR232"
+],
+"recorder": "Urton",
+"provenance": "Huacho",
+"n": 109,
+"S": 43,
+"Z": 66,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.606,
+"deviant": 0.0
+},
+{
+"id": "KH0470",
+"aliases": [
+"UR233"
+],
+"recorder": "Urton",
+"provenance": "Huacho",
+"n": 153,
+"S": 53,
+"Z": 100,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.654,
+"deviant": 0.0
+},
+{
+"id": "KH0478",
+"aliases": [
+"UR242"
+],
+"recorder": "Urton",
+"provenance": "Ica",
+"n": 241,
+"S": 170,
+"Z": 71,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.909,
+"baseline": 0.705,
+"deviant": 0.091
+},
+{
+"id": "KH0484",
+"aliases": [
+"UR248"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 51,
+"S": 13,
+"Z": 38,
+"rule": {
+"S": "Z",
+"L": "S"
+},
+"explained": 0.98,
+"baseline": 0.745,
+"deviant": 0.02
+},
+{
+"id": "KH0490",
+"aliases": [
+"UR254"
+],
+"recorder": "Urton",
+"provenance": "Pachacamac",
+"n": 41,
+"S": 15,
+"Z": 26,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.634,
+"deviant": 0.0
+},
+{
+"id": "KH0491",
+"aliases": [
+"UR255"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 156,
+"S": 17,
+"Z": 139,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.891,
+"baseline": 0.891,
+"deviant": 0.109
+},
+{
+"id": "KH0492",
+"aliases": [
+"UR256"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 305,
+"S": 34,
+"Z": 271,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.889,
+"baseline": 0.889,
+"deviant": 0.111
+},
+{
+"id": "KH0494",
+"aliases": [
+"UR258"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 88,
+"S": 30,
+"Z": 58,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.943,
+"baseline": 0.659,
+"deviant": 0.057
+},
+{
+"id": "KH0496",
+"aliases": [
+"UR260"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 76,
+"S": 28,
+"Z": 48,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.632,
+"deviant": 0.0
+},
+{
+"id": "KH0500",
+"aliases": [
+"UR264"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 228,
+"S": 104,
+"Z": 124,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "S"
+},
+"explained": 0.996,
+"baseline": 0.544,
+"deviant": 0.004
+},
+{
+"id": "KH0502",
+"aliases": [
+"UR266"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 329,
+"S": 96,
+"Z": 233,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.988,
+"baseline": 0.708,
+"deviant": 0.012
+},
+{
+"id": "KH0503",
+"aliases": [
+"UR267A"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 181,
+"S": 59,
+"Z": 122,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.674,
+"deviant": 0.0
+},
+{
+"id": "KH0504",
+"aliases": [
+"UR267B"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 234,
+"S": 54,
+"Z": 180,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.769,
+"deviant": 0.0
+},
+{
+"id": "KH0505",
+"aliases": [
+"UR268"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 434,
+"S": 95,
+"Z": 339,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.781,
+"deviant": 0.0
+},
+{
+"id": "KH0506",
+"aliases": [
+"UR269"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 548,
+"S": 97,
+"Z": 451,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.947,
+"baseline": 0.823,
+"deviant": 0.053
+},
+{
+"id": "KH0507",
+"aliases": [
+"UR270"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 652,
+"S": 110,
+"Z": 542,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.87,
+"baseline": 0.831,
+"deviant": 0.13
+},
+{
+"id": "KH0510",
+"aliases": [
+"UR273A"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 68,
+"S": 18,
+"Z": 50,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.735,
+"deviant": 0.0
+},
+{
+"id": "KH0511",
+"aliases": [
+"UR273B"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 96,
+"S": 18,
+"Z": 78,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.812,
+"deviant": 0.0
+},
+{
+"id": "KH0512",
+"aliases": [
+"UR274A"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 95,
+"S": 18,
+"Z": 77,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.989,
+"baseline": 0.811,
+"deviant": 0.011
+},
+{
+"id": "KH0513",
+"aliases": [
+"UR274B"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 160,
+"S": 35,
+"Z": 125,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "S"
+},
+"explained": 0.975,
+"baseline": 0.781,
+"deviant": 0.025
+},
+{
+"id": "KH0514",
+"aliases": [
+"UR275"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 334,
+"S": 83,
+"Z": 251,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.958,
+"baseline": 0.751,
+"deviant": 0.042
+},
+{
+"id": "KH0516",
+"aliases": [
+"UR277"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 321,
+"S": 135,
+"Z": 186,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.96,
+"baseline": 0.579,
+"deviant": 0.04
+},
+{
+"id": "KH0517",
+"aliases": [
+"UR278"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 881,
+"S": 250,
+"Z": 631,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.999,
+"baseline": 0.716,
+"deviant": 0.001
+},
+{
+"id": "KH0518",
+"aliases": [
+"UR279"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 42,
+"S": 12,
+"Z": 30,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.714,
+"deviant": 0.0
+},
+{
+"id": "KH0519",
+"aliases": [
+"UR280"
+],
+"recorder": "Urton",
+"provenance": "Incahuasi",
+"n": 255,
+"S": 111,
+"Z": 144,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.992,
+"baseline": 0.565,
+"deviant": 0.008
+},
+{
+"id": "KH0521",
+"aliases": [
+"UR283"
+],
+"recorder": "Urton",
+"provenance": "Huaca San Pedro, Armatambo",
+"n": 228,
+"S": 93,
+"Z": 135,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.846,
+"baseline": 0.592,
+"deviant": 0.154
+},
+{
+"id": "KH0525",
+"aliases": [
+"UR287"
+],
+"recorder": "Urton",
+"provenance": "Armatambo, Huaca San Pedro",
+"n": 43,
+"S": 22,
+"Z": 21,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.977,
+"baseline": 0.512,
+"deviant": 0.023
+},
+{
+"id": "KH0549",
+"aliases": [
+"HP017"
+],
+"recorder": "Pereyra",
+"provenance": "Pachacamac",
+"n": 156,
+"S": 29,
+"Z": 127,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.814,
+"deviant": 0.0
+},
+{
+"id": "KH0552",
+"aliases": [
+"HP020"
+],
+"recorder": "Pereyra",
+"provenance": "Pachacamac",
+"n": 43,
+"S": 19,
+"Z": 24,
+"rule": {
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.558,
+"deviant": 0.0
+},
+{
+"id": "KH0567",
+"aliases": [
+"HP037"
+],
+"recorder": "Pereyra",
+"provenance": "Costa Central, Huacho",
+"n": 66,
+"S": 43,
+"Z": 23,
+"rule": {
+"S": "S",
+"L": "S"
+},
+"explained": 0.652,
+"baseline": 0.652,
+"deviant": 0.348
+},
+{
+"id": "KH0574",
+"aliases": [
+"HP045"
+],
+"recorder": "Pereyra",
+"provenance": "Regi\u00f3n Sur, Quillagua, Valle de Loa",
+"n": 53,
+"S": 35,
+"Z": 18,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.811,
+"baseline": 0.66,
+"deviant": 0.189
+},
+{
+"id": "KH0587",
+"aliases": [
+"HP056"
+],
+"recorder": "Pereyra",
+"provenance": null,
+"n": 243,
+"S": 229,
+"Z": 14,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "S"
+},
+"explained": 0.942,
+"baseline": 0.942,
+"deviant": 0.058
+},
+{
+"id": "KH0595",
+"aliases": [
+"QU007",
+"QU07"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 141,
+"S": 66,
+"Z": 75,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.532,
+"deviant": 0.0
+},
+{
+"id": "KH0599",
+"aliases": [
+"QU011",
+"QU11"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 267,
+"S": 161,
+"Z": 106,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.682,
+"baseline": 0.603,
+"deviant": 0.318
+},
+{
+"id": "KH0600",
+"aliases": [
+"QU012",
+"QU12"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 294,
+"S": 244,
+"Z": 50,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.83,
+"deviant": 0.0
+},
+{
+"id": "KH0601",
+"aliases": [
+"QU013",
+"QU13"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 175,
+"S": 126,
+"Z": 49,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.914,
+"baseline": 0.72,
+"deviant": 0.086
+},
+{
+"id": "KH0602",
+"aliases": [
+"QU014",
+"QU14"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 246,
+"S": 227,
+"Z": 19,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.992,
+"baseline": 0.923,
+"deviant": 0.008
+},
+{
+"id": "KH0603",
+"aliases": [
+"QU015",
+"QU15"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 212,
+"S": 18,
+"Z": 194,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.915,
+"baseline": 0.915,
+"deviant": 0.085
+},
+{
+"id": "KH0604",
+"aliases": [
+"QU016",
+"QU16"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 88,
+"S": 28,
+"Z": 60,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.875,
+"baseline": 0.682,
+"deviant": 0.125
+},
+{
+"id": "KH0607",
+"aliases": [
+"QU019",
+"QU19"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 304,
+"S": 186,
+"Z": 118,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.691,
+"baseline": 0.612,
+"deviant": 0.309
+},
+{
+"id": "KH0612",
+"aliases": [
+"JC005"
+],
+"recorder": "Clindaniel",
+"provenance": "Incahuasi",
+"n": 186,
+"S": 31,
+"Z": 155,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.946,
+"baseline": 0.833,
+"deviant": 0.054
+},
+{
+"id": "KH0620",
+"aliases": [
+"JC013"
+],
+"recorder": "Clindaniel",
+"provenance": "Incahuasi",
+"n": 73,
+"S": 16,
+"Z": 57,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.781,
+"baseline": 0.781,
+"deviant": 0.219
+},
+{
+"id": "KH0630",
+"aliases": [
+"JC023"
+],
+"recorder": "Clindaniel",
+"provenance": "Incahuasi",
+"n": 56,
+"S": 13,
+"Z": 43,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.786,
+"baseline": 0.768,
+"deviant": 0.214
+},
+{
+"id": "KH0633",
+"aliases": [],
+"recorder": "Rode",
+"provenance": null,
+"n": 63,
+"S": 52,
+"Z": 11,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.825,
+"deviant": 0.0
+},
+{
+"id": "KH0634",
+"aliases": [],
+"recorder": "Rode",
+"provenance": null,
+"n": 52,
+"S": 44,
+"Z": 8,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.962,
+"baseline": 0.846,
+"deviant": 0.038
+},
+{
+"id": "KH0635",
+"aliases": [],
+"recorder": "Rode",
+"provenance": null,
+"n": 131,
+"S": 118,
+"Z": 13,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "S"
+},
+"explained": 0.901,
+"baseline": 0.901,
+"deviant": 0.099
+},
+{
+"id": "KH0667",
+"aliases": [
+"QU021",
+"QU21"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 131,
+"S": 103,
+"Z": 28,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.977,
+"baseline": 0.786,
+"deviant": 0.023
+},
+{
+"id": "KH0670",
+"aliases": [
+"QU024"
+],
+"recorder": "Quave",
+"provenance": null,
+"n": 137,
+"S": 65,
+"Z": 72,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 1.0,
+"baseline": 0.526,
+"deviant": 0.0
+},
+{
+"id": "KH0672",
+"aliases": [
+"MM006/AN001"
+],
+"recorder": "Medrano",
+"provenance": "South Peru",
+"n": 73,
+"S": 23,
+"Z": 50,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 1.0,
+"baseline": 0.685,
+"deviant": 0.0
+},
+{
+"id": "KH0673",
+"aliases": [
+"MM007/AN002"
+],
+"recorder": "Medrano",
+"provenance": "South Peru",
+"n": 62,
+"S": 8,
+"Z": 54,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.871,
+"baseline": 0.871,
+"deviant": 0.129
+},
+{
+"id": "KH0675",
+"aliases": [
+"UR298"
+],
+"recorder": "Urton",
+"provenance": null,
+"n": 374,
+"S": 18,
+"Z": 356,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.952,
+"baseline": 0.952,
+"deviant": 0.048
+},
+{
+"id": "KH0677",
+"aliases": [
+"MM001"
+],
+"recorder": "Medrano",
+"provenance": "Huacho?",
+"n": 271,
+"S": 44,
+"Z": 227,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.838,
+"baseline": 0.838,
+"deviant": 0.162
+},
+{
+"id": "KH0678",
+"aliases": [
+"MM002"
+],
+"recorder": "Medrano",
+"provenance": "Eduard Gaffron Estate",
+"n": 92,
+"S": 37,
+"Z": 55,
+"rule": {
+"S": "S",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.641,
+"baseline": 0.598,
+"deviant": 0.359
+},
+{
+"id": "KH0680",
+"aliases": [
+"MM004"
+],
+"recorder": "Medrano",
+"provenance": "Unknown (not from Gaffron collections)",
+"n": 70,
+"S": 24,
+"Z": 46,
+"rule": {
+"S": "S",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.671,
+"baseline": 0.657,
+"deviant": 0.329
+},
+{
+"id": "KH0682",
+"aliases": [
+"MM008"
+],
+"recorder": "Medrano",
+"provenance": "Eduard Gaffron",
+"n": 82,
+"S": 58,
+"Z": 24,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.768,
+"baseline": 0.707,
+"deviant": 0.232
+},
+{
+"id": "KH0689",
+"aliases": [
+"MM015"
+],
+"recorder": "Medrano",
+"provenance": "Eduard Gaffron",
+"n": 45,
+"S": 36,
+"Z": 9,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.867,
+"baseline": 0.8,
+"deviant": 0.133
+},
+{
+"id": "KH0692",
+"aliases": [
+"MM019"
+],
+"recorder": "Medrano",
+"provenance": null,
+"n": 271,
+"S": 254,
+"Z": 17,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.967,
+"baseline": 0.937,
+"deviant": 0.033
+},
+{
+"id": "KH0694",
+"aliases": [
+"MM021"
+],
+"recorder": "Medrano",
+"provenance": null,
+"n": 154,
+"S": 118,
+"Z": 36,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "S"
+},
+"explained": 0.987,
+"baseline": 0.766,
+"deviant": 0.013
+},
+{
+"id": "KH0695",
+"aliases": [
+"MM022"
+],
+"recorder": "Medrano",
+"provenance": null,
+"n": 297,
+"S": 129,
+"Z": 168,
+"rule": {
+"S": "Z",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.96,
+"baseline": 0.566,
+"deviant": 0.04
+},
+{
+"id": "KH0696",
+"aliases": [
+"AK001"
+],
+"recorder": "Byrne",
+"provenance": null,
+"n": 49,
+"S": 8,
+"Z": 41,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "S"
+},
+"explained": 0.878,
+"baseline": 0.837,
+"deviant": 0.122
+},
+{
+"id": "KH0698",
+"aliases": [
+"AK003"
+],
+"recorder": "Thompson",
+"provenance": null,
+"n": 797,
+"S": 586,
+"Z": 211,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.77,
+"baseline": 0.735,
+"deviant": 0.23
+},
+{
+"id": "KH0699",
+"aliases": [
+"KT001"
+],
+"recorder": "Thompson",
+"provenance": "Likely near Lima",
+"n": 376,
+"S": 330,
+"Z": 46,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.987,
+"baseline": 0.878,
+"deviant": 0.013
+},
+{
+"id": "KH0700",
+"aliases": [
+"SB001"
+],
+"recorder": "Byrne",
+"provenance": "Probably collected by Jane Stanford and donated to the Stanford Museum before 1905",
+"n": 131,
+"S": 13,
+"Z": 118,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.901,
+"baseline": 0.901,
+"deviant": 0.099
+},
+{
+"id": "KH0701",
+"aliases": [
+"AB001"
+],
+"recorder": "Boswell",
+"provenance": "Thomas Harper Goodspeed",
+"n": 97,
+"S": 9,
+"Z": 88,
+"rule": {
+"S": "Z",
+"L": "Z",
+"E": "Z"
+},
+"explained": 0.907,
+"baseline": 0.907,
+"deviant": 0.093
+},
+{
+"id": "KH0702",
+"aliases": [],
+"recorder": "FitzPatrick",
+"provenance": null,
+"n": 142,
+"S": 70,
+"Z": 72,
+"rule": {
+"S": "S",
+"L": "S",
+"E": "Z"
+},
+"explained": 0.937,
+"baseline": 0.507,
+"deviant": 0.063
+}
+],
+"explained95": 94,
+"explained90": 119,
+"baseline95": 5,
+"recorders": [
+{
+"recorder": "Urton",
+"khipus": 191,
+"rules": {
+"Z/Z": 81,
+"S/S": 51,
+"Z/S": 50,
+"Z/-": 4,
+"-/S": 3,
+"-/Z": 1,
+"S/Z": 1
+},
+"zShareSingles": 0.775
+},
+{
+"recorder": "Ascher",
+"khipus": 96,
+"rules": {
+"Z/Z": 50,
+"S/S": 29,
+"Z/S": 8,
+"-/Z": 4,
+"-/S": 4,
+"S/Z": 1
+},
+"zShareSingles": 0.633
+},
+{
+"recorder": "Brezine",
+"khipus": 47,
+"rules": {
+"Z/Z": 21,
+"S/S": 16,
+"S/Z": 5,
+"-/S": 2,
+"-/Z": 2,
+"Z/S": 1
+},
+"zShareSingles": 0.456
+},
+{
+"recorder": "Pereyra",
+"khipus": 40,
+"rules": {
+"Z/Z": 27,
+"S/S": 8,
+"Z/S": 3,
+"-/Z": 2
+},
+"zShareSingles": 0.823
+},
+{
+"recorder": "Quave",
+"khipus": 21,
+"rules": {
+"S/S": 11,
+"Z/Z": 6,
+"Z/S": 4
+},
+"zShareSingles": 0.362
+},
+{
+"recorder": "Medrano",
+"khipus": 16,
+"rules": {
+"Z/Z": 5,
+"S/S": 5,
+"Z/S": 3,
+"S/Z": 3
+},
+"zShareSingles": 0.757
+},
+{
+"recorder": "Clindaniel",
+"khipus": 12,
+"rules": {
+"Z/Z": 8,
+"-/Z": 3,
+"Z/S": 1
+},
+"zShareSingles": 0.993
+},
+{
+"recorder": "Rode",
+"khipus": 3,
+"rules": {
+"S/S": 3
+},
+"zShareSingles": 0.013
+},
+{
+"recorder": "Byrne",
+"khipus": 3,
+"rules": {
+"Z/Z": 3
+},
+"zShareSingles": 0.965
+},
+{
+"recorder": "Hyland",
+"khipus": 2,
+"rules": {
+"Z/Z": 2
+},
+"zShareSingles": 0.917
+},
+{
+"recorder": "Thompson",
+"khipus": 2,
+"rules": {
+"S/S": 2
+},
+"zShareSingles": 0.175
+},
+{
+"recorder": "Locke",
+"khipus": 1,
+"rules": {
+"Z/Z": 1
+},
+"zShareSingles": 1.0
+},
+{
+"recorder": "Strauss",
+"khipus": 1,
+"rules": {
+"Z/Z": 1
+},
+"zShareSingles": 1.0
+},
+{
+"recorder": "Boswell",
+"khipus": 1,
+"rules": {
+"Z/Z": 1
+},
+"zShareSingles": 1.0
+},
+{
+"recorder": "FitzPatrick",
+"khipus": 1,
+"rules": {
+"S/S": 1
+},
+"zShareSingles": 0.0
+}
+]
+}

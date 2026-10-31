@@ -1,0 +1,19 @@
+{
+  "projectName": "khipu",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "npm",
+  "includeExamples": true,
+  "tailwind": true,
+  "projectPreset": "default",
+  "addOnOptions": {},
+  "git": true,
+  "install": true,
+  "intent": true,
+  "routerOnly": true,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "biome"
+  ]
+}

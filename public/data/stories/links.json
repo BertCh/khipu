@@ -1,0 +1,2361 @@
+{
+ "windows": [
+  5,
+  4
+ ],
+ "shuffles": 3,
+ "baseline": {
+  "6": {
+   "observed": 24,
+   "shuffled": 0.7
+  },
+  "5": {
+   "observed": 7,
+   "shuffled": 1.3
+  },
+  "4": {
+   "observed": 27,
+   "shuffled": 18.0
+  }
+ },
+ "pairs": [
+  {
+   "a": "KH0097",
+   "b": "KH0586",
+   "dir": "fwd",
+   "values": 99,
+   "runs": 21,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     174,
+     179
+    ],
+    [
+     6,
+     174,
+     152
+    ],
+    [
+     6,
+     113,
+     128
+    ],
+    [
+     6,
+     113,
+     116
+    ],
+    [
+     6,
+     77,
+     79
+    ],
+    [
+     6,
+     77,
+     66
+    ],
+    [
+     5,
+     101,
+     128
+    ],
+    [
+     5,
+     101,
+     116
+    ],
+    [
+     5,
+     0,
+     0
+    ],
+    [
+     4,
+     178,
+     130
+    ],
+    [
+     4,
+     178,
+     118
+    ],
+    [
+     4,
+     131,
+     135
+    ],
+    [
+     4,
+     113,
+     140
+    ],
+    [
+     4,
+     113,
+     42
+    ],
+    [
+     4,
+     103,
+     93
+    ],
+    [
+     4,
+     101,
+     140
+    ],
+    [
+     4,
+     101,
+     42
+    ],
+    [
+     4,
+     79,
+     44
+    ],
+    [
+     4,
+     77,
+     91
+    ],
+    [
+     4,
+     77,
+     54
+    ],
+    [
+     4,
+     1,
+     40
+    ]
+   ]
+  },
+  {
+   "a": "KH0192",
+   "b": "KH0470",
+   "dir": "fwd",
+   "values": 51,
+   "runs": 10,
+   "longest": 7,
+   "spans": [
+    [
+     7,
+     41,
+     51
+    ],
+    [
+     6,
+     60,
+     74
+    ],
+    [
+     5,
+     81,
+     99
+    ],
+    [
+     5,
+     76,
+     93
+    ],
+    [
+     5,
+     56,
+     69
+    ],
+    [
+     5,
+     51,
+     63
+    ],
+    [
+     5,
+     36,
+     45
+    ],
+    [
+     5,
+     31,
+     39
+    ],
+    [
+     4,
+     72,
+     88
+    ],
+    [
+     4,
+     67,
+     82
+    ]
+   ]
+  },
+  {
+   "a": "KH0121",
+   "b": "KH0473",
+   "dir": "rev",
+   "values": 26,
+   "runs": 2,
+   "longest": 17,
+   "spans": [
+    [
+     17,
+     0,
+     13
+    ],
+    [
+     9,
+     17,
+     3
+    ]
+   ]
+  },
+  {
+   "a": "KH0301",
+   "b": "KH0305",
+   "dir": "fwd",
+   "values": 21,
+   "runs": 2,
+   "longest": 14,
+   "spans": [
+    [
+     14,
+     36,
+     37
+    ],
+    [
+     7,
+     59,
+     61
+    ]
+   ]
+  },
+  {
+   "a": "KH0303",
+   "b": "KH0304",
+   "dir": "fwd",
+   "values": 20,
+   "runs": 1,
+   "longest": 20,
+   "spans": [
+    [
+     20,
+     7,
+     7
+    ]
+   ]
+  },
+  {
+   "a": "KH0049",
+   "b": "KH0362",
+   "dir": "fwd",
+   "values": 19,
+   "runs": 2,
+   "longest": 12,
+   "spans": [
+    [
+     12,
+     82,
+     46
+    ],
+    [
+     7,
+     71,
+     35
+    ]
+   ]
+  },
+  {
+   "a": "KH0128",
+   "b": "KH0137",
+   "dir": "fwd",
+   "values": 16,
+   "runs": 1,
+   "longest": 16,
+   "spans": [
+    [
+     16,
+     34,
+     35
+    ]
+   ]
+  },
+  {
+   "a": "KH0450",
+   "b": "KH0689",
+   "dir": "rev",
+   "values": 13,
+   "runs": 1,
+   "longest": 13,
+   "spans": [
+    [
+     13,
+     181,
+     0
+    ]
+   ]
+  },
+  {
+   "a": "KH0140",
+   "b": "KH0483",
+   "dir": "fwd",
+   "values": 12,
+   "runs": 1,
+   "longest": 12,
+   "spans": [
+    [
+     12,
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "a": "KH0245",
+   "b": "KH0257",
+   "dir": "rev",
+   "values": 12,
+   "runs": 1,
+   "longest": 12,
+   "spans": [
+    [
+     12,
+     118,
+     24
+    ]
+   ]
+  },
+  {
+   "a": "KH0450",
+   "b": "KH0690",
+   "dir": "rev",
+   "values": 10,
+   "runs": 1,
+   "longest": 10,
+   "spans": [
+    [
+     10,
+     138,
+     4
+    ]
+   ]
+  },
+  {
+   "a": "KH0109",
+   "b": "KH0607",
+   "dir": "rev",
+   "values": 8,
+   "runs": 2,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     49,
+     104
+    ],
+    [
+     4,
+     49,
+     96
+    ]
+   ]
+  },
+  {
+   "a": "KH0377",
+   "b": "KH0590",
+   "dir": "fwd",
+   "values": 8,
+   "runs": 1,
+   "longest": 8,
+   "spans": [
+    [
+     8,
+     10,
+     9
+    ]
+   ]
+  },
+  {
+   "a": "KH0175",
+   "b": "KH0190",
+   "dir": "fwd",
+   "values": 7,
+   "runs": 1,
+   "longest": 7,
+   "spans": [
+    [
+     7,
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "a": "KH0450",
+   "b": "KH0682",
+   "dir": "fwd",
+   "values": 7,
+   "runs": 1,
+   "longest": 7,
+   "spans": [
+    [
+     7,
+     5,
+     15
+    ]
+   ]
+  },
+  {
+   "a": "KH0141",
+   "b": "KH0464",
+   "dir": "fwd",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     85,
+     0
+    ]
+   ]
+  },
+  {
+   "a": "KH0143",
+   "b": "KH0601",
+   "dir": "rev",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     87,
+     164
+    ]
+   ]
+  },
+  {
+   "a": "KH0147",
+   "b": "KH0683",
+   "dir": "rev",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     126,
+     0
+    ]
+   ]
+  },
+  {
+   "a": "KH0147",
+   "b": "KH0689",
+   "dir": "fwd",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     0,
+     14
+    ]
+   ]
+  },
+  {
+   "a": "KH0192",
+   "b": "KH0469",
+   "dir": "fwd",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     187,
+     82
+    ]
+   ]
+  },
+  {
+   "a": "KH0253",
+   "b": "KH0620",
+   "dir": "rev",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     83,
+     41
+    ]
+   ]
+  },
+  {
+   "a": "KH0358",
+   "b": "KH0602",
+   "dir": "fwd",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     103,
+     21
+    ]
+   ]
+  },
+  {
+   "a": "KH0369",
+   "b": "KH0677",
+   "dir": "rev",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     13,
+     117
+    ]
+   ]
+  },
+  {
+   "a": "KH0464",
+   "b": "KH0674",
+   "dir": "rev",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     12,
+     251
+    ]
+   ]
+  },
+  {
+   "a": "KH0616",
+   "b": "KH0620",
+   "dir": "fwd",
+   "values": 6,
+   "runs": 1,
+   "longest": 6,
+   "spans": [
+    [
+     6,
+     54,
+     16
+    ]
+   ]
+  },
+  {
+   "a": "KH0147",
+   "b": "KH0682",
+   "dir": "rev",
+   "values": 5,
+   "runs": 1,
+   "longest": 5,
+   "spans": [
+    [
+     5,
+     136,
+     5
+    ]
+   ]
+  },
+  {
+   "a": "KH0147",
+   "b": "KH0690",
+   "dir": "fwd",
+   "values": 5,
+   "runs": 1,
+   "longest": 5,
+   "spans": [
+    [
+     5,
+     34,
+     14
+    ]
+   ]
+  },
+  {
+   "a": "KH0156",
+   "b": "KH0432",
+   "dir": "rev",
+   "values": 5,
+   "runs": 1,
+   "longest": 5,
+   "spans": [
+    [
+     5,
+     132,
+     29
+    ]
+   ]
+  },
+  {
+   "a": "KH0228",
+   "b": "KH0424",
+   "dir": "rev",
+   "values": 5,
+   "runs": 1,
+   "longest": 5,
+   "spans": [
+    [
+     5,
+     74,
+     36
+    ]
+   ]
+  },
+  {
+   "a": "KH0325",
+   "b": "KH0480",
+   "dir": "rev",
+   "values": 5,
+   "runs": 1,
+   "longest": 5,
+   "spans": [
+    [
+     5,
+     186,
+     3
+    ]
+   ]
+  },
+  {
+   "a": "KH0329",
+   "b": "KH0620",
+   "dir": "rev",
+   "values": 5,
+   "runs": 1,
+   "longest": 5,
+   "spans": [
+    [
+     5,
+     176,
+     2
+    ]
+   ]
+  },
+  {
+   "a": "KH0446",
+   "b": "KH0470",
+   "dir": "fwd",
+   "values": 5,
+   "runs": 1,
+   "longest": 5,
+   "spans": [
+    [
+     5,
+     52,
+     97
+    ]
+   ]
+  },
+  {
+   "a": "KH0013",
+   "b": "KH0607",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     65,
+     90
+    ]
+   ]
+  },
+  {
+   "a": "KH0031",
+   "b": "KH0549",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     42,
+     28
+    ]
+   ]
+  },
+  {
+   "a": "KH0108",
+   "b": "KH0271",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     8,
+     27
+    ]
+   ]
+  },
+  {
+   "a": "KH0132",
+   "b": "KH0456",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     5,
+     10
+    ]
+   ]
+  },
+  {
+   "a": "KH0162",
+   "b": "KH0281",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     27,
+     22
+    ]
+   ]
+  },
+  {
+   "a": "KH0176",
+   "b": "KH0453",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     16,
+     17
+    ]
+   ]
+  },
+  {
+   "a": "KH0240",
+   "b": "KH0478",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     58,
+     73
+    ]
+   ]
+  },
+  {
+   "a": "KH0240",
+   "b": "KH0600",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     61,
+     50
+    ]
+   ]
+  },
+  {
+   "a": "KH0253",
+   "b": "KH0329",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     18,
+     114
+    ]
+   ]
+  },
+  {
+   "a": "KH0267",
+   "b": "KH0309",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     28,
+     2
+    ]
+   ]
+  },
+  {
+   "a": "KH0273",
+   "b": "KH0437",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     25,
+     74
+    ]
+   ]
+  },
+  {
+   "a": "KH0280",
+   "b": "KH0288",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     73,
+     107
+    ]
+   ]
+  },
+  {
+   "a": "KH0282",
+   "b": "KH0466",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     16,
+     60
+    ]
+   ]
+  },
+  {
+   "a": "KH0282",
+   "b": "KH0699",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     21,
+     110
+    ]
+   ]
+  },
+  {
+   "a": "KH0296",
+   "b": "KH0597",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     47,
+     78
+    ]
+   ]
+  },
+  {
+   "a": "KH0323",
+   "b": "KH0667",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     239,
+     35
+    ]
+   ]
+  },
+  {
+   "a": "KH0349",
+   "b": "KH0461",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     82,
+     30
+    ]
+   ]
+  },
+  {
+   "a": "KH0436",
+   "b": "KH0595",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     195,
+     79
+    ]
+   ]
+  },
+  {
+   "a": "KH0446",
+   "b": "KH0451",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     38,
+     71
+    ]
+   ]
+  },
+  {
+   "a": "KH0461",
+   "b": "KH0698",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     48,
+     444
+    ]
+   ]
+  },
+  {
+   "a": "KH0468",
+   "b": "KH0691",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     200,
+     3
+    ]
+   ]
+  },
+  {
+   "a": "KH0478",
+   "b": "KH0595",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     32,
+     16
+    ]
+   ]
+  },
+  {
+   "a": "KH0480",
+   "b": "KH0698",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     1,
+     452
+    ]
+   ]
+  },
+  {
+   "a": "KH0590",
+   "b": "KH0595",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     42,
+     41
+    ]
+   ]
+  },
+  {
+   "a": "KH0590",
+   "b": "KH0607",
+   "dir": "fwd",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     43,
+     92
+    ]
+   ]
+  },
+  {
+   "a": "KH0618",
+   "b": "KH0698",
+   "dir": "rev",
+   "values": 4,
+   "runs": 1,
+   "longest": 4,
+   "spans": [
+    [
+     4,
+     56,
+     355
+    ]
+   ]
+  }
+ ],
+ "accessions": [
+  {
+   "id": "acc-22",
+   "museum": "American Museum of Natural History",
+   "number": "B/3453",
+   "ids": [
+    "KH0416",
+    "KH0417",
+    "KH0418",
+    "KH0419"
+   ]
+  },
+  {
+   "id": "acc-35",
+   "museum": "British Museum",
+   "number": "AM1937,0213.84",
+   "ids": [
+    "KH0633",
+    "KH0634",
+    "KH0635"
+   ]
+  },
+  {
+   "id": "acc-36",
+   "museum": "Brooklyn Museum",
+   "number": "70.177.69,X591",
+   "ids": [
+    "KH0043",
+    "KH0044",
+    "KH0045",
+    "KH0046"
+   ]
+  },
+  {
+   "id": "acc-46",
+   "museum": "Centro Mallqui",
+   "number": "CMA-628/LC1-257",
+   "ids": [
+    "KH0247",
+    "KH0248",
+    "KH0249",
+    "KH0250",
+    "KH0251"
+   ]
+  },
+  {
+   "id": "acc-81",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA16138",
+   "ids": [
+    "KH0175",
+    "KH0176"
+   ]
+  },
+  {
+   "id": "acc-83",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA16141",
+   "ids": [
+    "KH0448",
+    "KH0449"
+   ]
+  },
+  {
+   "id": "acc-86",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA16145",
+   "ids": [
+    "KH0190",
+    "KH0191"
+   ]
+  },
+  {
+   "id": "acc-91",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA24369",
+   "ids": [
+    "KH0148",
+    "KH0149"
+   ]
+  },
+  {
+   "id": "acc-92",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA24370",
+   "ids": [
+    "KH0120",
+    "KH0121"
+   ]
+  },
+  {
+   "id": "acc-93",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA24371",
+   "ids": [
+    "KH0138",
+    "KH0139"
+   ]
+  },
+  {
+   "id": "acc-95",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA37859",
+   "ids": [
+    "KH0194",
+    "KH0195"
+   ]
+  },
+  {
+   "id": "acc-97",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA37867",
+   "ids": [
+    "KH0170",
+    "KH0171"
+   ]
+  },
+  {
+   "id": "acc-99",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA42508",
+   "ids": [
+    "KH0451",
+    "KH0452"
+   ]
+  },
+  {
+   "id": "acc-108",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA42528",
+   "ids": [
+    "KH0114",
+    "KH0115"
+   ]
+  },
+  {
+   "id": "acc-133",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA42597",
+   "ids": [
+    "KH0438",
+    "KH0439"
+   ]
+  },
+  {
+   "id": "acc-137",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA42605",
+   "ids": [
+    "KH0124",
+    "KH0125"
+   ]
+  },
+  {
+   "id": "acc-138",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA42607",
+   "ids": [
+    "KH0479",
+    "KH0480",
+    "KH0481",
+    "KH0482"
+   ]
+  },
+  {
+   "id": "acc-140",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA42610",
+   "ids": [
+    "KH0140",
+    "KH0483"
+   ]
+  },
+  {
+   "id": "acc-142",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA43333",
+   "ids": [
+    "KH0205",
+    "KH0206"
+   ]
+  },
+  {
+   "id": "acc-144",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA44677A",
+   "ids": [
+    "KH0464",
+    "KH0465"
+   ]
+  },
+  {
+   "id": "acc-146",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA44866",
+   "ids": [
+    "KH0163",
+    "KH0164",
+    "KH0165"
+   ]
+  },
+  {
+   "id": "acc-167",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA47106",
+   "ids": [
+    "KH0177",
+    "KH0178",
+    "KH0179"
+   ]
+  },
+  {
+   "id": "acc-171",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA47114",
+   "ids": [
+    "KH0458",
+    "KH0459",
+    "KH0460"
+   ]
+  },
+  {
+   "id": "acc-172",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA47114C",
+   "ids": [
+    "KH0442",
+    "KH0443",
+    "KH0444"
+   ]
+  },
+  {
+   "id": "acc-177",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA47124",
+   "ids": [
+    "KH0157",
+    "KH0158"
+   ]
+  },
+  {
+   "id": "acc-180",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA63038",
+   "ids": [
+    "KH0469",
+    "KH0470"
+   ]
+  },
+  {
+   "id": "acc-183",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA63042",
+   "ids": [
+    "KH0142",
+    "KH0143"
+   ]
+  },
+  {
+   "id": "acc-193",
+   "museum": "Ethnologisches Museum, Berlin",
+   "number": "VA66840",
+   "ids": [
+    "KH0199",
+    "KH0201",
+    "KH0202",
+    "KH0203",
+    "KH0204"
+   ]
+  },
+  {
+   "id": "acc-199",
+   "museum": "Hood Museum of Art, Dartmouth College",
+   "number": "55-32-13302",
+   "ids": [
+    "KH0235",
+    "KH0236"
+   ]
+  },
+  {
+   "id": "acc-222",
+   "museum": "Museo Arqueologico San Miguel de Azapa (MASMA)",
+   "number": "23284",
+   "ids": [
+    "KH0294",
+    "KH0295"
+   ]
+  },
+  {
+   "id": "acc-224",
+   "museum": "Museo Central - Banco Central de Reserva",
+   "number": "ATE3517",
+   "ids": [
+    "KH0283",
+    "KH0284",
+    "KH0285",
+    "KH0286",
+    "KH0287"
+   ]
+  },
+  {
+   "id": "acc-226",
+   "museum": "Museo Chileno de Arte Precolombino",
+   "number": "21163",
+   "ids": [
+    "KH0370",
+    "KH0371",
+    "KH0372"
+   ]
+  },
+  {
+   "id": "acc-232",
+   "museum": "Museo Jijon y Caamano, Pontificia Universidad Catolica del Ecuador",
+   "number": "P501",
+   "ids": [
+    "KH0047",
+    "KH0048"
+   ]
+  },
+  {
+   "id": "acc-244",
+   "museum": "Museo Nacional de Arqueología, Antropología e Historia del Perú",
+   "number": "35268",
+   "ids": [
+    "KH0520",
+    "KH0521"
+   ]
+  },
+  {
+   "id": "acc-250",
+   "museum": "Museo Nacional de Arqueología, Antropología e Historia del Perú",
+   "number": "36223",
+   "ids": [
+    "KH0525",
+    "KH0526"
+   ]
+  },
+  {
+   "id": "acc-273",
+   "museum": "Museo Nacional de Arqueología, Antropología e Historia del Perú",
+   "number": "MNAAHP5720",
+   "ids": [
+    "KH0575",
+    "KH0576"
+   ]
+  },
+  {
+   "id": "acc-278",
+   "museum": "Museo Nacional de Arqueología, Antropología e Historia del Perú",
+   "number": "MNAAHP5726",
+   "ids": [
+    "KH0581",
+    "KH0582"
+   ]
+  },
+  {
+   "id": "acc-337",
+   "museum": "Museo Temple Radicati",
+   "number": "9",
+   "ids": [
+    "KH0333",
+    "KH0340"
+   ]
+  },
+  {
+   "id": "acc-373",
+   "museum": "Museum der Kulturen",
+   "number": "IVC.366.03",
+   "ids": [
+    "KH0682",
+    "KH0683",
+    "KH0684",
+    "KH0685",
+    "KH0686",
+    "KH0687",
+    "KH0688",
+    "KH0689",
+    "KH0690",
+    "KH0691"
+   ]
+  },
+  {
+   "id": "acc-385",
+   "museum": "Museum für Völkerkunde, Munich",
+   "number": "G3305",
+   "ids": [
+    "KH0106",
+    "KH0107"
+   ]
+  },
+  {
+   "id": "acc-396",
+   "museum": "Museum of Science",
+   "number": "C14459",
+   "ids": [
+    "KH0225",
+    "KH0226",
+    "KH0227"
+   ]
+  },
+  {
+   "id": "acc-402",
+   "museum": "Museum of World Culture",
+   "number": "1929.26.0157A-",
+   "ids": [
+    "KH0352",
+    "KH0353"
+   ]
+  },
+  {
+   "id": "acc-403",
+   "museum": "Museum of World Culture",
+   "number": "1930.02.0016",
+   "ids": [
+    "KH0366",
+    "KH0367",
+    "KH0368"
+   ]
+  },
+  {
+   "id": "acc-405",
+   "museum": "Museum of World Culture",
+   "number": "1931.37.0002",
+   "ids": [
+    "KH0358",
+    "KH0359",
+    "KH0365"
+   ]
+  },
+  {
+   "id": "acc-408",
+   "museum": "Museum of World Culture",
+   "number": "32.7.3",
+   "ids": [
+    "KH0354",
+    "KH0355",
+    "KH0356",
+    "KH0357"
+   ]
+  },
+  {
+   "id": "acc-445",
+   "museum": "O. Nunez del Prado",
+   "number": "7",
+   "ids": [
+    "KH0074",
+    "KH0075"
+   ]
+  },
+  {
+   "id": "acc-453",
+   "museum": "Peabody Museum, Harvard University",
+   "number": "41-52-30/293",
+   "ids": [
+    "KH0035",
+    "KH0036",
+    "KH0037",
+    "KH0038",
+    "KH0039",
+    "KH0040",
+    "KH0041"
+   ]
+  },
+  {
+   "id": "acc-457",
+   "museum": "Penn Museum, University of Pennsylvania",
+   "number": "CG852611-6382,SA4034",
+   "ids": [
+    "KH0019",
+    "KH0021"
+   ]
+  },
+  {
+   "id": "acc-459",
+   "museum": "Penn Museum, University of Pennsylvania",
+   "number": "SA4030",
+   "ids": [
+    "KH0027",
+    "KH0028"
+   ]
+  },
+  {
+   "id": "acc-470",
+   "museum": "Phoebe A. Hearst Museum of Anthropology",
+   "number": "TK4/5419",
+   "ids": [
+    "KH0219",
+    "KH0220",
+    "KH0221"
+   ]
+  },
+  {
+   "id": "acc-471",
+   "museum": "Phoebe A. Hearst Museum of Anthropology",
+   "number": "TM4/5446",
+   "ids": [
+    "KH0223",
+    "KH0265",
+    "KH0266"
+   ]
+  },
+  {
+   "id": "acc-483",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "12703-2014",
+   "ids": [
+    "KH0500",
+    "KH0501"
+   ]
+  },
+  {
+   "id": "acc-485",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "13092",
+   "ids": [
+    "KH0503",
+    "KH0504"
+   ]
+  },
+  {
+   "id": "acc-489",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "13831-2014",
+   "ids": [
+    "KH0510",
+    "KH0511"
+   ]
+  },
+  {
+   "id": "acc-490",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "13832-2014",
+   "ids": [
+    "KH0512",
+    "KH0513"
+   ]
+  },
+  {
+   "id": "acc-500",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "9228-13",
+   "ids": [
+    "KH0491",
+    "KH0492",
+    "KH0493",
+    "KH0494",
+    "KH0495",
+    "KH0496",
+    "KH0497"
+   ]
+  },
+  {
+   "id": "acc-503",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "PAI-003-2016",
+   "ids": [
+    "KH0609",
+    "KH0610"
+   ]
+  },
+  {
+   "id": "acc-505",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "PAI-005-2016",
+   "ids": [
+    "KH0611",
+    "KH0612"
+   ]
+  },
+  {
+   "id": "acc-507",
+   "museum": "Proyecto Arqueológico Incahuasi",
+   "number": "PAI-008-2016",
+   "ids": [
+    "KH0618",
+    "KH0619",
+    "KH0620"
+   ]
+  },
+  {
+   "id": "acc-536",
+   "museum": "Puruchuco Museum",
+   "number": "4",
+   "ids": [
+    "KH0303",
+    "KH0314"
+   ]
+  },
+  {
+   "id": "acc-540",
+   "museum": "Rijksmuseum voor Volkenkunde, Leiden",
+   "number": "RV-3344-1",
+   "ids": [
+    "KH0290",
+    "KH0291",
+    "KH0292"
+   ]
+  }
+ ],
+ "places": [
+  {
+   "id": "place-0",
+   "label": "Pachacamac",
+   "ids": [
+    "KH0042",
+    "KH0108",
+    "KH0109",
+    "KH0110",
+    "KH0112",
+    "KH0114",
+    "KH0115",
+    "KH0116",
+    "KH0118",
+    "KH0124",
+    "KH0125",
+    "KH0126",
+    "KH0132",
+    "KH0133",
+    "KH0135",
+    "KH0140",
+    "KH0147",
+    "KH0150",
+    "KH0155",
+    "KH0160",
+    "KH0161",
+    "KH0167",
+    "KH0172",
+    "KH0173",
+    "KH0174",
+    "KH0180",
+    "KH0182",
+    "KH0184",
+    "KH0187",
+    "KH0189",
+    "KH0192",
+    "KH0205",
+    "KH0206",
+    "KH0207",
+    "KH0351",
+    "KH0363",
+    "KH0364",
+    "KH0434",
+    "KH0435",
+    "KH0437",
+    "KH0438",
+    "KH0439",
+    "KH0440",
+    "KH0441",
+    "KH0446",
+    "KH0450",
+    "KH0451",
+    "KH0452",
+    "KH0454",
+    "KH0456",
+    "KH0463",
+    "KH0467",
+    "KH0479",
+    "KH0480",
+    "KH0481",
+    "KH0482",
+    "KH0483",
+    "KH0484",
+    "KH0485",
+    "KH0489",
+    "KH0490",
+    "KH0533",
+    "KH0534",
+    "KH0535",
+    "KH0536",
+    "KH0537",
+    "KH0538",
+    "KH0539",
+    "KH0540",
+    "KH0541",
+    "KH0542",
+    "KH0543",
+    "KH0544",
+    "KH0545",
+    "KH0546",
+    "KH0549",
+    "KH0550",
+    "KH0551",
+    "KH0552",
+    "KH0553",
+    "KH0554",
+    "KH0555",
+    "KH0557",
+    "KH0558",
+    "KH0559",
+    "KH0560",
+    "KH0563",
+    "KH0564"
+   ]
+  },
+  {
+   "id": "place-1",
+   "label": "Incahuasi",
+   "ids": [
+    "KH0491",
+    "KH0492",
+    "KH0493",
+    "KH0494",
+    "KH0495",
+    "KH0496",
+    "KH0497",
+    "KH0498",
+    "KH0499",
+    "KH0500",
+    "KH0501",
+    "KH0502",
+    "KH0503",
+    "KH0504",
+    "KH0505",
+    "KH0506",
+    "KH0507",
+    "KH0508",
+    "KH0509",
+    "KH0510",
+    "KH0511",
+    "KH0512",
+    "KH0513",
+    "KH0514",
+    "KH0515",
+    "KH0516",
+    "KH0517",
+    "KH0518",
+    "KH0519",
+    "KH0608",
+    "KH0609",
+    "KH0610",
+    "KH0611",
+    "KH0612",
+    "KH0613",
+    "KH0614",
+    "KH0615",
+    "KH0616",
+    "KH0617",
+    "KH0618",
+    "KH0619",
+    "KH0620",
+    "KH0621",
+    "KH0622",
+    "KH0623",
+    "KH0624",
+    "KH0625",
+    "KH0626",
+    "KH0627",
+    "KH0628",
+    "KH0629",
+    "KH0630"
+   ]
+  },
+  {
+   "id": "place-2",
+   "label": "Ica",
+   "ids": [
+    "KH0113",
+    "KH0117",
+    "KH0119",
+    "KH0123",
+    "KH0129",
+    "KH0130",
+    "KH0131",
+    "KH0134",
+    "KH0137",
+    "KH0141",
+    "KH0144",
+    "KH0151",
+    "KH0154",
+    "KH0157",
+    "KH0158",
+    "KH0159",
+    "KH0162",
+    "KH0166",
+    "KH0168",
+    "KH0177",
+    "KH0178",
+    "KH0179",
+    "KH0181",
+    "KH0183",
+    "KH0188",
+    "KH0196",
+    "KH0197",
+    "KH0222",
+    "KH0407",
+    "KH0432",
+    "KH0442",
+    "KH0443",
+    "KH0444",
+    "KH0457",
+    "KH0458",
+    "KH0459",
+    "KH0460",
+    "KH0461",
+    "KH0466",
+    "KH0474",
+    "KH0478",
+    "KH0486"
+   ]
+  },
+  {
+   "id": "place-3",
+   "label": "Leymebamba",
+   "ids": [
+    "KH0237",
+    "KH0238",
+    "KH0239",
+    "KH0240",
+    "KH0241",
+    "KH0242",
+    "KH0243",
+    "KH0244",
+    "KH0245",
+    "KH0246",
+    "KH0247",
+    "KH0248",
+    "KH0249",
+    "KH0250",
+    "KH0251",
+    "KH0252",
+    "KH0253",
+    "KH0254",
+    "KH0255",
+    "KH0256",
+    "KH0257",
+    "KH0258"
+   ]
+  },
+  {
+   "id": "place-4",
+   "label": "Huaquerones",
+   "ids": [
+    "KH0297",
+    "KH0298",
+    "KH0299",
+    "KH0301",
+    "KH0302",
+    "KH0303",
+    "KH0304",
+    "KH0306",
+    "KH0307",
+    "KH0308",
+    "KH0309",
+    "KH0311",
+    "KH0312",
+    "KH0313",
+    "KH0315",
+    "KH0316",
+    "KH0317",
+    "KH0318",
+    "KH0319"
+   ]
+  },
+  {
+   "id": "place-5",
+   "label": "Huacho",
+   "ids": [
+    "KH0360",
+    "KH0433",
+    "KH0469",
+    "KH0470",
+    "KH0682",
+    "KH0683",
+    "KH0684",
+    "KH0685",
+    "KH0686",
+    "KH0687",
+    "KH0688",
+    "KH0689",
+    "KH0690",
+    "KH0691"
+   ]
+  },
+  {
+   "id": "place-6",
+   "label": "Nazca",
+   "ids": [
+    "KH0034",
+    "KH0142",
+    "KH0143",
+    "KH0152",
+    "KH0156",
+    "KH0193",
+    "KH0235",
+    "KH0236",
+    "KH0272",
+    "KH0349",
+    "KH0350",
+    "KH0361",
+    "KH0362"
+   ]
+  },
+  {
+   "id": "place-7",
+   "label": "Armatambo, Huaca San Pedro",
+   "ids": [
+    "KH0522",
+    "KH0523",
+    "KH0524",
+    "KH0525",
+    "KH0526",
+    "KH0527",
+    "KH0528",
+    "KH0529",
+    "KH0530",
+    "KH0531",
+    "KH0532"
+   ]
+  },
+  {
+   "id": "place-8",
+   "label": "Huacones",
+   "ids": [
+    "KH0653",
+    "KH0654",
+    "KH0655",
+    "KH0656",
+    "KH0657",
+    "KH0658",
+    "KH0659",
+    "KH0660",
+    "KH0661",
+    "KH0662",
+    "KH0663"
+   ]
+  },
+  {
+   "id": "place-9",
+   "label": "Valle de Ica Hacienda Callango Ocucaje",
+   "ids": [
+    "KH0067",
+    "KH0379",
+    "KH0380",
+    "KH0382",
+    "KH0383",
+    "KH0391",
+    "KH0394",
+    "KH0395",
+    "KH0401",
+    "KH0402"
+   ]
+  },
+  {
+   "id": "place-10",
+   "label": "Between Ica and Pisco",
+   "ids": [
+    "KH0111",
+    "KH0122",
+    "KH0127",
+    "KH0128",
+    "KH0175",
+    "KH0176",
+    "KH0190",
+    "KH0191"
+   ]
+  },
+  {
+   "id": "place-11",
+   "label": "\"This quipu is associated wtih AS59-AS67 / found with a cloth bag at Chala.\"",
+   "ids": [
+    "KH0071",
+    "KH0073",
+    "KH0075",
+    "KH0076",
+    "KH0077",
+    "KH0079",
+    "KH0080"
+   ]
+  },
+  {
+   "id": "place-12",
+   "label": "Hacienda Ullujalla y Callengo",
+   "ids": [
+    "KH0062",
+    "KH0063",
+    "KH0064",
+    "KH0065",
+    "KH0066",
+    "KH0389",
+    "KH0392"
+   ]
+  },
+  {
+   "id": "place-13",
+   "label": "Paracas",
+   "ids": [
+    "KH0354",
+    "KH0355",
+    "KH0356",
+    "KH0357",
+    "KH0358",
+    "KH0359",
+    "KH0365"
+   ]
+  },
+  {
+   "id": "place-14",
+   "label": "near Callengo, Ica Valley",
+   "ids": [
+    "KH0209",
+    "KH0210",
+    "KH0211",
+    "KH0212",
+    "KH0213",
+    "KH0214",
+    "KH0215"
+   ]
+  },
+  {
+   "id": "place-15",
+   "label": "Atarco",
+   "ids": [
+    "KH0259",
+    "KH0260",
+    "KH0262",
+    "KH0263",
+    "KH0264",
+    "KH0293"
+   ]
+  },
+  {
+   "id": "place-16",
+   "label": "Marquez",
+   "ids": [
+    "KH0120",
+    "KH0121",
+    "KH0138",
+    "KH0139",
+    "KH0148",
+    "KH0149"
+   ]
+  },
+  {
+   "id": "place-17",
+   "label": "Nazca Valley; Ancon, Central Coast",
+   "ids": [
+    "KH0087",
+    "KH0088",
+    "KH0089",
+    "KH0090",
+    "KH0092",
+    "KH0093"
+   ]
+  },
+  {
+   "id": "place-18",
+   "label": "Peru",
+   "ids": [
+    "KH0100",
+    "KH0102",
+    "KH0103",
+    "KH0105",
+    "KH0106",
+    "KH0107"
+   ]
+  },
+  {
+   "id": "place-19",
+   "label": "Santa",
+   "ids": [
+    "KH0323",
+    "KH0324",
+    "KH0325",
+    "KH0326",
+    "KH0327",
+    "KH0328"
+   ]
+  },
+  {
+   "id": "place-20",
+   "label": "Chancay, Central Coast",
+   "ids": [
+    "KH0374",
+    "KH0375",
+    "KH0376",
+    "KH0377",
+    "KH0421"
+   ]
+  },
+  {
+   "id": "place-21",
+   "label": "Lluta Valley",
+   "ids": [
+    "KH0082",
+    "KH0084",
+    "KH0370",
+    "KH0371",
+    "KH0372"
+   ]
+  },
+  {
+   "id": "place-22",
+   "label": "Playa Miller #6, Arica, Chile",
+   "ids": [
+    "KH0268",
+    "KH0294",
+    "KH0320",
+    "KH0369",
+    "KH0373"
+   ]
+  },
+  {
+   "id": "place-23",
+   "label": "near Lima",
+   "ids": [
+    "KH0145",
+    "KH0170",
+    "KH0171",
+    "KH0194",
+    "KH0195"
+   ]
+  },
+  {
+   "id": "place-24",
+   "label": "Cajamarquilla",
+   "ids": [
+    "KH0416",
+    "KH0417",
+    "KH0418",
+    "KH0419"
+   ]
+  },
+  {
+   "id": "place-25",
+   "label": "Chuquitanta",
+   "ids": [
+    "KH0001",
+    "KH0153",
+    "KH0415",
+    "KH0420"
+   ]
+  },
+  {
+   "id": "place-26",
+   "label": "Ocucaje",
+   "ids": [
+    "KH0163",
+    "KH0164",
+    "KH0165",
+    "KH0455"
+   ]
+  },
+  {
+   "id": "place-27",
+   "label": "Tambo Colorado",
+   "ids": [
+    "KH0396",
+    "KH0397",
+    "KH0398",
+    "KH0399"
+   ]
+  },
+  {
+   "id": "place-28",
+   "label": "\"This quipu is associated with AS59-AS67 / found with a cloth bag at Chala.\"",
+   "ids": [
+    "KH0072",
+    "KH0074",
+    "KH0078"
+   ]
+  },
+  {
+   "id": "place-29",
+   "label": "Grave K, Site T, Soniche cemetery,between Chulpaca and Tate, Ica Valley; Max Uhle excavation",
+   "ids": [
+    "KH0219",
+    "KH0220",
+    "KH0221"
+   ]
+  },
+  {
+   "id": "place-30",
+   "label": "Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)",
+   "ids": [
+    "KH0428",
+    "KH0429",
+    "KH0430"
+   ]
+  },
+  {
+   "id": "place-31",
+   "label": "Ica/Pisco",
+   "ids": [
+    "KH0448",
+    "KH0449",
+    "KH0468"
+   ]
+  },
+  {
+   "id": "place-32",
+   "label": "Pisco",
+   "ids": [
+    "KH0447",
+    "KH0464",
+    "KH0465"
+   ]
+  },
+  {
+   "id": "place-33",
+   "label": "Pueblo Libre, Lima, Peru",
+   "ids": [
+    "KH0276",
+    "KH0277",
+    "KH0278"
+   ]
+  },
+  {
+   "id": "place-34",
+   "label": "Casa del Quipu, Pachacamac",
+   "ids": [
+    "KH0561",
+    "KH0562"
+   ]
+  },
+  {
+   "id": "place-35",
+   "label": "Cieneguilla, Valle de Lurin",
+   "ids": [
+    "KH0547",
+    "KH0548"
+   ]
+  },
+  {
+   "id": "place-36",
+   "label": "Costa Sur",
+   "ids": [
+    "KH0049",
+    "KH0569"
+   ]
+  },
+  {
+   "id": "place-37",
+   "label": "Eduard Gaffron Estate",
+   "ids": [
+    "KH0678",
+    "KH0679"
+   ]
+  },
+  {
+   "id": "place-38",
+   "label": "Grave M, road between Chulpaca and Tate (Site T), Ica valley",
+   "ids": [
+    "KH0265",
+    "KH0266"
+   ]
+  },
+  {
+   "id": "place-39",
+   "label": "Huaca San Pedro, Armatambo",
+   "ids": [
+    "KH0520",
+    "KH0521"
+   ]
+  },
+  {
+   "id": "place-40",
+   "label": "Ica Valley, near Callango",
+   "ids": [
+    "KH0408",
+    "KH0425"
+   ]
+  },
+  {
+   "id": "place-41",
+   "label": "La puntilla, between Paracas and Pisco",
+   "ids": [
+    "KH0032",
+    "KH0033"
+   ]
+  },
+  {
+   "id": "place-42",
+   "label": "Maranga, Huaca 1",
+   "ids": [
+    "KH0047",
+    "KH0048"
+   ]
+  },
+  {
+   "id": "place-43",
+   "label": "Rancho San Juan, Ica Valley, Peru",
+   "ids": [
+    "KH0085",
+    "KH0086"
+   ]
+  },
+  {
+   "id": "place-44",
+   "label": "South Peru",
+   "ids": [
+    "KH0672",
+    "KH0673"
+   ]
+  },
+  {
+   "id": "place-45",
+   "label": "Ullujaya, Ocucaje, Ica",
+   "ids": [
+    "KH0565",
+    "KH0566"
+   ]
+  }
+ ]
+}

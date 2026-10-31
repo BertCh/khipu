@@ -1,0 +1,408 @@
+/* Khipu profile panel (src/components/khipu/KhipuProfile.tsx) */
+
+.profile {
+	display: grid;
+}
+
+.profile-row {
+	display: grid;
+	grid-template-columns: minmax(9rem, 13rem) minmax(0, 1fr);
+	gap: 0.4rem 1.5rem;
+	padding: 0.95rem 1.2rem 1rem;
+	border-top: 1px solid var(--hairline);
+}
+
+.profile-row:first-child {
+	border-top: 0;
+}
+
+.profile-key {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.profile-name {
+	color: var(--ink-3);
+	font-size: 0.74rem;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.profile-verdict {
+	color: var(--ink);
+	font-size: 1.05rem;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.profile-approx {
+	color: var(--ink-3);
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+.profile-body {
+	min-width: 0;
+	max-width: 56rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	font-size: 0.9rem;
+	color: var(--ink);
+}
+
+.profile-gloss {
+	color: var(--ink-3);
+	font-size: 0.8rem;
+	line-height: 1.45;
+	max-width: 70ch;
+}
+
+.profile-note {
+	color: var(--ink-2);
+	margin-bottom: 0.35rem;
+}
+
+.profile-facts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.15rem 0;
+}
+
+.profile-facts li:not(:last-child)::after {
+	content: "·";
+	color: var(--ink-3);
+	margin: 0 0.55rem;
+}
+
+/* arithmetic verdict marker: filled = clear, ring with core = some, ring = none, dashed = can't tell */
+
+.profile-arith {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.profile-arith i {
+	flex: none;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1.5px var(--ink-3);
+}
+
+.profile-arith.is-clear i {
+	background: var(--accent);
+	box-shadow: none;
+}
+
+.profile-arith.is-some i {
+	box-shadow: inset 0 0 0 1.5px var(--accent);
+	background: radial-gradient(circle, var(--accent) 0 2.5px, transparent 3px);
+}
+
+.profile-arith.is-small i,
+.profile-arith.is-untested i {
+	box-shadow: none;
+	border: 1.5px dashed var(--ink-3);
+}
+
+.profile-arith.is-none,
+.profile-arith.is-small,
+.profile-arith.is-untested {
+	color: var(--ink-2);
+}
+
+/* the tests table */
+
+.profile-tests {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.85rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.profile-tests th,
+.profile-tests td {
+	padding: 0.28rem 0.5rem;
+	border-bottom: 1px solid var(--hairline);
+	text-align: left;
+	vertical-align: middle;
+}
+
+.profile-tests th:first-child,
+.profile-tests td:first-child {
+	padding-left: 0;
+}
+
+.profile-tests th:last-child,
+.profile-tests td:last-child {
+	padding-right: 0;
+}
+
+.profile-tests thead th {
+	color: var(--ink-3);
+	font-size: 0.74rem;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.profile-tests tbody th {
+	font-weight: 400;
+	color: var(--ink-2);
+	cursor: help;
+}
+
+.profile-tests tbody tr.is-lead th {
+	color: var(--ink);
+	font-weight: 500;
+}
+
+.profile-tests .num {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.profile-p {
+	color: var(--ink-3);
+}
+
+.profile-tests.is-muted {
+	opacity: 0.72;
+}
+
+.profile-track-cell {
+	width: 34%;
+	min-width: 5rem;
+}
+
+.profile-track {
+	position: relative;
+	display: block;
+	height: 14px;
+	margin: 0 6px;
+}
+
+.profile-track-line {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	height: 1px;
+	background: var(--rule);
+}
+
+.profile-track-chance {
+	position: absolute;
+	top: 1px;
+	width: 2px;
+	height: 12px;
+	margin-left: -1px;
+	border-radius: 1px;
+	background: var(--series-context);
+}
+
+.profile-track-found {
+	position: absolute;
+	top: 50%;
+	width: 9px;
+	height: 9px;
+	margin: -4.5px 0 0 -4.5px;
+	border-radius: 50%;
+	background: var(--surface);
+	box-shadow:
+		inset 0 0 0 2px var(--ink-2),
+		0 0 0 2px var(--surface);
+}
+
+.profile-track-found.is-beyond {
+	background: var(--accent);
+	box-shadow: 0 0 0 2px var(--surface);
+}
+
+.profile-legend {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	font-weight: 400;
+}
+
+.profile-legend i {
+	position: static;
+	display: inline-block;
+	margin: 0 0 0 0.35rem;
+}
+
+.profile-legend i:first-child {
+	margin-left: 0;
+}
+
+.profile-legend .profile-track-found.is-beyond {
+	box-shadow: none;
+}
+
+/* network roles */
+
+.profile-roles {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 0.3rem;
+}
+
+.profile-roles li {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 0.25rem 0.75rem;
+}
+
+.profile-alias,
+.profile-more {
+	color: var(--ink-3);
+}
+
+.profile-role-tags {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.78rem;
+	color: var(--ink-3);
+}
+
+.profile-role-tags .conf {
+	font-size: 0.7rem;
+	padding: 0.2rem 0.45rem 0.2rem 0.4rem;
+}
+
+/* method note */
+
+.profile-method {
+	margin-top: 0.75rem;
+	font-size: 0.88rem;
+	scroll-margin-top: 6rem;
+}
+
+.profile-method summary {
+	cursor: pointer;
+	color: var(--accent-ink);
+	width: fit-content;
+}
+
+.profile-method .prose {
+	margin-top: 0.6rem;
+	display: grid;
+	gap: 0.6rem;
+}
+
+@media (max-width: 640px) {
+	.profile-row {
+		grid-template-columns: 1fr;
+		padding: 0.85rem 0.9rem 0.9rem;
+	}
+
+	.profile-key {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.2rem 0.6rem;
+	}
+
+	.profile-track-cell {
+		min-width: 3.5rem;
+		width: 26%;
+	}
+
+	.profile-legend {
+		display: none;
+	}
+}
+
+.profile-link {
+	all: unset;
+	cursor: pointer;
+	color: var(--accent-ink);
+	text-decoration: underline;
+	text-decoration-color: color-mix(in oklab, var(--accent) 45%, transparent);
+	text-underline-offset: 0.15em;
+}
+
+.profile-link:hover {
+	text-decoration-color: var(--accent);
+}
+
+.profile-link:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* ---- khipu page, "Show matches": cords threaded to other khipus */
+
+.match-key {
+	margin-top: 0.75rem;
+	display: grid;
+	gap: 0.6rem;
+}
+.match-key .chart-legend {
+	margin: 0;
+}
+.match-key-dim {
+	color: var(--ink-3);
+}
+.match-partners {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 0.3rem;
+	font-size: 0.85rem;
+}
+.match-partners li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.2rem 0.5rem;
+}
+.match-partner-rule {
+	color: var(--ink-2);
+}
+.match-unexamined {
+	font-size: 0.74rem;
+	color: var(--ink-3);
+	border: 1px dashed var(--rule);
+	border-radius: 999px;
+	padding: 0 0.45rem;
+}
+.match-tip {
+	list-style: none;
+	margin: 0.35rem 0 0;
+	padding: 0;
+	display: grid;
+	gap: 0.3rem;
+}
+.match-tip li {
+	display: flex;
+	gap: 0.45rem;
+	align-items: baseline;
+	font-variant-numeric: tabular-nums;
+}
+.match-tip i {
+	flex: none;
+	width: 9px;
+	height: 9px;
+	border-radius: 2px;
+	transform: translateY(1px);
+}
+.match-tip small {
+	display: block;
+	color: var(--ink-3);
+	font-size: 0.72rem;
+}

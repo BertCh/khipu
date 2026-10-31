@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env
+.tanstack
+__unconfig*
+todos.json
+
+# raw khipu data sources (re-fetch with scripts/fetch_data.sh; public/data is the built output)
+/data/

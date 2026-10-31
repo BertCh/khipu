@@ -1,0 +1,197 @@
+/* TotalsCascade: group totals falling to the heads of another khipu
+   (/stories/totals-that-travel, steps 1 and 2) */
+
+.totals-cascade {
+	--tc-sum: var(--moiety-r);
+	--tc-mirror: var(--accent);
+	margin: 0 0 1rem;
+}
+
+.tc-scroll {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.totals-cascade svg {
+	display: block;
+	width: 100%;
+	height: auto;
+	font-family: var(--font-ui);
+	overflow: visible;
+}
+
+.tc-primary {
+	stroke: var(--ink-2);
+	stroke-width: 1.6;
+	stroke-linecap: round;
+}
+
+.tc-cord path {
+	stroke-width: 1.5;
+	stroke-linecap: round;
+}
+.tc-cord .tc-casing {
+	stroke: var(--cord-casing);
+	stroke-width: 2.4;
+}
+.tc-cord {
+	opacity: 0.4;
+}
+.tc-cord.is-lit {
+	opacity: 0.95;
+}
+
+.tc-fan {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-width: 0.5;
+	opacity: 0.55;
+}
+.tc-fan.is-hit {
+	stroke: var(--tc-sum);
+	stroke-width: 0.7;
+	opacity: 0.8;
+}
+.tc-fan.is-small {
+	opacity: 0.25;
+}
+
+.tc-knot,
+.tc-land {
+	fill: var(--tc-sum);
+}
+.tc-open {
+	fill: var(--surface);
+	stroke: var(--ink-3);
+	stroke-width: 1;
+}
+.tc-small {
+	fill: var(--ink-3);
+	opacity: 0.5;
+}
+
+.tc-total {
+	font-size: 8.5px;
+	text-anchor: middle;
+	fill: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+	paint-order: stroke;
+	stroke: var(--surface);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+}
+.tc-total.is-hit {
+	fill: var(--ink);
+	font-weight: 600;
+}
+
+.tc-strand {
+	fill: none;
+	stroke: var(--tc-sum);
+	stroke-width: 1.5;
+	stroke-linecap: round;
+}
+.tc-ghost {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-width: 1;
+	stroke-dasharray: 1 3;
+	stroke-linecap: round;
+}
+.tc-near {
+	font-size: 8px;
+	text-anchor: middle;
+	fill: var(--ink-3);
+	font-style: italic;
+	paint-order: stroke;
+	stroke: var(--surface);
+	stroke-width: 3px;
+}
+
+.tc-deduct path {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-width: 0.8;
+}
+.tc-deduct text {
+	font-size: 7.5px;
+	text-anchor: middle;
+	fill: var(--ink-3);
+}
+.tc-callout {
+	font-size: 9px;
+	fill: var(--ink-2);
+	font-variant-numeric: tabular-nums;
+}
+
+.tc-mirror {
+	fill: none;
+	stroke: var(--tc-mirror);
+	stroke-width: 0.8;
+	opacity: 0.35;
+}
+.tc-mirror.is-head {
+	stroke-width: 1.2;
+	opacity: 0.75;
+}
+.tc-mirror.is-near {
+	stroke-dasharray: 1.5 2.5;
+	stroke-linecap: round;
+}
+.tc-below-note {
+	font-size: 8.5px;
+	fill: var(--tc-mirror);
+	font-style: italic;
+}
+
+.tc-row-label {
+	font-size: 9px;
+	fill: var(--ink-3);
+}
+.tc-row-id {
+	font-size: 11px;
+	font-weight: 600;
+	fill: var(--ink);
+}
+.tc-row-range {
+	font-size: 8px;
+}
+
+.tc-key {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem 1.2rem;
+	margin: 0.5rem 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.8rem;
+	color: var(--ink-2);
+}
+.tc-key li {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+.tc-key i {
+	display: inline-block;
+	flex: none;
+	width: 18px;
+	height: 0;
+	border-top: 2px solid var(--tc-sum);
+}
+.tc-key i.tc-key-open {
+	width: 8px;
+	height: 8px;
+	border: 1px solid var(--ink-3);
+	border-radius: 50%;
+}
+.tc-key i.tc-key-ghost {
+	border-top: 2px dotted var(--ink-3);
+}
+.tc-key i.tc-key-mirror {
+	border-top-color: var(--tc-mirror);
+	opacity: 0.8;
+}
+.tc-key i.tc-key-mirror.has-near {
+	border-top-style: solid;
+}

@@ -1,0 +1,48 @@
+/* mirror-ledger story: the two slot matrices side by side, and equation rows */
+
+.ml-panels {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 470px), 1fr));
+	gap: 1rem;
+}
+
+.ml-panel {
+	margin: 0;
+	background: var(--surface);
+	border: 1px solid var(--hairline);
+	border-radius: 10px;
+	padding: 0.6rem 0.6rem 0.4rem;
+	min-width: 0;
+	overflow-x: auto;
+}
+
+.ml-panel figcaption {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: var(--ink-2);
+	margin: 0 0 0.3rem 0.4rem;
+}
+
+.ml-sum {
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.ml-sum .muted {
+	margin: 0 0.15rem;
+}
+
+.ledger-table td.ml-wrap {
+	white-space: normal;
+	min-width: 13rem;
+}
+
+/* the long tables read whole; no inner scroll */
+.ledger.ml-tall {
+	max-height: none;
+}
+
+.ml-sil svg {
+	max-width: 100%;
+	height: auto;
+}
